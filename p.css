@@ -1,0 +1,230 @@
+
+         .h66{
+            rotate: -45deg;
+            /* background-color: rgb(54, 17, 17); */
+            /* color: white; */
+            position: relative;
+            left: 1px;
+            /* top: 2cm; */
+            font-size: 20px;
+            bottom: 1.8cm;
+        }
+        .h88{
+            rotate: -45deg;
+            /* background-color: rgb(54, 17, 17); */
+            /* color: white; */
+            position: absolute;
+            left: 160px;
+            top: 1cm;
+            bottom: 8cm;
+            font-size: 20px;
+        }
+        .h44{
+            rotate: -45deg;
+            /* background-color: rgb(54, 17, 17); */
+            /* color: white; */
+            position: relative;
+            /* left: cm; */
+            top: 2cm;
+            font-size: 20px;
+        }
+        .h00{
+            rotate: -45deg;
+            /* background-color: rgb(54, 17, 17); */
+            /* color: white; */
+            position: relative;
+            left: 3cm;
+            font-size: 20px;
+            top: 1cm;
+        }
+
+        .h3{
+            rotate: -45deg;
+            /* background-color: rgb(54, 17, 17); */
+            /* color: white; */
+            position: relative;
+            font-size: 20px;
+            left: 2cm;
+
+        }
+        .boxx{
+            position: relative;
+            right: 11px;    
+        }
+ 
+#arrayDisplay{
+position:relative;
+background-color: aqua;
+overflow: hidden;
+height: 720px; 
+width: 720px;
+position: relative;
+left: 14cm;
+top: 10px;
+
+
+}
+
+.losange{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:50px;
+left: 6.5cm;
+z-index: 1;
+background-color: rgb(245, 155, 155);
+
+}
+
+.losange11{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:relative;
+/* top:4px; */
+bottom: 3.5cm;
+left: 11.3cm;
+background-color: rgb(117, 235, 113);
+}
+
+
+.losange1{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:relative;
+top:100px;
+left: 2cm;
+
+background-color: rgb(149, 214, 223);
+}
+
+
+.losange12{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:relative;  
+/* top:4px; */
+bottom: 20px;
+left: 11.3cm;
+background-color: rgb(101, 171, 204);
+}
+
+
+
+
+
+.losange22{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:49.2px;
+left: 16.1cm;
+background-color: rgb(115, 114, 209);
+}
+
+
+.losange33{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:relative;
+/* top:4px; */
+bottom: 270px;
+/* right: 65px; */
+left: 65px;
+background-color: rgb(235, 132, 212);
+}
+
+.losange44{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:415px;
+left: 16.1cm;
+background-color: rgb(163, 177, 255);
+}
+
+.losange55{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:415px;
+left: 6.5cm;
+background-color: rgb(161, 255, 216);
+}
+
+.losange66{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top: 598px;
+left: 11.3cm;
+background-color: rgb(168, 240, 120);
+}
+
+
+.losange77{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top: 598px;
+left: 1.7cm;
+background-color: rgb(200, 167, 255);
+}
+
+
+.losange88{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:416px;
+/* right: 1cm; */
+left: -3.1cm;
+background-color: rgb(222, 255, 132);
+}
+
+.losange99{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:50px;
+/* right: 1cm; */
+left: -3.1cm;
+background-color: rgb(176, 233, 255);
+}
+
+.losange00{
+width: 250px;
+height:250px;
+border:solid 1px black;
+transform:rotate(45deg);
+position:absolute;
+top:-131px;
+/* right: 1cm; */
+left: 1.7cm;
+background-color: rgb(146, 211, 236);
+}
+
+    
