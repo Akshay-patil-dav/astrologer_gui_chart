@@ -1,1 +1,592 @@
-<h1>Hello Akki</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="./p.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+      
+        #imagePreview{
+           width: 30%;
+           height: 3.2cm;
+           position: relative;
+           left: 1cm;
+           /* top: 25px; */
+           aspect-ratio: 3/2;
+           object-fit: contain;
+            
+        }
+        
+          /* Hide the real file input */
+          input[type="file"] {
+            display: none;
+        }
+        
+
+        /* Custom button styling */
+        .custom-file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            /* background-color: #007bff; */
+            color: #000000;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            position: relative;
+            top: 25px;
+        }
+
+        /* Display the file name after selection */
+        .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .lg{
+            width: 35%;
+            margin-left: 15cm;
+        }
+    </style>
+      <script>
+        function fullname(val) {
+          document.getElementById('name').innerHTML=val;
+        }
+        function email(val) {
+            document.getElementById('email').innerHTML=val;
+        }
+        function phone(val) {
+            document.getElementById('phone').innerHTML=val;
+        }
+        </script>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <!-- <input type="file" id="imageInput" accept="image/*"> -->
+            <!-- <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+            <div style="position: relative; bottom: 35px; height: 1cm; ">
+
+
+               
+                <h1 id="" >
+                    
+
+                        <div>
+                            
+    <label for="fileInput" class="" style="position: relative; top: 10px; cursor: pointer; " id="imagePreview">
+        <p style="position: relative; top: 15px; left: 20px;   " > <img style="  width: 200%;
+            aspect-ratio: 3/2;
+            object-fit: contain;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWjURgX1k3SXRvioy4b9v9b4I4pgfKkgFVRw&s" alt=""></p>
+    </label>
+    <input id="fileInput" type="file"/>
+                        </div>
+    
+                </h1> 
+            </div>
+
+          </a>
+
+         <!-- Example single danger button -->
+        <div>
+                    <!-- Button trigger modal -->
+                     <style>
+                        .btn:hover{
+                            border:  0 solid;
+                        }
+                     </style>
+<button type="button" class="btn bg-body-tertiary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Full Name : <b id="name">Akshay</b> &#160 &#160 E-mail ID : <b id="email">name@example.com</b> &#160 &#160 Phone No : <b id="phone">+91-54654646546</b>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">User Information</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" value="Akshay" onchange="fullname(this.value)" placeholder="User Name">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" value="name@example.com" onchange="email(this.value)" placeholder="name@example.com">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Phone No</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" value="+91-54654646546" onchange="phone(this.value)" placeholder="Phone No">
+              </div>
+              
+        </div>
+
+      
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+
+        </div>
+      </nav>
+
+   
+      <div>
+       
+
+        <style>
+            .box {
+  width:700px;
+  height:550px;
+  border:3px solid;
+  display:flex;
+  margin: 1cm;
+  margin-left: 15cm;
+  flex-wrap:wrap;
+  background:
+    linear-gradient(to top right,transparent calc(50% - 2px), #000 calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 2px)),
+    linear-gradient(to top left ,transparent calc(50% - 2px), #000 calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 2px));
+  background-size:50% 50%;
+   
+  counter-reset:num;
+  overflow:hidden;
+  resize:both;
+}
+.box span {
+  flex-grow:1;
+  flex-basis:50%;
+  height:25%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.box span:nth-child(3),
+.box span:nth-child(5),
+.box span:nth-child(9),
+.box span:nth-child(11) {
+  flex-basis:5%;
+}
+.box span:nth-child(2),
+.box span:nth-child(6),
+.box span:nth-child(8),
+.box span:nth-child(12) {
+  height:12.5%;
+}
+
+/* span:before {
+  content:counter(num);
+  counter-increment:num;
+} */
+        </style>
+
+<div id="arrayDisplay" >
+
+  <div class="boxx" > 
+    <div class="losange"  ><h3 class="h3" style=" font-size: 20px;" >1 </h3></div>
+    <div class="losange11"><h3 class="h00"                          >12</h3></div>
+    <div class="losange12"><h3 class="h3" style=" font-size: 20px;" >10</h3></div>
+    <div class="losange22"><h3 class="h44"                          >11</h3></div>
+    <div class="losange33"><h3 class="h3" style=" font-size: 20px;" >4 </h3></div>
+    <div class="losange44"><h3 class="h44"                          >9 </h3></div>
+    <div class="losange55"><h3 class="h3" style=" font-size: 20px;" >7 </h3></div>
+    <div class="losange66"><h3 class="h66"                          >8 </h3></div>
+    <div class="losange77"><h3 class="h66"                          >6 </h3></div>
+    <div class="losange88"><h3 class="h88"                          >5 </h3></div>
+    <div class="losange99"><h3 class="h88"                          >3 </h3></div>
+    <div class="losange00"><h3 class="h00"                          >2 </h3></div>
+    </div>
+
+</div>
+  
+      <div>
+<style>
+
+    body{
+        overflow: hidden;
+    }
+    ul{
+        /* gap: 0.5cm; */
+        position: relative;
+        left: 5cm;
+        bottom: 1cm;
+        display: grid;
+            gap: 1px;
+            grid-template-columns: auto auto ;
+            
+    }
+
+    li{
+        padding: 2cm;
+        display: flex;
+        cursor: pointer;
+    }
+    .pl{
+        width: 30%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+           
+    }
+</style>
+
+        <ul style="display: flex;" >
+             <li>
+                <div id="mydiv8">
+                    <img class="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
+                    <div>Sun</div>
+                    </div>
+            </li>
+            <li>
+                <div id="mydiv2">
+                    <img class="pl" src="https://w7.pngwing.com/pngs/576/257/png-transparent-earth-full-moon-lunar-phase-planet-moon-moon-atmosphere-computer-wallpaper-monochrome-thumbnail.png" alt="">
+                    <div>Moon</div>
+                    </div>
+            </li>
+            <li><div id="mydiv">
+                <img class="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gx5sI_2JaRe-i0W1kBr4whgl9Vfol0nMiw&s" alt="">
+                <div>Mercury</div>
+                </div>
+                </li>
+            <li>
+                
+                    <div id="mydiv1">
+                        <img class="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3vxhkh6H2-LqkJcCGk36tJz8Tg3EHLWanQ&s" alt="">
+                        <div>venus</div>
+                        </div>
+                
+            </li>
+        
+            <li>
+                <div id="mydiv3">
+                    <img class="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeksFtqTWHTRuXVIspqVOjf1gDs9q-pSGHDw&s" alt="">
+                    <div>Mars</div>
+                    </div>
+            </li>
+            <li>
+                <div id="mydiv4">
+                    <img class="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJ5SPrwFzu4giI0xFeWXVxIsKNlz7CsGecg&s" alt="">
+                    <div>Jupiter</div>
+                    </div>
+            </li>
+          
+            <li>
+                <div id="mydiv6">
+                    <img class="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQe-DwV3cTZoWGIUu1Jjufr8o0cf5due2vg&s" alt="">
+                    <div>Saturn</div>
+                    </div>
+            </li>
+            <li>
+                <div id="mydiv7">
+                    <img class="pl" src="https://www.rahu.in/images/mercury.png" alt="">
+                    <div>Rahu</div>
+                    </div>
+            </li>
+
+           
+
+            <li>
+                <div id="mydiv9">
+                    <img class="pl" src="https://png.pngtree.com/png-clipart/20210803/ourmid/pngtree-abstract-style-black-and-white-watercolor-moon-illustration-png-image_3768678.png" alt="">
+                    <div>Ketu</div>
+                    </div>
+            </li>
+          
+        </ul>
+        
+
+
+
+
+
+
+
+
+  
+  
+  <script>
+  //Make the DIV element draggagle:
+  dragElement(document.getElementById("mydiv"));
+  dragElement(document.getElementById("mydiv1"));
+  dragElement(document.getElementById("mydiv2"));
+  dragElement(document.getElementById("mydiv3"));
+  dragElement(document.getElementById("mydiv4"));
+
+  dragElement(document.getElementById("mydiv6"));
+  dragElement(document.getElementById("mydiv7"));
+  dragElement(document.getElementById("mydiv8"));
+  dragElement(document.getElementById("mydiv9"));
+  
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      /* if present, the header is where you move the DIV from:*/
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      /* otherwise, move the DIV from anywhere inside the DIV:*/
+      elmnt.onmousedown = dragMouseDown;
+    }
+  
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+  
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+  
+    function closeDragElement() {
+      /* stop moving when mouse button is released:*/
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+  </script>
+        <style>
+     
+            
+         
+           #mydiv,  #mydiv1 , #mydiv2 , #mydiv3 , #mydiv4 , #mydiv5, #mydiv6 , #mydiv7, #mydiv8 , #mydiv9 {
+              position: absolute;
+              z-index: 9;
+              /* background-color: #f1f1f1; */
+              width: 4cm;
+              border-radius: 100%;
+              text-align: center;
+              /* border: 1px solid #d3d3d3; */
+              
+            }
+            
+        
+        
+            </style>
+      </div>
+
+
+        <script>
+           function NUM(val) {
+// Initialize an empty array
+let numbersArray = [];
+
+// // Use a for loop to push numbers into the array
+// for (let i = 1; i <= 12; i++) {
+//     numbersArray.push(i);
+// }
+
+switch(val){
+// 1   2  / 3  **  4  **1
+// 12  1  / 2  **  3  **2
+// 10  11 / 12 **  1  **3
+// 11  12 /  1 **  2  **4
+// 4   5  / 6  **  7  **5
+// 9   10 / 11 ** 12  ** 6
+// 7   8  / 9  ** 10  **7
+// 8   9  / 10 ** 11  ** 8
+// 6   7  / 8  ** 9  **9
+// 5   6  / 7  ** 8  **10
+// 3   4  / 5  ** 6  **11
+// 2   3  / 4  ** 5  **12
+
+  
+
+            case 'Aries':
+              
+            numbersArray = [12,1,2,3,4,5,6,7,8,9,10,11];
+              name(numbersArray);
+              break;
+            
+            case 'Taurus':
+            numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12];
+              name(numbersArray);
+              break;
+
+             case 'Gemini':
+             numbersArray = [2,3,4,5,6,7,8,9,10,11,12,1];
+              name(numbersArray);
+              break;
+
+              case 'Cancer':
+              numbersArray = [3,4,5,6,7,8,9,10,11,12,1,2];
+              name(numbersArray);
+              break;
+              
+
+              case 'Leo':
+              numbersArray = [4,5,6,7,8,9,10,11,12,1,2,3];
+              name(numbersArray);
+              break;
+
+              case 'Virgo':
+              numbersArray = [5,6,7,8,9,10,11,12,1,2,3,4];
+              name(numbersArray);
+              break;
+
+              
+
+              case 'Libra':
+              numbersArray = [6,7,8,9,10,11,12,1,2,3,4,5];
+              name(numbersArray);
+              break;
+
+              case 'Scorpio':
+              numbersArray = [7,8,9,10,11,12,1,2,3,4,5,6];
+              name(numbersArray);
+              break;
+
+              case 'Sagittarius':
+              numbersArray = [8,9,10,11,12,1,2,3,4,5,6,7];
+              name(numbersArray);
+              break;
+
+              case 'Capricorn':
+              numbersArray = [9,10,11,12,1,2,3,4,5,6,7,8];
+              name(numbersArray);
+              break;
+
+              case 'Aquarius':
+              numbersArray = [10,11,12,1,2,3,4,5,6,7,8,9];
+              name(numbersArray);
+              break;
+
+              case 'Pisces':
+                              
+              numbersArray = [11,12,1,2,3,4,5,6,7,8,9,10];
+              name(numbersArray);
+              break;
+
+           
+
+// name(numbersArray);
+
+}
+
+        }
+
+
+        function name(numbersArray){
+
+// Display the array
+document.getElementById('arrayDisplay').innerHTML =  
+"<div class='boxx' > "+
+    
+  "<div class='losange'  ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
+    "<div class='losange11'><h3 class='h00'                          >"+numbersArray[12]+"</h3></div>"+
+    "<div class='losange12'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[10]+"</h3></div>"+
+    "<div class='losange22'><h3 class='h44'                          >"+numbersArray[11]+"</h3></div>"+
+    "<div class='losange33'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[4 ]+"</h3></div>"+
+    "<div class='losange44'><h3 class='h44'                          >"+numbersArray[9 ]+"</h3></div>"+
+    "<div class='losange55'><h3 class='h3'style='' font-size: 15px;' >"+numbersArray[7 ]+"</h3></div>"+
+    "<div class='losange66'><h3 class='h66'                          >"+numbersArray[8 ]+"</h3></div>"+
+    "<div class='losange77'><h3 class='h66'                          >"+numbersArray[6 ]+"</h3></div>"+
+    "<div class='losange88'><h3 class='h88'                          >"+numbersArray[5 ]+"</h3></div>"+
+    "<div class='losange99'><h3 class='h88'                          >"+numbersArray[3 ]+"</h3></div>"+
+    "<div class='losange00'><h3 class='h00'                          >"+numbersArray[2 ]+"</h3></div>"+
+   "</div>"
+
+
+
+;
+
+}
+        </script>
+
+<!-- <div class="box" id="n" >
+  <span style="order:4">1</span>
+  <span style="order:1">2</span>
+  <span style="order:3">3</span>
+  <span style="order:6">4</span>
+  <span style="order:8">5</span>
+  <span style="order:11">6</span>
+  <span style="order:9">7</span>
+  <span style="order:12">8</span>
+  <span style="order:10">9</span>
+  <span style="order:7">10</span>
+  <span style="order:5">11</span>
+  <span style="order:2">12</span>
+</div> -->
+
+
+      <div>
+        <div style="width: 5cm; margin-left: 22cm; position: relative; bottom: 1cm; " >
+          <select class="form-select form-select-lg mb-3" aria-label="Large select example"  onchange="NUM(this.value)" >
+            <option selected>Open this select menu</option>
+            <option value="Aries"> Aries</option>
+            <option value="Taurus">Taurus</option>
+            <option value="Gemini">Gemini</option>
+            <option value="Cancer">Cancer</option>
+            <option value="Leo">Leo</option>
+            <option value="Virgo">Virgo</option>
+            <option value="Libra">Libra</option>
+            <option value="Scorpio">Scorpio</option>
+            <option value="Sagittarius">Sagittarius</option>
+            <option value="Capricorn">Capricorn</option>
+            <option value="Aquarius">Aquarius</option>
+            <option value="Pisces">Pisces</option>
+            <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
+          </select></div>
+      </div>
+
+      <!-- <h1 id="arrayDisplay" ></h1> -->
+      <script>
+        function displayValue() {
+            const input = document.getElementById('nameInput').value;
+            // input ="./IMG20231128184411-removebg-preview.png";  
+            
+            document.getElementById('output').innerHTML = " <img src=" + input+ ">";
+        }
+    </script>
+
+
+<!-- <img src="./IMG20231128184411-removebg-preview.png" alt=""> -->
+<script>
+    document.getElementById('fileInput').onchange = function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imgElement = document.createElement("img");
+                imgElement.src = e.target.result;
+                imgElement.style.maxWidth = "100%";
+                imgElement.style.maxHeight = "100%";
+
+                const previewContainer = document.getElementById('imagePreview');
+                previewContainer.innerHTML = '';
+                previewContainer.appendChild(imgElement);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
