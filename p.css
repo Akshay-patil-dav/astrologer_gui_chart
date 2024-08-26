@@ -1,5 +1,16 @@
-@media only screen and (min-width: 1303px) {
-
+/* @media only screen and (min-width: 1303px) { */
+body{
+    overflow-x: hidden;
+}
+#resetButton{
+    background-color: red;
+    color: white;
+    font-family: Arial black;
+    width: 6cm;
+    height: 1cm;
+    border-radius: 10px;
+    border: 0px;
+}
          .h66{
             rotate: -45deg;
             /* background-color: rgb(54, 17, 17); */
@@ -8,15 +19,15 @@
             left: 1px;
             /* top: 2cm; */
             font-size: 20px;
-            bottom: 1.8cm;
+            bottom: 1cm;
         }
         .h88{
             rotate: -45deg;
             /* background-color: rgb(54, 17, 17); */
             /* color: white; */
             position: absolute;
-            left: 160px;
-            top: 1cm;
+            left: 150px;
+            top: 0.5cm;
             bottom: 8cm;
             font-size: 20px;
         }
@@ -45,77 +56,81 @@
             /* color: white; */
             position: relative;
             font-size: 20px;
-            left: 2cm;
+            left: 1.4cm;
 
         }
         .boxx{
             position: relative;
-            right: 10px;    
+            right: 56px;    
         }
  
 #arrayDisplay{
 position:relative;
 background-color: rgb(0, 0, 0);
 overflow: hidden;
-height: 720px; 
-width: 720px;
+height: 580px; 
+width: 580px;
 position: relative;
 border: 0.1cm solid;
-left: 5.8cm;
+left: 17cm;
 top: 10px;
+z-index: 2;
 
 
 }
 
 .losange{
-width: 250px;
-height:250px;
+width: 200px;
+height:200px;
 /* border:solid 1px rgb(253, 0, 0); */
 transform:rotate(45deg);
 position:absolute;
-top:50px;
+top:40px;
 left: 6.5cm;
 z-index: 1;
-background-color: rgb(245, 155, 155);
+background-color: rgb(255, 255, 255);
 
 }
 
 .losange11{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;
 /* top:4px; */
-bottom: 3.5cm;
-left: 11.3cm;
-background-color: rgb(117, 235, 113);
+bottom: 2.8cm;
+left: 10.3cm;
+/* background-color: rgb(117, 235, 113); */
+background-color: rgb(255, 255, 255);
 }
 
 
 .losange1{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;
 top:100px;
 left: 2cm;
 
-background-color: rgb(149, 214, 223);
+/* background-color: rgb(149, 214, 223); */
+background-color: rgb(255, 255, 255);
 }
 
 
 .losange12{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;  
 /* top:4px; */
-bottom: 20px;
-left: 11.3cm;
-background-color: rgb(101, 171, 204);
+bottom: 15px;
+left: 10.3cm;
+/* background-color: rgb(101, 171, 204); */
+background-color: rgb(255, 255, 255);
 }
 
 
@@ -123,110 +138,120 @@ background-color: rgb(101, 171, 204);
 
 
 .losange22{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top:49.2px;
-left: 16.1cm;
-background-color: rgb(115, 114, 209);
+top:40px;
+left: 14.1cm;
+/* background-color: rgb(115, 114, 209); */
+background-color: rgb(255, 255, 255);
 }
 
 
 .losange33{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;
 /* top:4px; */
-bottom: 270px;
+bottom: 215px;
 /* right: 65px; */
-left: 65px;
-background-color: rgb(235, 132, 212);
+left: 100px;
+/* background-color: rgb(235, 132, 212); */
+background-color: rgb(255, 255, 255);
 }
 
 .losange44{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top:415px;
-left: 16.1cm;
-background-color: rgb(163, 177, 255);
+top:329px;
+left: 14.2cm;
+/* background-color: rgb(163, 177, 255); */
+background-color: rgb(255, 255, 255);
 }
 
 .losange55{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top:415px;
+top:330px;
 left: 6.5cm;
-background-color: rgb(161, 255, 216);
+/* background-color: rgb(161, 255, 216); */
+background-color: rgb(255, 255, 255);
 }
 
 .losange66{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top: 598px;
-left: 11.3cm;
-background-color: rgb(168, 240, 120);
+top: 475px;
+left: 10.4cm;
+/* background-color: rgb(168, 240, 120); */
+background-color: rgb(255, 255, 255);
 }
 
 
 .losange77{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top: 598px;
-left: 1.7cm;
-background-color: rgb(200, 167, 255);
+top: 476px;
+/* left: 2.6cm; */
+left: 100px;
+/* background-color: rgb(200, 167, 255); */
+background-color: rgb(255, 255, 255);
 }
 
 
 .losange88{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top:416px;
+top:331px;
 /* right: 1cm; */
-left: -3.1cm;
-background-color: rgb(222, 255, 132);
+left: -1.2cm;
+/* background-color: rgb(222, 255, 132); */
+background-color: rgb(255, 255, 255);
 }
 
 .losange99{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top:50px;
+top:40px;
 /* right: 1cm; */
-left: -3.1cm;
-background-color: rgb(176, 233, 255);
+left: -1.2cm;
+/* background-color: rgb(176, 233, 255); */
+background-color: rgb(255, 255, 255);
 }
 
 .losange00{
-width: 250px;
-height:250px;
+    width: 200px;
+    height:200px;
 /* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
-top:-131px;
-/* right: 1cm; */
-left: 1.7cm;
-background-color: rgb(236, 146, 146);
+top:-104px;
+/* bottom: 2.8cm; */
+left: 100px;
+/* background-color: rgb(230, 209, 209); */
+background-color: rgb(255, 255, 255);
 }
 
-}
+/* } */
