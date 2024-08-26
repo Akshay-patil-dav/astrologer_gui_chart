@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    
     <link rel="stylesheet" href="./p.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
@@ -197,23 +196,24 @@
 <div id="arrayDisplay" >
 
   <div class="boxx" > 
-    <div class="losange"  ><h3 class="h3" style=" font-size: 20px;" >1 </h3></div>
-    <div class="losange11"><h3 class="h00"                          >12</h3></div>
-    <div class="losange12"><h3 class="h3" style=" font-size: 20px;" >10</h3></div>
-    <div class="losange22"><h3 class="h44"                          >11</h3></div>
-    <div class="losange33"><h3 class="h3" style=" font-size: 20px;" >4 </h3></div>
-    <div class="losange44"><h3 class="h44"                          >9 </h3></div>
-    <div class="losange55"><h3 class="h3" style=" font-size: 20px;" >7 </h3></div>
-    <div class="losange66"><h3 class="h66"                          >8 </h3></div>
-    <div class="losange77"><h3 class="h66"                          >6 </h3></div>
-    <div class="losange88"><h3 class="h88"                          >5 </h3></div>
-    <div class="losange99"><h3 class="h88"                          >3 </h3></div>
-    <div class="losange00"><h3 class="h00"                          >2 </h3></div>
+    <div class="losange"   id="dropBox"   ><h3 class="h3" style=" font-size: 20px;" >1 </h3></div>
+    <div class="losange11" id="dropBox1"   ><h3 class="h00"                          >12</h3></div>
+    <div class="losange12" id="dropBox2" ><h3 class="h3" style=" font-size: 20px;" >10</h3></div>
+    <div class="losange22" id="dropBox3" ><h3 class="h44"                          >11</h3></div>
+    <div class="losange33" id="dropBox4" ><h3 class="h3" style=" font-size: 20px;" >4 </h3></div>
+    <div class="losange44" id="dropBox5" ><h3 class="h44"                          >9 </h3></div>
+    <div class="losange55" id="dropBox6" ><h3 class="h3" style=" font-size: 20px;" >7 </h3></div>
+    <div class="losange66" id="dropBox7" ><h3 class="h66"                          >8 </h3></div>
+    <div class="losange77" id="dropBox8" ><h3 class="h66"                          >6 </h3></div>
+    <div class="losange88" id="dropBox9" ><h3 class="h88"                          >5 </h3></div>
+    <div class="losange99" id="dropBox10" ><h3 class="h88"                          >3 </h3></div>
+    <div class="losange00" id="dropBox11" ><h3 class="h00"                          >2 </h3></div>
     </div>
 
 </div>
   
       <div>
+        
 <style>
 
     body{
@@ -221,25 +221,27 @@
     }
     ul{
         /* gap: 0.5cm; */
-   
-        /* bottom: 1cm; */
-        /* display: grid; */
-            /* gap: 1px; */
-            /* grid-template-columns: auto auto auto; */
-            display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+        position: relative;
+        /* left: 5cm; */
+        bottom: 1cm;
+        /* display: grid;   display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
     width: 80%;
-    max-width: 12px;
+    max-width: 1200px; */
+    left: 4cm;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* gap: 9px; */
+    width: 80%;
+    max-width: 10px;
             
     }
 
     li{
-        /* padding: 2cm; */
+        padding: 2cm;
         display: flex;
         cursor: pointer;
-        
-        /* gap:5cm; */
     }
     .pl{
         width: 30%;
@@ -249,8 +251,7 @@
     }
 </style>
 
-
-        <ul style="" >
+        <ul  >
              <li>
                 <div id="mydiv8">
                     <img class="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
@@ -319,6 +320,261 @@
 
 
 
+        <div id="colorPalette">
+          <div class="color" style="background-color: rgb(197, 57, 57);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(130, 199, 130);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(125, 125, 185);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(228, 130, 130);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(113, 223, 199);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(250, 201, 94);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(57, 209, 78);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(216, 235, 109);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(99, 226, 177);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(145, 168, 148);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(247, 177, 235);" draggable="true"></div>
+          <div class="color" style="background-color: rgb(168, 211, 160);" draggable="true"></div>
+     
+        </div>
+      <!-- <div id="dropBox"></div> -->
+  
+      <style>
+
+  #colorPalette {
+      display: flex;
+      gap: 10px;
+      position: relative;
+      bottom: 1.4cm;
+      left: 19cm;
+  }
+  
+  .color {
+      width:  1cm;
+      height: 1cm;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+  }
+  
+  #dropBox , #dropBox2 , #dropBox2 , #dropBox3 , #dropBox4 , #dropBox5, #dropBox6, #dropBox7 , #dropBox8 , #dropBox9, #dropBox10 , #dropBox11 {
+
+      transition: all 0.3s ease;
+  }
+  
+      </style>
+      <script>
+          document.addEventListener('DOMContentLoaded', () => {
+      const colors = document.querySelectorAll('#colorPalette .color');
+      const dropBox = document.getElementById('dropBox');
+      const dropBox1 = document.getElementById('dropBox1');
+      const dropBox2 = document.getElementById('dropBox2');
+      const dropBox3 = document.getElementById('dropBox3');
+      const dropBox4 = document.getElementById('dropBox4');
+      const dropBox5 = document.getElementById('dropBox5');
+      const dropBox6 = document.getElementById('dropBox6');
+      const dropBox7 = document.getElementById('dropBox7');
+      const dropBox8 = document.getElementById('dropBox8');
+      const dropBox9 = document.getElementById('dropBox9');
+      const dropBox10 = document.getElementById('dropBox10');
+      const dropBox11 = document.getElementById('dropBox11');
+      
+  
+      colors.forEach(color => {
+          color.addEventListener('dragstart', (e) => {
+              e.dataTransfer.setData('text/plain', color.style.backgroundColor);
+          });
+      });
+  
+      // *****************************
+      dropBox.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+
+  
+      // *****************************
+      dropBox1.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox1.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox1.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox2.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox2.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox2.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox3.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox3.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox3.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox4.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox4.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox4.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox5.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox5.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox5.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox6.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox6.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox6.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox7.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox7.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox7.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox8.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox8.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox8.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox9.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox9.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox9.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox10.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox10.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox10.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox11.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox11.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox11.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+      // *****************************
+      dropBox1.addEventListener('dragover', (e) => {
+          e.preventDefault(); // Necessary to allow dropping
+      });
+  
+      dropBox1.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const color = e.dataTransfer.getData('text/plain');
+          dropBox1.style.backgroundColor = color;
+          
+          // Change size based on the color    
+  });
+
+// *******************
+
+
+  });
+  
+      </script>
+        
+
 
 
 
@@ -383,7 +639,7 @@
             
          
            #mydiv,  #mydiv1 , #mydiv2 , #mydiv3 , #mydiv4 , #mydiv5, #mydiv6 , #mydiv7, #mydiv8 , #mydiv9 {
-              position: relative;
+              position: absolute;
               z-index: 9;
               /* background-color: #f1f1f1; */
               width: 4cm;
@@ -460,7 +716,7 @@ switch(val){
               "rgb(245, 155, 155)",
               "rgb(117, 235, 113)"
               ]
-              name(numbersArray,cold1);
+              name(numbersArray);
               // name(numbersArray);
               break;
             
@@ -482,8 +738,8 @@ switch(val){
               "rgb(245, 155, 155)",
               "rgb(117, 235, 113)"
               ]
-              name(numbersArray,cold);
-              // name(numbersArray);
+              // name(numbersArray,cold);
+              name(numbersArray);
               break;
 
              case 'Gemini':
@@ -504,8 +760,8 @@ switch(val){
               "rgb(115, 114, 209)",
               "rgb(117, 235, 113)"
               ]
-              name(numbersArray , col10);
-              // name(numbersArray);
+              // name(numbersArray , col10);
+              name(numbersArray);
               break;
 
               case 'Cancer':
@@ -526,8 +782,8 @@ switch(val){
               "rgb(222, 255, 132)",
               "rgb(117, 235, 113)"
               ]
-              name(numbersArray , col9);
-              // name(numbersArray);
+              // name(numbersArray , col9);
+              name(numbersArray);
               break;
               
 
@@ -550,8 +806,8 @@ switch(val){
               "rgb(117, 235, 113)"
               ]
 
-              name(numbersArray , col8);
-              // name(numbersArray);
+              // name(numbersArray , col8);
+              name(numbersArray);
               break;
 
               case 'Virgo':
@@ -573,8 +829,8 @@ switch(val){
               "rgb(117, 235, 113)"
               ]
 
-              name(numbersArray , col7);
-              // name(numbersArray);
+              // name(numbersArray , col7);
+              name(numbersArray);
               break;
 
               
@@ -598,8 +854,8 @@ switch(val){
               "rgb(117, 235, 113)"
               ]
 
-              name(numbersArray , col6);
-              // name(numbersArray);
+              // name(numbersArray , col6);
+              name(numbersArray);
               break;
 
               case 'Scorpio':
@@ -621,8 +877,8 @@ switch(val){
               "rgb(117, 235, 113)"
               ]
 
-              name(numbersArray , col5);
-              // name(numbersArray);
+              // name(numbersArray , col5);
+              name(numbersArray);
               break;
 
               case 'Sagittarius':
@@ -645,8 +901,8 @@ switch(val){
 
               ]
 
-              name(numbersArray , col4);
-              // name(numbersArray);
+              // name(numbersArray , col4);
+              name(numbersArray);
               break;
 
               case 'Capricorn':
@@ -668,8 +924,8 @@ switch(val){
               "rgb(146, 211, 236)"
               ]
 
-              name(numbersArray , col3);
-              // name(numbersArray);
+              // name(numbersArray , col3);
+              name(numbersArray);
               break;
 
               case 'Aquarius':
@@ -691,8 +947,8 @@ switch(val){
               "rgb(146, 211, 236)"
               ]
 
-              name(numbersArray , col);
-              // name(numbersArray);
+              // name(numbersArray , col);
+              name(numbersArray);
               break;
 
               case 'Pisces':         
@@ -714,7 +970,7 @@ switch(val){
               "rgb(146, 211, 236)"
               ]
 
-              name(numbersArray , col1);
+              name(numbersArray );
               break;
 
               default : 
@@ -729,14 +985,14 @@ switch(val){
         }
 
 
-        function name(numbersArray , col){
+        function name(numbersArray ){
 
 // Display the array
 document.getElementById('arrayDisplay').innerHTML =  
 "<div class='boxx' > "+
     
-  "<div class='losange' class='losange11'  ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
-    "<div  class='losange11' ><h3 class='h00'                         >"+numbersArray[0]+"</h3></div>"+
+  "<div class='losange'   class='losange11'  ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
+    "<div class='losange11' ><h3 class='h00'                         >"+numbersArray[0]+"</h3></div>"+
     "<div  class='losange12'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[10]+"</h3></div>"+
     "<div  class='losange22'><h3 class='h44'                          >"+numbersArray[11]+"</h3></div>"+
     "<div  class='losange33'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[4 ]+"</h3></div>"+
@@ -781,7 +1037,7 @@ document.getElementById('arrayDisplay').innerHTML =
 
 
       <div >
-        <div style="width: 5cm; margin-left: 22cm; position: relative; bottom: 1cm; " >
+        <div style="width: 12cm; margin-left: 22cm; position: relative; bottom: 1cm; display: flex; gap: 1cm; " >
           <select class="form-select form-select-lg mb-3" aria-label="Large select example"  onchange="NUM(this.value)" >
             <option selected>Open this select menu</option>
             <option value="Aries"> Aries</option>
@@ -797,7 +1053,8 @@ document.getElementById('arrayDisplay').innerHTML =
             <option value="Aquarius">Aquarius</option>
             <option value="Pisces">Pisces</option>
             <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
-          </select></div>
+          </select> <button id="resetButton">Reset </button></div>
+          
       </div>
 
       <!-- <h1 id="arrayDisplay" ></h1> -->
@@ -831,7 +1088,6 @@ document.getElementById('arrayDisplay').innerHTML =
         }
     };
 </script>
-<script src="./js/changecolor.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
