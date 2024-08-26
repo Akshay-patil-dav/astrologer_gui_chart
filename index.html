@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    
     <link rel="stylesheet" href="./p.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
@@ -216,23 +217,29 @@
 <style>
 
     body{
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     ul{
         /* gap: 0.5cm; */
-        position: relative;
-        left: 5cm;
-        bottom: 1cm;
-        display: grid;
-            gap: 1px;
-            grid-template-columns: auto auto ;
+   
+        /* bottom: 1cm; */
+        /* display: grid; */
+            /* gap: 1px; */
+            /* grid-template-columns: auto auto auto; */
+            display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 80%;
+    max-width: 12px;
             
     }
 
     li{
-        padding: 2cm;
+        /* padding: 2cm; */
         display: flex;
         cursor: pointer;
+        
+        /* gap:5cm; */
     }
     .pl{
         width: 30%;
@@ -242,7 +249,8 @@
     }
 </style>
 
-        <ul style="display: flex;" >
+
+        <ul style="" >
              <li>
                 <div id="mydiv8">
                     <img class="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
@@ -290,7 +298,7 @@
             </li>
             <li>
                 <div id="mydiv7">
-                    <img class="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVuBLhYPAUMeg3M-MfLyRpPxEeuoJBw7t6wQ&s" alt="">
+                    <img class="pl" src="https://www.rahu.in/images/mercury.png" alt="">
                     <div>Rahu</div>
                     </div>
             </li>
@@ -375,7 +383,7 @@
             
          
            #mydiv,  #mydiv1 , #mydiv2 , #mydiv3 , #mydiv4 , #mydiv5, #mydiv6 , #mydiv7, #mydiv8 , #mydiv9 {
-              position: absolute;
+              position: relative;
               z-index: 9;
               /* background-color: #f1f1f1; */
               width: 4cm;
@@ -727,18 +735,18 @@ switch(val){
 document.getElementById('arrayDisplay').innerHTML =  
 "<div class='boxx' > "+
     
-  "<div class='losange'  style='background-color: "+col[1]+";' class='losange11'  ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
-    "<div style='background-color: "+col[0]+";' class='losange11' ><h3 class='h00'                         >"+numbersArray[0]+"</h3></div>"+
-    "<div style='background-color: "+col[10]+";' class='losange12'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[10]+"</h3></div>"+
-    "<div style='background-color: "+col[11]+";' class='losange22'><h3 class='h44'                          >"+numbersArray[11]+"</h3></div>"+
-    "<div style='background-color: "+col[4 ]+";' class='losange33'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[4 ]+"</h3></div>"+
-    "<div style='background-color: "+col[9 ]+";' class='losange44'><h3 class='h44'                          >"+numbersArray[9 ]+"</h3></div>"+
-    "<div style='background-color: "+col[7 ]+";' class='losange55'><h3 class='h3 pp' >"+numbersArray[7 ]+"</h3></div>"+
-    "<div style='background-color: "+col[8 ]+";' class='losange66'><h3 class='h66'                          >"+numbersArray[8 ]+"</h3></div>"+
-    "<div style='background-color: "+col[6 ]+";' class='losange77'><h3 class='h66'                          >"+numbersArray[6 ]+"</h3></div>"+
-    "<div style='background-color: "+col[5 ]+";' class='losange88'><h3 class='h88'                          >"+numbersArray[5 ]+"</h3></div>"+
-    "<div style='background-color: "+col[3 ]+";' class='losange99'><h3 class='h88'                          >"+numbersArray[3 ]+"</h3></div>"+
-    "<div style='background-color: "+col[2 ]+";' class='losange00'><h3 class='h00'                         >"+numbersArray[2 ]+"</h3></div>"+
+  "<div class='losange' class='losange11'  ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
+    "<div  class='losange11' ><h3 class='h00'                         >"+numbersArray[0]+"</h3></div>"+
+    "<div  class='losange12'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[10]+"</h3></div>"+
+    "<div  class='losange22'><h3 class='h44'                          >"+numbersArray[11]+"</h3></div>"+
+    "<div  class='losange33'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[4 ]+"</h3></div>"+
+    "<div  class='losange44'><h3 class='h44'                          >"+numbersArray[9 ]+"</h3></div>"+
+    "<div  class='losange55'><h3 class='h3 pp' >"+numbersArray[7 ]+"</h3></div>"+
+    "<div  class='losange66'><h3 class='h66'                          >"+numbersArray[8 ]+"</h3></div>"+
+    "<div  class='losange77'><h3 class='h66'                          >"+numbersArray[6 ]+"</h3></div>"+
+    "<div  class='losange88'><h3 class='h88'                          >"+numbersArray[5 ]+"</h3></div>"+
+    "<div  class='losange99'><h3 class='h88'                          >"+numbersArray[3 ]+"</h3></div>"+
+    "<div  class='losange00'><h3 class='h00'                         >"+numbersArray[2 ]+"</h3></div>"+
    "</div>"
 
 
@@ -823,6 +831,7 @@ document.getElementById('arrayDisplay').innerHTML =
         }
     };
 </script>
+<script src="./js/changecolor.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

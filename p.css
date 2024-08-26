@@ -1,3 +1,4 @@
+/* @media only screen and (min-width: 1303px) { */
 
          .h66{
             rotate: -45deg;
@@ -49,17 +50,18 @@
         }
         .boxx{
             position: relative;
-            right: 11px;    
+            right: 10px;    
         }
  
 #arrayDisplay{
 position:relative;
-background-color: aqua;
+background-color: rgb(0, 0, 0);
 overflow: hidden;
 height: 720px; 
 width: 720px;
 position: relative;
-left: 14cm;
+border: 0.1cm solid;
+left: 5.8cm;
 top: 10px;
 
 
@@ -68,7 +70,7 @@ top: 10px;
 .losange{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px rgb(253, 0, 0); */
 transform:rotate(45deg);
 position:absolute;
 top:50px;
@@ -81,7 +83,7 @@ background-color: rgb(245, 155, 155);
 .losange11{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;
 /* top:4px; */
@@ -94,7 +96,7 @@ background-color: rgb(117, 235, 113);
 .losange1{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;
 top:100px;
@@ -107,7 +109,7 @@ background-color: rgb(149, 214, 223);
 .losange12{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;  
 /* top:4px; */
@@ -123,7 +125,7 @@ background-color: rgb(101, 171, 204);
 .losange22{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top:49.2px;
@@ -135,7 +137,7 @@ background-color: rgb(115, 114, 209);
 .losange33{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:relative;
 /* top:4px; */
@@ -148,7 +150,7 @@ background-color: rgb(235, 132, 212);
 .losange44{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top:415px;
@@ -159,7 +161,7 @@ background-color: rgb(163, 177, 255);
 .losange55{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top:415px;
@@ -170,7 +172,7 @@ background-color: rgb(161, 255, 216);
 .losange66{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top: 598px;
@@ -182,7 +184,7 @@ background-color: rgb(168, 240, 120);
 .losange77{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top: 598px;
@@ -194,7 +196,7 @@ background-color: rgb(200, 167, 255);
 .losange88{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top:416px;
@@ -206,7 +208,7 @@ background-color: rgb(222, 255, 132);
 .losange99{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top:50px;
@@ -218,13 +220,13 @@ background-color: rgb(176, 233, 255);
 .losange00{
 width: 250px;
 height:250px;
-border:solid 1px black;
+/* border:solid 1px black; */
 transform:rotate(45deg);
 position:absolute;
 top:-131px;
 /* right: 1cm; */
 left: 1.7cm;
-background-color: rgb(146, 211, 236);
+background-color: rgb(236, 146, 146);
 }
 
-    
+}
