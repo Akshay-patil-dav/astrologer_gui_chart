@@ -196,18 +196,18 @@
 <div id="arrayDisplay" >
 
   <div class="boxx" > 
-    <div class="losange"   id="dropBox"   ><h3 class="h3" style=" font-size: 20px;" >1 </h3></div>
-    <div class="losange11" id="dropBox1"   ><h3 class="h00"                          >12</h3></div>
-    <div class="losange12" id="dropBox2" ><h3 class="h3" style=" font-size: 20px;" >10</h3></div>
-    <div class="losange22" id="dropBox3" ><h3 class="h44"                          >11</h3></div>
-    <div class="losange33" id="dropBox4" ><h3 class="h3" style=" font-size: 20px;" >4 </h3></div>
-    <div class="losange44" id="dropBox5" ><h3 class="h44"                          >9 </h3></div>
-    <div class="losange55" id="dropBox6" ><h3 class="h3" style=" font-size: 20px;" >7 </h3></div>
-    <div class="losange66" id="dropBox7" ><h3 class="h66"                          >8 </h3></div>
-    <div class="losange77" id="dropBox8" ><h3 class="h66"                          >6 </h3></div>
-    <div class="losange88" id="dropBox9" ><h3 class="h88"                          >5 </h3></div>
-    <div class="losange99" id="dropBox10" ><h3 class="h88"                          >3 </h3></div>
-    <div class="losange00" id="dropBox11" ><h3 class="h00"                          >2 </h3></div>
+    <div class="losange"   id="dropBox"  ><h3 id="p1"  class="h3" style=" font-size: 20px;" >1 </h3></div>
+    <div class="losange11" id="dropBox1" ><h3 id="p2"  class="h00"                          >12</h3></div>
+    <div class="losange12" id="dropBox2" ><h3 id="p3"  class="h3" style=" font-size: 20px;" >10</h3></div>
+    <div class="losange22" id="dropBox3" ><h3 id="p4"  class="h44"                          >11</h3></div>
+    <div class="losange33" id="dropBox4" ><h3 id="p5"  class="h3" style=" font-size: 20px;" >4 </h3></div>
+    <div class="losange44" id="dropBox5" ><h3 id="p6"  class="h44"                          >9 </h3></div>
+    <div class="losange55" id="dropBox6" ><h3 id="p7"  class="h3" style=" font-size: 20px;" >7 </h3></div>
+    <div class="losange66" id="dropBox7" ><h3 id="p8"  class="h66"                          >8 </h3></div>
+    <div class="losange77" id="dropBox8" ><h3 id="p9"  class="h66"                          >6 </h3></div>
+    <div class="losange88" id="dropBox9" ><h3 id="p10"  class="h88"                          >5 </h3></div>
+    <div class="losange99" id="dropBox10"><h3 id="p11"  class="h88"                          >3 </h3></div>
+    <div class="losange00" id="dropBox11"><h3 id="p12"  class="h00"                          >2 </h3></div>
     </div>
 
 </div>
@@ -988,29 +988,40 @@ switch(val){
         function name(numbersArray ){
 
 // Display the array
-document.getElementById('arrayDisplay').innerHTML =  
-"<div class='boxx' > "+
+// document.getElementById('arrayDisplay').innerHTML =  
+// "<div class='boxx' > "+
     
-  "<div class='losange'   class='losange11'  ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
-    "<div class='losange11' ><h3 class='h00'                         >"+numbersArray[0]+"</h3></div>"+
-    "<div  class='losange12'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[10]+"</h3></div>"+
-    "<div  class='losange22'><h3 class='h44'                          >"+numbersArray[11]+"</h3></div>"+
-    "<div  class='losange33'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[4 ]+"</h3></div>"+
-    "<div  class='losange44'><h3 class='h44'                          >"+numbersArray[9 ]+"</h3></div>"+
-    "<div  class='losange55'><h3 class='h3 pp' >"+numbersArray[7 ]+"</h3></div>"+
-    "<div  class='losange66'><h3 class='h66'                          >"+numbersArray[8 ]+"</h3></div>"+
-    "<div  class='losange77'><h3 class='h66'                          >"+numbersArray[6 ]+"</h3></div>"+
-    "<div  class='losange88'><h3 class='h88'                          >"+numbersArray[5 ]+"</h3></div>"+
-    "<div  class='losange99'><h3 class='h88'                          >"+numbersArray[3 ]+"</h3></div>"+
-    "<div  class='losange00'><h3 class='h00'                         >"+numbersArray[2 ]+"</h3></div>"+
-   "</div>"
+//     "<div class='losange' id="+'dropBox'+" ><h3 class='h3' style=' font-size: 20px;'   >"+numbersArray[1 ]+"</h3></div>"+
+//     "<div class='losange11' ><h3 class='h00'                         >"+numbersArray[0]  +"</h3></div>"+
+//     "<div  class='losange12'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[10]+"</h3></div>"+
+//     "<div  class='losange22'><h3 class='h44'                          >"+numbersArray[11]+"</h3></div>"+
+//     "<div  class='losange33'><h3 class='h3'style=' font-size: 20px;'  >"+numbersArray[4 ]+"</h3></div>"+
+//     "<div  class='losange44'><h3 class='h44'                          >"+numbersArray[9 ]+"</h3></div>"+
+//     "<div  class='losange55'><h3 class='h3 pp' >"+numbersArray[7 ]+"</h3></div>"+
+//     "<div  class='losange66'><h3 class='h66'                          >"+numbersArray[8 ]+"</h3></div>"+
+//     "<div  class='losange77'><h3 class='h66'                          >"+numbersArray[6 ]+"</h3></div>"+
+//     "<div  class='losange88'><h3 class='h88'                          >"+numbersArray[5 ]+"</h3></div>"+
+//     "<div  class='losange99'><h3 class='h88'                          >"+numbersArray[3 ]+"</h3></div>"+
+//     "<div  class='losange00'><h3 class='h00'                         >"+numbersArray[2  ]+"</h3></div>"+
+//    "</div>"
+// ;
 
+document.getElementById('p1').innerHTML =numbersArray[1 ];
+document.getElementById('p2').innerHTML = numbersArray[0]  ;
+document.getElementById('p3').innerHTML = numbersArray[10];
+document.getElementById('p4').innerHTML = numbersArray[11];
+document.getElementById('p5').innerHTML = numbersArray[4 ];
+document.getElementById('p6').innerHTML = numbersArray[9 ];
+document.getElementById('p7').innerHTML = numbersArray[7 ];
+document.getElementById('p8').innerHTML = numbersArray[8 ];
+document.getElementById('p9').innerHTML = numbersArray[6 ];
+document.getElementById('p10').innerHTML = numbersArray[5 ];
+document.getElementById('p11').innerHTML = numbersArray[3 ];
+document.getElementById('p12').innerHTML = numbersArray[2  ];
+        }
 
-
-;
-
-}
         </script>
+        
         <style>
           .pp{
             /* color: white; */
