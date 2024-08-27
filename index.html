@@ -251,6 +251,7 @@
     }
 </style>
 
+<div id="pal" >
         <ul  >
              <li>
                 <div id="mydiv8">
@@ -314,7 +315,7 @@
             </li>
           
         </ul>
-        
+       </div> 
 
 
 
@@ -1049,7 +1050,7 @@ document.getElementById('p12').innerHTML = numbersArray[2  ];
 
       <div >
         <div style="width: 12cm; margin-left: 22cm; position: relative; bottom: 1cm; display: flex; gap: 1cm; " >
-          <select class="form-select form-select-lg mb-3" aria-label="Large select example"  onchange="NUM(this.value)" >
+          <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
             <option selected>Open this select menu</option>
             <option value="Aries"> Aries</option>
             <option value="Taurus">Taurus</option>
@@ -1064,9 +1065,10 @@ document.getElementById('p12').innerHTML = numbersArray[2  ];
             <option value="Aquarius">Aquarius</option>
             <option value="Pisces">Pisces</option>
             <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
-          </select> <button id="resetButton">Reset </button></div>
+          </select> <button id="resetButton" onclick="remove()" >Reset </button></div>
           
       </div>
+ 
 
       <!-- <h1 id="arrayDisplay" ></h1> -->
       <script>
@@ -1099,6 +1101,7 @@ document.getElementById('p12').innerHTML = numbersArray[2  ];
         }
     };
 </script>
+<script src="./js/changecolor.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
