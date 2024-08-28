@@ -196,8 +196,16 @@
   left: 16.4cm;
   width: 3cm;
  }
+ #google_translate_element{
+  position: relative;
+  left: 50cm;
+ }
         </style>
+        
+    <div id="google_translate_element"></div>
+    <br>
 <h3 id="p3" style=" font-size: 20px;" >10</h3>
+<div class="box11" >
 <button id="resetButton" onclick="remove()" >Reset </button>
         
 
@@ -225,9 +233,10 @@
     position: relative;
     /* top: -7cm; */
     /* bottom:1cm; */
+    width: 1cm;
     margin-right: 5cm;
     bottom: 8cm;
-    width: 0.8cm;
+    
     z-index: +5;
     
   }
@@ -240,6 +249,7 @@
     z-index: +8;
   }
 </style>
+
   <div class="boxx" > 
     <div class="losange"   id="dropBox"  ><h3 id="p1"  class="h3" style=" font-size: 20px;" >1 </h3></div>
     <div class="losange11" id="dropBox1" ><h3 id="p2"  class="h00"                          >12</h3></div>
@@ -263,8 +273,11 @@
         
 <style>
 #p7{
+  width: 0.5cm;
+  /* background-color: red; */
   position: relative;
   left: 11.6cm;
+
   top: -250px;
   /* bottom: ; */
 }
@@ -576,7 +589,7 @@
             </div>
           
           <div class="" >
-            <label for="" style="font-family: Arial black;" >Duplicate</label><br>
+            <label for="" style="font-family: Arial black;" >Names</label><br>
             <label class="switch">
             
               <input  id="input2" type="checkbox" >
@@ -595,7 +608,13 @@
           
        <style>#pl{position: relative; top: 5px; }</style>
 
-
+        </div>
+        <style>
+          .box11{
+            position: relative;
+            bottom: 1.5cm;
+          }
+        </style>
        <script>
 
       </script>
@@ -649,6 +668,21 @@
 <script>
 
 </script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+          {pageLanguage: 'en'},
+          'google_translate_element'
+      );
+  }
+</script>
+<script type="text/javascript" 
+src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="./js/dublication.js" ></script>
 <script src="./js/changecolor.js" ></script>
 <script src="./js/changecolor.js" ></script>
