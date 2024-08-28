@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duplicate Box</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Freehand Drawing Tool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div id="container">
-        <div class="box">Box 1</div>
+    <div class="toolbar">
+        <button class="color" style="background-color: black;" onclick="changeColor('black')"></button>
+        <button class="color" style="background-color: red;" onclick="changeColor('red')"></button>
+        <button class="color" style="background-color: green;" onclick="changeColor('green')"></button>
+        <button class="color" style="background-color: blue;" onclick="changeColor('blue')"></button>
+        <button class="eraser" onclick="clearCanvas()">Erase All</button>
     </div>
-
-    <button id="duplicateButton">Duplicate Box</button>
-
-    <script >
-        let boxCounter = 1;
-
-document.getElementById('duplicateButton').addEventListener('click', function() {
-    // Increment the box counter
-    boxCounter++;
-
-    // Get the container where the boxes are placed
-    const container = document.getElementById('container');
-
-    // Create a new div element with class 'box'
-    const newBox = document.createElement('div');
-    newBox.className = 'box';
-    newBox.textContent = 'Box ' + boxCounter;
-
-    // Append the new box to the container
-    container.appendChild(newBox);
-});
-
-    </script>
+    <canvas id="drawingCanvas"></canvas>
+    <script src="script.js"></script>
 </body>
 </html>
 <style>
     body {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,30 +30,109 @@ document.getElementById('duplicateButton').addEventListener('click', function() 
     background-color: #f0f0f0;
 }
 
-#container {
+.toolbar {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: #2196F3;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    border-radius: 8px;
-    text-align: center;
+.color {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+.eraser {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
     cursor: pointer;
 }
 
+canvas {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-color: white; */
+    /* cursor: none; Hide default cursor over canvas */
+}
+
+/* Custom cursor when hovering over color buttons */
+.toolbar .color:hover {
+    cursor: url('pen-icon.png'), auto; /* Change to pen icon */
+}
+
+/* Custom cursor for canvas when drawing */
+.canvas-active {
+    cursor: url('pen-icon.png'), auto; /* Change to pen icon */
+}
+
 </style>
+
+<script>
+    const canvas = document.getElementById('drawingCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth - 40;
+canvas.height = window.innerHeight - 100;
+
+let drawing = false;
+let color = 'black'; // Default to black
+
+// Function to change the drawing color and activate the pen cursor
+function changeColor(newColor) {
+    color = newColor;
+    canvas.classList.add('canvas-active'); // Show pen icon when active
+}
+
+// Activate drawing mode on "bubble tab" click
+canvas.addEventListener('mousedown', () => {
+    drawing = true;
+    canvas.classList.add('canvas-active'); // Show pen icon while drawing
+});
+
+// Stop drawing on mouse release
+canvas.addEventListener('mouseup', () => {
+    drawing = false;
+    ctx.beginPath();
+    canvas.classList.remove('canvas-active'); // Revert to default cursor after drawing
+});
+
+// Handle drawing as the mouse moves over the canvas
+canvas.addEventListener('mousemove', draw);
+
+function draw(event) {
+    if (!drawing) return;
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = color;
+
+    ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+}
+
+// Function to clear the entire canvas
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// Ensure cursor is displayed when over the canvas
+canvas.addEventListener('mouseenter', () => {
+    canvas.classList.add('canvas-active');
+});
+
+// Remove cursor when leaving the canvas
+canvas.addEventListener('mouseleave', () => {
+    drawing = false;
+    ctx.beginPath();
+    canvas.classList.remove('canvas-active');
+});
+
+</script>

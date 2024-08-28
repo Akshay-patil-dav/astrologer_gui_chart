@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Draggable DIV Duplication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="draggable" id="draggableDiv">Drag me</div>
+    <button id="onButton" onclick="startDuplicating()">On</button>
+    <button id="offButton" onclick="stopDuplicating()">Off</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #ccc;
+    position: absolute;
+    cursor: move;
+}
+
+button {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+</style>
+
+<script>
+    let duplicating = false;
+let duplicateInterval;
+
+function makeElementDraggable(element) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+    element.onmousedown = function(e) {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    };
+
+    function elementDrag(e) {
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        element.style.top = (element.offsetTop - pos2) + "px";
+        element.style.left = (element.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+// Make the initial DIV draggable
+makeElementDraggable(document.getElementById('draggableDiv'));
+
+// Function to start infinite duplication
+function startDuplicating() {
+    if (duplicating) return; // Prevent starting multiple intervals
+    duplicating = true;
+    duplicateInterval = setInterval(duplicateDiv, 1000); // Duplicate every second
+}
+
+// Function to stop infinite duplication and hide all duplicated elements
+function stopDuplicating() {
+    duplicating = false;
+    clearInterval(duplicateInterval);
+    const duplicates = document.querySelectorAll('.draggable.clone');
+    duplicates.forEach(clone => {
+        clone.style.display = 'none'; // Hide all duplicates
+    });
+}
+
+// Function to duplicate the draggable DIV
+function duplicateDiv() {
+    const originalDiv = document.getElementById('draggableDiv');
+    const clone = originalDiv.cloneNode(true);
+
+    // Set a unique ID for the cloned DIV (optional)
+    clone.id = "draggableDiv" + document.getElementsByClassName('draggable').length;
+
+    // Mark it as a clone
+    clone.classList.add('clone');
+
+    // Position the cloned DIV slightly offset from the original
+    clone.style.top = (originalDiv.offsetTop + 20) + "px";
+    clone.style.left = (originalDiv.offsetLeft + 20) + "px";
+
+    // Append the cloned DIV to the body
+    document.body.appendChild(clone);
+
+    // Make the cloned DIV draggable
+    makeElementDraggable(clone);
+}
+
+</script>
