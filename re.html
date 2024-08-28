@@ -4,135 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freehand Drawing Tool</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the drawing container */
+        #drawingCanvas {
+            width: 600px;
+            height: 400px;
+            border: 2px solid #ccc;
+            position: relative;
+            background-color: white;
+            cursor: crosshair;
+        }
+
+        /* Color palette buttons */
+        .color-palette {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            border: 2px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* Pen cursor style */
+        .pen-cursor {
+            cursor: url('https://cdn-icons-png.flaticon.com/512/1828/1828767.png') 0 16, auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="toolbar">
-        <button class="color" style="background-color: black;" onclick="changeColor('black')"></button>
-        <button class="color" style="background-color: red;" onclick="changeColor('red')"></button>
-        <button class="color" style="background-color: green;" onclick="changeColor('green')"></button>
-        <button class="color" style="background-color: blue;" onclick="changeColor('blue')"></button>
-        <button class="eraser" onclick="clearCanvas()">Erase All</button>
-    </div>
-    <canvas id="drawingCanvas"></canvas>
-    <script src="script.js"></script>
-</body>
-</html>
-<style>
-    body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
 
-.toolbar {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
+<canvas id="drawingCanvas"></canvas>
 
-.color {
-    width: 30px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.eraser {
-    padding: 5px 10px;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-canvas {
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* background-color: white; */
-    /* cursor: none; Hide default cursor over canvas */
-}
-
-/* Custom cursor when hovering over color buttons */
-.toolbar .color:hover {
-    cursor: url('pen-icon.png'), auto; /* Change to pen icon */
-}
-
-/* Custom cursor for canvas when drawing */
-.canvas-active {
-    cursor: url('pen-icon.png'), auto; /* Change to pen icon */
-}
-
-</style>
+<!-- Color options -->
+<div>
+    <div class="color-palette" style="background-color: black;" onclick="selectColor('black')"></div>
+    <div class="color-palette" style="background-color: red;" onclick="selectColor('red')"></div>
+    <div class="color-palette" style="background-color: blue;" onclick="selectColor('blue')"></div>
+    <div class="color-palette" style="background-color: green;" onclick="selectColor('green')"></div>
+</div>
 
 <script>
     const canvas = document.getElementById('drawingCanvas');
-const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let context, lastX, lastY;
+    let selectedColor = 'black';
 
-canvas.width = window.innerWidth - 40;
-canvas.height = window.innerHeight - 100;
+    // Setup the drawing context
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    context = canvas.getContext('2d');
+    context.lineWidth = 5;
+    context.lineCap = 'round';
 
-let drawing = false;
-let color = 'black'; // Default to black
+    // Change the selected color
+    function selectColor(color) {
+        selectedColor = color;
+        canvas.classList.add('pen-cursor');
+    }
 
-// Function to change the drawing color and activate the pen cursor
-function changeColor(newColor) {
-    color = newColor;
-    canvas.classList.add('canvas-active'); // Show pen icon when active
-}
+    // Mouse down event to start drawing
+    canvas.addEventListener('mousedown', function(e) {
+        isDrawing = true;
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+    });
 
-// Activate drawing mode on "bubble tab" click
-canvas.addEventListener('mousedown', () => {
-    drawing = true;
-    canvas.classList.add('canvas-active'); // Show pen icon while drawing
-});
+    // Mouse move event to draw
+    canvas.addEventListener('mousemove', function(e) {
+        if (!isDrawing) return;
+        context.strokeStyle = selectedColor;
+        context.beginPath();
+        context.moveTo(lastX, lastY);
+        context.lineTo(e.offsetX, e.offsetY);
+        context.stroke();
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+    });
 
-// Stop drawing on mouse release
-canvas.addEventListener('mouseup', () => {
-    drawing = false;
-    ctx.beginPath();
-    canvas.classList.remove('canvas-active'); // Revert to default cursor after drawing
-});
+    // Mouse up event to stop drawing
+    canvas.addEventListener('mouseup', function() {
+        isDrawing = false;
+    });
 
-// Handle drawing as the mouse moves over the canvas
-canvas.addEventListener('mousemove', draw);
-
-function draw(event) {
-    if (!drawing) return;
-    ctx.lineWidth = 5;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = color;
-
-    ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
-}
-
-// Function to clear the entire canvas
-function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-// Ensure cursor is displayed when over the canvas
-canvas.addEventListener('mouseenter', () => {
-    canvas.classList.add('canvas-active');
-});
-
-// Remove cursor when leaving the canvas
-canvas.addEventListener('mouseleave', () => {
-    drawing = false;
-    ctx.beginPath();
-    canvas.classList.remove('canvas-active');
-});
-
+    // Mouse out event to stop drawing if mouse leaves the canvas
+    canvas.addEventListener('mouseout', function() {
+        isDrawing = false;
+    });
 </script>
+
+</body>
+</html>
