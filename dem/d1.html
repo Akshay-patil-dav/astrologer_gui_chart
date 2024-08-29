@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" id="dropBox">
+        <div class="sub"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        
+        <div class="p1">AA<br>&nbsp;01</div>
+        <div class="p2">AA<br>&nbsp;02</div>
+        <div class="p3">AA<br>&nbsp;03</div>
+        <div class="p4">AA<br>&nbsp;04</div>
+        <div class="p5">AA<br>&nbsp;05</div>
+        <div class="p6">AA<br>&nbsp;06</div>
+        <div class="p7">AA<br>&nbsp;07</div>
+        <div class="p8">AA<br>&nbsp;08</div>
+        <div class="p9">AA<br>&nbsp;09</div>
+        <div class="p10">AA<br>&nbsp;10</div>
+        <div class="p11">AA<br>&nbsp;11</div>
+        <div class="p12">AA<br>&nbsp;12</div>
+    </div>
+    <!-- *********************************************************************** -->
+
+    <div id="colorPalette">
+        <div class="color" style="background-color: red;" draggable="true"></div>
+        <div class="color" style="background-color: green;" draggable="true"></div>
+        <div class="color" style="background-color: blue;" draggable="true"></div>
+    </div>
+
+    <style>
+        
+#colorPalette {
+    display: flex;
+    gap: 10px;
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+    </style>
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const colors = document.querySelectorAll('#colorPalette .color');
+    const dropBox = document.getElementById('dropBox');
+
+    colors.forEach(color => {
+        color.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', color.style.backgroundColor);
+        });
+    });
+
+    dropBox.addEventListener('dragover', (e) => {
+        e.preventDefault(); // Necessary to allow dropping
+    });
+
+    dropBox.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const color = e.dataTransfer.getData('text/plain');
+        dropBox.style.backgroundColor = color;
+        
+        // Change size based on the color
+    });
+});
+
+    </script>
+
+    <!-- ******************************************************************************* -->
+</body>
+</html>
+<style>
+    .main {
+            height: 250px;
+            width: 250px;
+            border: 3px solid #000;
+            margin: 100px auto;
+            float: none;
+            overflow: hidden;
+        }
+        
+        .sub {
+            height: 175px;
+            width: 175px;
+            border: 3px solid #000;
+            transform: rotate(45deg);
+            margin-left: 37px;
+            margin-top: 37px;
+        }
+        
+        .line1 {
+            height: 10px;
+            width: 360px;
+            border-bottom: 3px solid #000;
+            transform: rotate(135deg);
+            margin-top: -95px;
+            margin-left: -50px;
+        }
+        
+        .line2 {
+            height: 10px;
+            width: 380px;
+            border-top: 3px solid #000;
+            transform: rotate(-135deg);
+            margin-left: -50px;
+            margin-top: -10px;  
+        }
+        p{
+            margin: 0;
+        }
+        .p1{
+            margin-top: -130px;
+            margin-left: 50px;
+        }
+        .p2{
+            margin-top: -35px;
+            margin-left: 180px;
+        }
+        .p3{
+            margin-left: 10px;
+        }
+        .p4{
+            margin-top: -35px;
+            margin-left: 110px;
+        }
+        .p5{
+            margin-top: -35px;
+            margin-left: 215px;
+        }
+        .p6{
+            margin-top: 20px;
+            margin-left: 45px;
+        }
+        .p7{
+            margin-top: -35px;
+            margin-left: 170px;
+        }
+        .p8{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .p9{
+            margin-top: -35px;
+            margin-left: 110px;
+        }
+        .p10{
+            margin-top: -35px;
+            margin-left: 215px;
+        }
+        .p11{
+            margin-top: 5px;
+            margin-left: 50px;
+        }
+        .p12{
+            margin-top: -35px;
+            margin-left: 180px;
+        }
+</style>

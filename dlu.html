@@ -7,7 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="draggable" id="draggableDiv">Drag me</div>
+    <!-- <div class="draggable" id="draggableDiv">Drag me</div> -->
+
+    <!-- <div class="col" style="background-color: red;" id="col">Drag me</div> -->
+<style>
+    ul{
+        display: flex;
+        gap: 5cm;
+    }
+    li{
+        display: flex;
+    }
+</style>
+    <ul>
+        <li>
+            <div class="col" style="background-color: red;" id="col">Drag me</div>
+
+        </li>
+        <li>
+            <div class="col" style="background-color: rgb(143, 38, 38);" id="col">Drag me</div>
+
+        </li>
+        <li>
+            <div class="col" style="background-color: rgb(83, 37, 37);" id="col">Drag me</div>
+
+        </li>
+    </ul>
+    
     <button id="onButton" onclick="startDuplicating()">On</button>
     <button id="offButton" onclick="stopDuplicating()">Off</button>
 
@@ -28,6 +54,16 @@
     cursor: move;
 }
 
+.col{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #ccc;
+    position: absolute;
+    cursor: move;
+}
 button {
     margin-top: 20px;
     margin-right: 10px;
@@ -67,7 +103,7 @@ function makeElementDraggable(element) {
 }
 
 // Make the initial DIV draggable
-makeElementDraggable(document.getElementById('draggableDiv'));
+makeElementDraggable(document.getElementById('col'));
 
 // Function to start infinite duplication
 function startDuplicating() {
@@ -80,7 +116,7 @@ function startDuplicating() {
 function stopDuplicating() {
     duplicating = false;
     clearInterval(duplicateInterval);
-    const duplicates = document.querySelectorAll('.draggable.clone');
+    const duplicates = document.querySelectorAll('.col.clone');
     duplicates.forEach(clone => {
         clone.style.display = 'none'; // Hide all duplicates
     });
@@ -88,18 +124,18 @@ function stopDuplicating() {
 
 // Function to duplicate the draggable DIV
 function duplicateDiv() {
-    const originalDiv = document.getElementById('draggableDiv');
+    const originalDiv = document.getElementById('col');
     const clone = originalDiv.cloneNode(true);
 
     // Set a unique ID for the cloned DIV (optional)
-    clone.id = "draggableDiv" + document.getElementsByClassName('draggable').length;
+    clone.id = "col" + document.getElementsByClassName('col').length;
 
     // Mark it as a clone
     clone.classList.add('clone');
 
     // Position the cloned DIV slightly offset from the original
-    clone.style.top = (originalDiv.offsetTop + 20) + "px";
-    clone.style.left = (originalDiv.offsetLeft + 20) + "px";
+    clone.style.top = (originalDiv.offsetTop + 0) + "px";
+    clone.style.left = (originalDiv.offsetLeft + 0) + "px";
 
     // Append the cloned DIV to the body
     document.body.appendChild(clone);
