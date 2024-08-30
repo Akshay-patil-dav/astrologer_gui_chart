@@ -149,6 +149,16 @@
 
         </div>
       </nav>
+          <!-- *******************************************Charts*****************************************************************************/ -->
+
+        <br>
+<div style=" position: relative; left: 1cm; display: flex; gap: 5.2cm;" >
+  <!-- <h4>Lagna Chart</h4> -->
+  <!-- <button id="reset" onclick="remove()" >Reset</button> -->
+
+
+
+
 
    
       <div>
@@ -200,45 +210,43 @@
   counter-increment:num;
 } */
  #resetButton{
-  position: relative;
-  left: 16.4cm;
+
   width: 3cm;
  }
- #google_translate_element{
+ .butt{
   position: relative;
-  left: 40cm;
+  left: 12.5cm;
  }
+ #sett{
+  background-color: blue;
+  color: white;
+  font-family: Arial black;
+  border: 0px solid;
+  border-radius: 10px;
+  width: 1cm;
+  height: 1cm;
+ }
+
         </style>
-        <!-- <div style="" class="skiptranslate">
-          <iframe frameborder="0" style="visibility:visible" 
-                  src="javascript:''" 
-                  class="goog-te-banner-frame skiptranslate" 
-                  id=":2.container"></iframe>
-        </div> -->
-        <style>
-          /* .goog-te-banner-frame {
-    display:none !important
-    } */
-     iframe{
-      display: none;
-     }
-    /* .skiptranslate {
-    display:none !important
-    } */
-        </style>
-        <!-- <script>
-          function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-       pageLanguage: 'hin'
-    }, 'google_translate_element');
-}
-        </script> -->
-    <div id="google_translate_element"></div>
+
+
     <br>
+
+
+    <div class="butt">
+      <button id="resetButton"  onclick="remove()" >Reset </button>
+      <button id="sett" data-bs-toggle="modal" data-bs-target="#sett1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide" viewBox="0 0 16 16">
+        <path d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z"/>
+      </svg></button>
+    </div>
+
+
 <h3 id="p3" style=" font-size: 20px;" >10</h3>
 <div class="box11" >
-<button id="resetButton" onclick="remove()" >Reset </button>
-        
+
+
+<!-- *********************************************************************************** -->
+
 
 <div id="arrayDisplay"  >
 <style>
@@ -275,7 +283,7 @@
     position: relative;
     /* right: 0cm; */
     left: 13cm;
-    top: 310px;
+    top: 280px;
     width: 0.8cm;
     z-index: +8;
   }
@@ -319,7 +327,7 @@
         /* gap: 0.5cm; */
         position: relative;
         /* left: 5cm; */
-        bottom: 1cm;
+        bottom:1cm;
         /* display: grid;   display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 9px;
@@ -358,12 +366,42 @@
       position: relative;
       height: 1.5cm;
       left: 2cm;
-      top: 1cm;
+      /* top: 1cm; */
+      bottom: -0.2cm;
     }
     
 
 </style>
+          <div style="display: flex; gap: 1cm; position: relative; left: 9cm;">
+            
+          <div class="" style="display: flex;">
+            <label for="" style="font-family: Arial black;" >Names</label><br>
+            <label class="switch">
+            
+              <input  id="input2" type="checkbox" >
+              <span class="slider round"></span>
+            </label>
+          </div>
 
+          <div class="" style="display: flex;">
+            <label for="" style="font-family: Arial black;" >Icon</label><br>
+            <label class="switch">
+            
+              <input  id="input" type="checkbox" >
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="" style="display: flex;" >
+            <label for="" style="font-family: Arial black;" >Dubalicate</label><br>
+            <label class="switch">
+            
+              <input  id="input22" type="checkbox" >
+              <span class="slider round"></span>
+            </label>
+          </div>
+          
+          </div>
 
 <div id="pal" >
         <ul  >
@@ -373,23 +411,17 @@
               </style>
 
               
-                <div id="mydiv8" >
+                <div id="mydiv8"  class="mydiv8">
                   <!-- <div > -->
                     <img id="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
                     <div id="text1" > Sun</div>
                   </div>
 
+                  
+
                     <p id="pldub" >
                       
                     </p>
-
-              
-                 <!-- <div> -->
-
-                  <!-- <div class="draggable" id="draggableDiv">Drag me</div> -->
-                
-              <!-- </div> -->
-                    
             </li>
             
             <li>
@@ -471,11 +503,12 @@
    
       </div>
         <div id="toolbar">
-          <button class="color" style="background-color: black;" onclick="changeColor('black')"></button>
-          <button class="color" style="background-color: red;" onclick="changeColor('red')"></button>
-          <button class="color" style="background-color: green;" onclick="changeColor('green')"></button>
-          <button class="color" style="background-color: blue;" onclick="changeColor('blue')"></button>
-          <button class="eraser" onclick="clearCanvas()">Erase</button>
+        
+    
+        </div>
+
+        <div id="toolbar">
+        
     
         </div>
      </div>
@@ -490,7 +523,7 @@
       top: 1.5cm;
       left: 2cm;
       border: 1px solid;
-      width: 9cm;
+      width: 3cm;
       position: relative;
       height: 1.5cm;
 
@@ -596,46 +629,55 @@
      display: flex; gap: 1cm; 
   }
 </style>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="sett1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div>   <label for="" style="font-family: Arial black;" >Select </label><br>
+        <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
+          <option selected>Open this select menu</option>
+          <option value="Aries"> Aries</option>
+          <option value="Taurus">Taurus</option>
+          <option value="Gemini">Gemini</option>
+          <option value="Cancer">Cancer</option>
+          <option value="Leo">Leo</option>
+          <option value="Virgo">Virgo</option>
+          <option value="Libra">Libra</option>
+          <option value="Scorpio">Scorpio</option>
+          <option value="Sagittarius">Sagittarius</option>
+          <option value="Capricorn">Capricorn</option>
+          <option value="Aquarius">Aquarius</option>
+          <option value="Pisces">Pisces</option>
+          <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
+        </select> </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
       <div >
         <div class="selpla" >
             <div>
-              <label for="" style="font-family: Arial black;" >Select </label><br>
+           
 
-          <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
-            <option selected>Open this select menu</option>
-            <option value="Aries"> Aries</option>
-            <option value="Taurus">Taurus</option>
-            <option value="Gemini">Gemini</option>
-            <option value="Cancer">Cancer</option>
-            <option value="Leo">Leo</option>
-            <option value="Virgo">Virgo</option>
-            <option value="Libra">Libra</option>
-            <option value="Scorpio">Scorpio</option>
-            <option value="Sagittarius">Sagittarius</option>
-            <option value="Capricorn">Capricorn</option>
-            <option value="Aquarius">Aquarius</option>
-            <option value="Pisces">Pisces</option>
-            <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
-          </select> 
+         
             </div>
-          
-          <div class="" >
-            <label for="" style="font-family: Arial black;" >Names</label><br>
-            <label class="switch">
-            
-              <input  id="input2" type="checkbox" >
-              <span class="slider round"></span>
-            </label>
-          </div>
-
-          <div class="" >
-            <label for="" style="font-family: Arial black;" >Icon</label><br>
-            <label class="switch">
-            
-              <input  id="input" type="checkbox" >
-              <span class="slider round"></span>
-            </label>
-          </div>
           
        <style>#pl{position: relative; top: 5px; }</style>
 
@@ -644,6 +686,7 @@
           .box11{
             position: relative;
             bottom: 1cm;
+            right: 2.5cm;
             /* background-color: blue; */
           }
         </style>
@@ -700,20 +743,11 @@
 <script>
 
 </script>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-          {pageLanguage: 'en'},
-          'google_translate_element'
-      );
-  }
-</script>
-<script type="text/javascript" 
-src=
-"https://translate.google.com/translate_a/element.js?
-cb=googleTranslateElementInit">
-</script>
 
+ 
+<script src="./s.js">
+
+</script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="./js/dublication.js" ></script>
 <script src="./js/changecolor.js" ></script>

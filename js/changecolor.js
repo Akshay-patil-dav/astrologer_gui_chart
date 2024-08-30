@@ -1,3 +1,28 @@
+function LANG(val){
+
+    const l1 = []
+    // alert(val)
+    switch(val){
+        case 'Hin':
+            l1 = ['रीसेट','सूरज','चंद्रमा','पारा','शुक्र','मंगल','बृहस्पति','शनि','राहु','केतु'];
+    }
+
+
+
+
+    function arr(l1){
+        // document.getElementById('text1').innerHTML=l1[]
+        // document.getElementById('text2').innerHTML=l1[]
+        // document.getElementById('text3').innerHTML=l1[]
+        // document.getElementById('text4').innerHTML=l1[]
+        // document.getElementById('text5').innerHTML=l1[]
+        // document.getElementById('text6').innerHTML=l1[]
+        // document.getElementById('text').innerHTML=l1[]
+        // document.getElementById('text').innerHTML=l1[]
+        // document.getElementById('text').innerHTML=l1[]
+    }
+  }
+
 
 function NUM(val) {
     // Initialize an empty array

@@ -3,162 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Freehand Drawing Tool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main" id="dropBox">
-        <div class="sub"></div>
-        <div class="line1"></div>
-        <div class="line2"></div>
-        
-        <div class="p1">AA<br>&nbsp;01</div>
-        <div class="p2">AA<br>&nbsp;02</div>
-        <div class="p3">AA<br>&nbsp;03</div>
-        <div class="p4">AA<br>&nbsp;04</div>
-        <div class="p5">AA<br>&nbsp;05</div>
-        <div class="p6">AA<br>&nbsp;06</div>
-        <div class="p7">AA<br>&nbsp;07</div>
-        <div class="p8">AA<br>&nbsp;08</div>
-        <div class="p9">AA<br>&nbsp;09</div>
-        <div class="p10">AA<br>&nbsp;10</div>
-        <div class="p11">AA<br>&nbsp;11</div>
-        <div class="p12">AA<br>&nbsp;12</div>
+    <div class="toolbar">
+        <button class="color" style="background-color: black;" onclick="changeColor('black')"></button>
+        <button class="color" style="background-color: red;" onclick="changeColor('red')"></button>
+        <button class="color" style="background-color: green;" onclick="changeColor('green')"></button>
+        <button class="color" style="background-color: blue;" onclick="changeColor('blue')"></button>
+        <button class="eraser" onclick="clearCanvas()">Erase All</button>
     </div>
-    <!-- *********************************************************************** -->
+    <canvas id="drawingCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
 
-    <div id="colorPalette">
-        <div class="color" style="background-color: red;" draggable="true"></div>
-        <div class="color" style="background-color: green;" draggable="true"></div>
-        <div class="color" style="background-color: blue;" draggable="true"></div>
-    </div>
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
-    <style>
-        
-#colorPalette {
+.toolbar {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 10px;
 }
 
 .color {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    border: none;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border-radius: 50%;
 }
-    </style>
-     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const colors = document.querySelectorAll('#colorPalette .color');
-    const dropBox = document.getElementById('dropBox');
 
-    colors.forEach(color => {
-        color.addEventListener('dragstart', (e) => {
-            e.dataTransfer.setData('text/plain', color.style.backgroundColor);
-        });
-    });
+.eraser {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    dropBox.addEventListener('dragover', (e) => {
-        e.preventDefault(); // Necessary to allow dropping
-    });
+canvas {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: none; /* Hide default cursor over canvas */
+}
 
-    dropBox.addEventListener('drop', (e) => {
-        e.preventDefault();
-        const color = e.dataTransfer.getData('text/plain');
-        dropBox.style.backgroundColor = color;
-        
-        // Change size based on the color
-    });
+/* Custom cursor when hovering over color buttons */
+.toolbar .color:hover {
+    cursor: url('pen-icon.png'), auto; /* Change to pen icon */
+}
+
+/* Custom cursor for canvas when drawing */
+.canvas-active {
+    cursor: url('pen-icon.png'), auto; /* Change to pen icon */
+}
+
+</style>
+
+<script>
+    const canvas = document.getElementById('drawingCanvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth - 40;
+canvas.height = window.innerHeight - 100;
+
+let drawing = false;
+let color = 'black'; // Default to black
+
+// Function to change the drawing color and activate the pen cursor
+function changeColor(newColor) {
+    color = newColor;
+    canvas.classList.add('canvas-active'); // Show pen icon when active
+}
+
+// Activate drawing mode on "bubble tab" click
+canvas.addEventListener('mousedown', () => {
+    drawing = true;
+    canvas.classList.add('canvas-active'); // Show pen icon while drawing
 });
 
-    </script>
+// Stop drawing on mouse release
+canvas.addEventListener('mouseup', () => {
+    drawing = false;
+    ctx.beginPath();
+    canvas.classList.remove('canvas-active'); // Revert to default cursor after drawing
+});
 
-    <!-- ******************************************************************************* -->
-</body>
-</html>
-<style>
-    .main {
-            height: 250px;
-            width: 250px;
-            border: 3px solid #000;
-            margin: 100px auto;
-            float: none;
-            overflow: hidden;
-        }
-        
-        .sub {
-            height: 175px;
-            width: 175px;
-            border: 3px solid #000;
-            transform: rotate(45deg);
-            margin-left: 37px;
-            margin-top: 37px;
-        }
-        
-        .line1 {
-            height: 10px;
-            width: 360px;
-            border-bottom: 3px solid #000;
-            transform: rotate(135deg);
-            margin-top: -95px;
-            margin-left: -50px;
-        }
-        
-        .line2 {
-            height: 10px;
-            width: 380px;
-            border-top: 3px solid #000;
-            transform: rotate(-135deg);
-            margin-left: -50px;
-            margin-top: -10px;  
-        }
-        p{
-            margin: 0;
-        }
-        .p1{
-            margin-top: -130px;
-            margin-left: 50px;
-        }
-        .p2{
-            margin-top: -35px;
-            margin-left: 180px;
-        }
-        .p3{
-            margin-left: 10px;
-        }
-        .p4{
-            margin-top: -35px;
-            margin-left: 110px;
-        }
-        .p5{
-            margin-top: -35px;
-            margin-left: 215px;
-        }
-        .p6{
-            margin-top: 20px;
-            margin-left: 45px;
-        }
-        .p7{
-            margin-top: -35px;
-            margin-left: 170px;
-        }
-        .p8{
-            margin-top: 20px;
-            margin-left: 10px;
-        }
-        .p9{
-            margin-top: -35px;
-            margin-left: 110px;
-        }
-        .p10{
-            margin-top: -35px;
-            margin-left: 215px;
-        }
-        .p11{
-            margin-top: 5px;
-            margin-left: 50px;
-        }
-        .p12{
-            margin-top: -35px;
-            margin-left: 180px;
-        }
-</style>
+// Handle drawing as the mouse moves over the canvas
+canvas.addEventListener('mousemove', draw);
+
+function draw(event) {
+    if (!drawing) return;
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = color;
+
+    ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+}
+
+// Function to clear the entire canvas
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// Ensure cursor is displayed when over the canvas
+canvas.addEventListener('mouseenter', () => {
+    canvas.classList.add('canvas-active');
+});
+
+// Remove cursor when leaving the canvas
+canvas.addEventListener('mouseleave', () => {
+    drawing = false;
+    ctx.beginPath();
+    canvas.classList.remove('canvas-active');
+});
+
+</script>

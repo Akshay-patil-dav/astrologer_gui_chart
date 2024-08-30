@@ -3,79 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive 4x4 Grid</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    <div id="container">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
-        <div class="box">6</div>
-        <div class="box">7</div>
-        <div class="box">8</div>
-        <div class="box">9</div>
-        <div class="box">10</div>
-        <div class="box">11</div>
-        <div class="box">12</div>
-        <div class="box">13</div>
-        <div class="box">14</div>
-        <div class="box">15</div>
-        <div class="box">16</div>
+    <div class="container">
+        <div class="color-palette">
+            <div class="color-swatch" style="background-color: red;" draggable="true"></div>
+            <div class="color-swatch" style="background-color: green;" draggable="true"></div>
+            <div class="color-swatch" style="background-color: blue;" draggable="true"></div>
+            <div class="color-swatch" style="background-color: yellow;" draggable="true"></div>
+            <div class="color-swatch" style="background-color: purple;" draggable="true"></div>
+        </div>
+    
+        <div class="box" id="box1">Drop Here</div>
     </div>
-    <style>
-        body {
-    margin: 0;
+    
+</body>
+</html>
+
+<style>
+    body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
 }
 
-#container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 9px;
-    width: 80%;
-    max-width: 1200px;
+.container {
+    text-align: center;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.color-swatch {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    cursor: grab;
+    border-radius: 100%;
 }
 
 .box {
-    background-color: lightgray;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
 }
 
-.box:hover {
-    background-color: #e0e0e0;
-}
+</style>
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    #container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+<script>
+    // Add dragstart event to color swatches
+document.querySelectorAll('.color-swatch').forEach(swatch => {
+    swatch.addEventListener('dragstart', function(e) {
+        e.dataTransfer.setData('color', e.target.style.backgroundColor);
+    });
+});
 
-@media (max-width: 800px) {
-    #container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+// Add dragover event to allow dropping
+document.getElementById('box1').addEventListener('dragover', function(e) {
+    e.preventDefault();  // Necessary to allow dropping
+});
 
-@media (max-width: 500px) {
-    #container {
-        grid-template-columns: 1fr;
-    }
-}
+// Add drop event to change box color
+document.getElementById('box1').addEventListener('drop', function(e) {
+    e.preventDefault();
+    const color = e.dataTransfer.getData('color');
+    e.target.style.backgroundColor = color;
+});
 
-    </style>
-</body>
-</html>
+</script>

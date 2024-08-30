@@ -46,7 +46,7 @@ document.getElementById('input3').addEventListener('change', function() {
   if (this.checked) {
      alert("Hello")
 
-  // document.getElementById('pldub').innerHTML = " <div id='mydiv55'><img id='pl' src='https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png' ><div id='text'>Sun</div></div>"
+  document.getElementById('pldub').innerHTML = " <div id='mydiv55'><img id='pl' src='https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png' ><div id='text'>Sun</div></div>"
 
 
 
