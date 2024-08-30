@@ -63,3 +63,30 @@ document.getElementById('input3').addEventListener('change', function() {
 
 
 
+
+
+
+function co1(){
+      document.getElementById('arrayDisplay').style.background = 'red'
+        document.getElementById('arrayDisplay').style.borderColor = 'red'
+}
+
+function c2(){
+  document.getElementById('arrayDisplay').style.background = 'rgb(0, 0, 0)'
+  document.getElementById('arrayDisplay').style.borderColor = 'rgb(0, 0, 0)'
+}
+
+function c3(){
+  document.getElementById('arrayDisplay').style.background = ' rgb(22, 224, 15)'
+  document.getElementById('arrayDisplay').style.borderColor = ' rgb(22, 224, 15)'
+}
+
+function c4(){
+  document.getElementById('arrayDisplay').style.background = 'rgb(17, 67, 175)'
+   document.getElementById('arrayDisplay').style.borderColor = 'rgb(17, 67, 175)'
+}
+
+function c5(){
+  document.getElementById('arrayDisplay').style.background = 'rgb(68, 7, 109)'
+  document.getElementById('arrayDisplay').style.borderColor = 'rgb(68, 7, 109)'
+}

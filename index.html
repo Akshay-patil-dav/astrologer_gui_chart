@@ -153,9 +153,10 @@
 <style>
   .booo{
     position: relative;
-    bottom: 1cm;
+    bottom: 0.5cm;
   }
 </style>
+
         <br>
 <div class="booo" style=" position: relative; left: 1cm; display: flex; gap: 5.2cm;" >
   <!-- <h4>Lagna Chart</h4> -->
@@ -232,12 +233,48 @@
   height: 1cm;
  }
 
+
+ .ppl{
+  position: fixed;
+  left: 52cm;
+  top: 25cm;
+ }
+
         </style>
 
+        <!-- Modal -->
+<div class="modal fade" id="m1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div style="display: flex; gap: 0.5cm;">
+            <h5 style="position: relative; top: 10px;">  border Color</h5>
+            <button class="color" style="background-color: red;" onclick="co1()"></button>
+            <button class="color" style="background-color: rgb(0, 0, 0);" onclick="c2()"></button>
+            <button class="color" style="background-color: rgb(22, 224, 15);"  onclick="c3()"></button>
+            <button class="color" style="background-color: rgb(17, 67, 175);"  onclick="c4()"></button>
+            <button class="color" style="background-color: rgb(68, 7, 109);"  onclick="c5()"></button>
+         
+          </div>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary " data-bs-dismiss="modal" >Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <br>
-
-
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary ppl" data-bs-toggle="modal" data-bs-target="#m1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+  </svg>
+</button>
     <div class="butt">
       <button id="resetButton"  onclick="remove()" >Reset </button>
       <button id="sett" data-bs-toggle="modal" data-bs-target="#sett1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide" viewBox="0 0 16 16">
@@ -287,7 +324,7 @@
   #p3{
     position: relative;
     /* right: 0cm; */
-    left: 10cm;
+    left: 10.5cm;
     top: 280px;
     width: 0.8cm;
     z-index: +8;
@@ -430,12 +467,12 @@
             </li>
             
             <li>
-                <div id="mydiv2">
+                <div class="mydiv2" id="mydiv2">
                     <img  id="pl" src="https://w7.pngwing.com/pngs/576/257/png-transparent-earth-full-moon-lunar-phase-planet-moon-moon-atmosphere-computer-wallpaper-monochrome-thumbnail.png" alt="">
                     <div id="text2" > Moon</div>
                     </div>
             </li>
-            <li><div id="mydiv">
+            <li><div id="mydiv" class="mydiv">
                 <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gx5sI_2JaRe-i0W1kBr4whgl9Vfol0nMiw&s" alt="">
                 <div id="text3" >Mercury</div>
                 </div>
