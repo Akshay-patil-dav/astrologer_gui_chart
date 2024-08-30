@@ -413,6 +413,8 @@ function remove(){
     document.getElementById('dropBox11').style.backgroundColor = 'rgb(255, 255, 255)';
     // document.getElementById('mydiv8').style.backgroundColor = 'red';
     // document.getElementById('pal').style.display="block"
+         document.getElementById('arrayDisplay').style.background = 'black'
+           document.getElementById('arrayDisplay').style.borderColor = 'black'
 
     // document.getElementById('mydiv8').innerHTML ="<img class='pl' src='https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png'><div>Sun</div>";
 }

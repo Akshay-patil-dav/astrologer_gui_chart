@@ -90,3 +90,93 @@ function c5(){
   document.getElementById('arrayDisplay').style.background = 'rgb(68, 7, 109)'
   document.getElementById('arrayDisplay').style.borderColor = 'rgb(68, 7, 109)'
 }
+
+
+
+
+function B1(){
+  document.getElementById('dropBox'  ).style.background = 'red'
+  document.getElementById('dropBox1' ).style.background = 'red'
+  document.getElementById('dropBox2' ).style.background = 'red'
+  document.getElementById('dropBox3' ).style.background = 'red'
+  document.getElementById('dropBox4' ).style.background = 'red'
+  document.getElementById('dropBox5' ).style.background = 'red'
+  document.getElementById('dropBox6' ).style.background = 'red'
+  document.getElementById('dropBox7' ).style.background = 'red'
+  document.getElementById('dropBox8' ).style.background = 'red'
+  document.getElementById('dropBox9' ).style.background = 'red'
+  document.getElementById('dropBox10').style.background = 'red'
+  document.getElementById('dropBox11').style.background = 'red'
+  
+    // document.getElementById('arrayDisplay').style.borderColor = 'red'
+}
+
+function B2(){
+
+
+document.getElementById('dropBox'  ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox1' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox2' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox3' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox4' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox5' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox6' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox7' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox8' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox9' ).style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox10').style.background = 'rgb(0, 0, 0)'
+document.getElementById('dropBox11').style.background = 'rgb(0, 0, 0)'
+}
+
+function B3(){
+
+
+document.getElementById('dropBox'  ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox1' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox2' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox3' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox4' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox5' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox6' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox7' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox8' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox9' ).style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox10').style.background = 'rgb(22, 224, 15)'
+document.getElementById('dropBox11').style.background = 'rgb(22, 224, 15)'
+}
+
+function B4(){
+
+
+
+document.getElementById('dropBox'  ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox1' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox2' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox3' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox4' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox5' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox6' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox7' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox8' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox9' ).style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox10').style.background = 'rgb(17, 67, 175)'
+document.getElementById('dropBox11').style.background = 'rgb(17, 67, 175)'
+}
+
+function B5(){
+
+
+
+document.getElementById('dropBox'  ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox1' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox2' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox3' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox4' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox5' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox6' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox7' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox8' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox9' ).style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox10').style.background = 'rgb(68, 7, 109)'
+document.getElementById('dropBox11').style.background = 'rgb(68, 7, 109)'
+}
