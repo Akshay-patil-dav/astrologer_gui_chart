@@ -124,7 +124,9 @@
             <div class="box-left">
               <div class="top-ch">
                 <h1 id="chartlagn">Lagna Chart</h1>
-                <button id="clear" class="butt">Remove</button>
+    
+                <button id="clear" style="z-index: 100;" class="butt">Remove</button>
+     
                 <button id="clear" class="butt2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
                   </svg></button>
@@ -327,12 +329,21 @@
                                     <label for=""><b id="penbox">Pen  </b></label>
                                     <div class="pen">
                                          <div class="color-palette2">
-                                            <button class="pen-img" id="startDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                          <!-- *************** -->
+                                            <!-- <button class="pen-img" id="startDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
                                                 <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
                                               </svg></button>
                                               <button class="pen-img3" id="stopDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
                                                 <path d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0"/>
-                                              </svg></button>
+                                              </svg></button> -->
+                                            <!-- ////***************************************** -->
+
+                                              <label class="switch " style="z-index: 100; position: relative; top: 10px;left: 5px;">
+                                                <input type="checkbox" id="startDrawing">sked.
+                                                <span class="slider round"></span>
+                                              </label>
+
+
                                               <button class="pen-img4" id="eraseDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                                 <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                                               </svg></button>
@@ -403,13 +414,13 @@
                    <!-- *************************************************** -->
            
                    <div class="sel11"> 
-                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
+                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="value1"  onchange="box1sel(this.value)" >
                       <option id="o1"  selected>Open this select menu</option>
                       <option id="o2" value="Aries"> Aries</option>
                       <option id="o3" value="Taurus">Taurus</option>
-                      <option id="o4" value="Gemini">Gemini</option>
-                      <option id="o5" value="Cancer">Cancer</option>
-                      <option id="o6" value="Leo">Image uplode</option>
+                      <option id="o4" value="popup1">Gemini</option>
+                      <option id="o5" value="popup2">Custome image</option>
+                    
                   
                       <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
                     </select> </div>
@@ -435,6 +446,50 @@
 
 
 <!-- *********************************colorbox*************************************************** -->
+
+    <!-- Popup 1 -->
+    <div id="popup1" class="popup">
+      <div class="popup-content">
+          <span class="closeBtn">&times;</span>
+          <h2>Popup 1</h2>
+         <div>
+          <input type="file" id="FileUpload">
+<input type="button" id="btnFile" value="Upload">
+         </div>
+      </div>
+  </div>
+
+  <!-- Popup 2 -->
+  <div id="popup2" class="popup">
+      <div class="popup-content">
+          <span class="closeBtn">&times;</span>
+          <h2>Popup 2</h2>
+          <p>This is the second popup window.</p>
+      </div>
+  </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="imguplode" tabindex="-1" aria-labelledby="imguplode" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
  <!-- Modal -->
 
 <!-- Modal -->
@@ -494,7 +549,7 @@
   </div>
   
   
-
+<script src="./js/popup.js"></script>
 <script src="./js/lang.js"></script>
 <script src="./js/img-logo.js"></script>
 <script src="./js/dra.js"></script>

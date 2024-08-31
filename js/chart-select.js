@@ -133,3 +133,8 @@ function NUM(val) {
             
             
     
+// ************************************
+
+// function box1sel(val1){
+//   alert(val1)
+// }

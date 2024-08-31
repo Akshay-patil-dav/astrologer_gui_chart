@@ -69,7 +69,7 @@ function LANG(lang){
 
     document.getElementById('fullname1').innerHTML= 'पूरा नाम'
     document.getElementById('mail2').innerHTML= 'ईमेल आईडी'
-    document.getElementById('ph3').innerHTML=  'फोन नंबर'
+    document.getElementById('ph3').innerHTML=  'फोन नंबर' 
 
     document.getElementById('colorbox').innerHTML ='रंग'
     document.getElementById('penbox').innerHTML = 'कलम'

@@ -48,20 +48,41 @@ drawingArea.addEventListener('mousemove', (event) => {
     }
 });
 
-document.getElementById('startDrawing').addEventListener('click', () => {
-    // alert("jskdfjm")
-    document.getElementById('drawingArea').style.zIndex = '30';
-    isDrawingEnabled = true;
-    document.body.style.cursor = 'default';
+
+
+
+
+document.getElementById('startDrawing').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('drawingArea').style.zIndex = '30';
+        isDrawingEnabled = true;
+        document.body.style.cursor = 'default';
+    }else{
+        document.getElementById('drawingArea').style.zIndex = '1';
+
+        isDrawingEnabled = false;
+        isDrawing = false;
+        document.body.style.cursor = 'default';
+    }
 });
 
-document.getElementById('stopDrawing').addEventListener('click', () => {
-    document.getElementById('drawingArea').style.zIndex = '4';
 
-    isDrawingEnabled = false;
-    isDrawing = false;
-    document.body.style.cursor = 'default';
-});
+
+
+// document.getElementById('startDrawing').addEventListener('click', () => {
+//     // alert("jskdfjm")
+//     document.getElementById('drawingArea').style.zIndex = '30';
+//     isDrawingEnabled = true;
+//     document.body.style.cursor = 'default';
+// });
+
+// document.getElementById('stopDrawing').addEventListener('click', () => {
+//     document.getElementById('drawingArea').style.zIndex = '2';
+
+//     isDrawingEnabled = false;
+//     isDrawing = false;
+//     document.body.style.cursor = 'default';
+// });
 
 document.getElementById('eraseDrawing').addEventListener('click', () => {
     ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
@@ -70,3 +91,4 @@ document.getElementById('eraseDrawing').addEventListener('click', () => {
 function setColor(selectedColor) {
     color = selectedColor;
 }
+

@@ -89,6 +89,11 @@
       
 
 
+      #text6{
+        position: relative;
+        right: 5px;
+      }
+
 
       #text11{
         display: none;

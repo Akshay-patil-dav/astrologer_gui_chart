@@ -30,7 +30,7 @@ max-width: 10px;
 position: absolute;
 /* top: -9cm; */
 top: 2.4cm;
-
+/* opacity: 0.5; */
 rotate: 45deg;
 
 }
@@ -38,6 +38,7 @@ rotate: 45deg;
 #arrayDisplay{
 position:relative;
 /* background-color: rgb(0, 0, 0); */
+opacity: 0.8;
 overflow: hidden;
 height: 490px; 
 width: 490px;
