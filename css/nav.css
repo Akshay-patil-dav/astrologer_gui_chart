@@ -1,0 +1,53 @@
+#imagePreview{
+    width: 30%;
+    height: 3.2cm;
+    position: relative;
+    left: 1cm;
+    /* top: 25px; */
+    aspect-ratio: 3/2;
+    object-fit: contain;
+     
+ }
+ 
+   /* Hide the real file input */
+   input[type="file"] {
+     display: none;
+ }
+ 
+
+ /* Custom button styling */
+ .custom-file-upload {
+     display: inline-block;
+     padding: 10px 20px;
+     cursor: pointer;
+     /* background-color: #007bff; */
+     color: #000000;
+     border-radius: 5px;
+     font-size: 30px;
+     text-align: center;
+     position: relative;
+     top: 25px;
+ }
+
+ /* Display the file name after selection */
+ .file-name {
+     margin-top: 10px;
+     font-size: 14px;
+     color: #555;
+ }
+ .lg{
+     width: 35%;
+     margin-left: 15cm;
+ }
+ nav{
+   position: relative;
+   /* bottom: 1cm; */
+ }
+ .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+   display: none;
+ }
+
+
+
+
+ 

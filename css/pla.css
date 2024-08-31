@@ -1,0 +1,146 @@
+#p7{
+    width: 0.5cm;
+    /* background-color: red; */
+    position: relative;
+    left: 11.6cm;
+  
+    top: -250px;
+    /* bottom: ; */
+  }
+      body{
+          /* overflow: hidden; */
+      }
+      ul{
+          /* gap: 0.5cm; */
+          position: relative;
+          /* left: 5cm; */
+          bottom:1cm;
+          /* display: grid;   display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      width: 80%;
+      max-width: 1200px; */
+      left: -1.2cm;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* gap: 9px; */
+      width: 1000%;
+      max-width: 10px;
+      /* border: 1px solid; */
+      /* border: 1px solid; */
+  
+              
+      }
+  
+      li{
+          padding: 26px;
+
+          display: flex;
+          cursor: pointer;
+          /* border: 1px solid; */
+          position: relative;
+          top: 0.4cm;
+          /* right: 2.5cm; */
+      }
+      #pl{
+          width: 100%;
+          aspect-ratio: 3/2;
+          object-fit: contain;
+          /* display: none; */
+             
+      }
+      #pal{
+        border: 1px solid;
+
+        width: 13cm;
+        border-radius: 10px;
+        position: relative;
+        height: 1.5cm;
+        /* left: m; */
+        top: 1cm;
+        bottom: -0.2cm;
+      }
+
+      .lp{
+        position: relative;
+        top: 1cm;
+      }
+      
+
+
+
+
+
+
+
+
+
+          
+      #mydiv,  #mydiv1 , #mydiv2 , #mydiv3 , #mydiv4 , #mydiv5, #mydiv6 , #mydiv7, #mydiv8 , #mydiv9 , .mydiv8{
+        position: absolute;
+        z-index: 9;
+        /* background-color: #f1f1f1; */
+        width: 1cm;
+        border-radius: 10%;
+        text-align: center;
+        /* border: 1px solid #d3d3d3; */
+        
+      }
+      
+
+
+
+      #text11{
+        display: none;
+      }
+
+      
+      #text22{
+        display: none;
+      }
+
+      
+      #text33{
+        display: none;
+      }
+
+      
+      #text44{
+        display: none;
+      }
+
+      
+      #text55{
+        display: none;
+      }
+
+      
+      #text66{
+        display: none;
+      }
+
+      
+      #text77{
+        display: none;
+      }
+
+      
+      #text88{
+        display: none;
+      }
+
+      
+      #text{
+        display: none;
+      }
+
+
+
+
+
+      .form-switch{
+        position: relative;
+        top: 1cm;
+        left: 4.2cm;
+        z-index: +5;
+      }

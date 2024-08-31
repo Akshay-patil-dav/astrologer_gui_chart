@@ -5,63 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./p.css">
+    <link rel="stylesheet" href="./chart.css">
+    <link rel="stylesheet" href="./dub.css">
+    <link rel="stylesheet" href="./css/butt.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chart.css">
+    
+    <link rel="stylesheet" href="./css/box-flx.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body >
-    <style>
-      
-        #imagePreview{
-           width: 30%;
-           height: 3.2cm;
-           position: relative;
-           left: 1cm;
-           /* top: 25px; */
-           aspect-ratio: 3/2;
-           object-fit: contain;
-            
-        }
-        
-          /* Hide the real file input */
-          input[type="file"] {
-            display: none;
-        }
-        
 
-        /* Custom button styling */
-        .custom-file-upload {
-            display: inline-block;
-            padding: 10px 20px;
-            cursor: pointer;
-            /* background-color: #007bff; */
-            color: #000000;
-            border-radius: 5px;
-            font-size: 30px;
-            text-align: center;
-            position: relative;
-            top: 25px;
-        }
-
-        /* Display the file name after selection */
-        .file-name {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-        .lg{
-            width: 35%;
-            margin-left: 15cm;
-        }
-        nav{
-          position: relative;
-          /* bottom: 1cm; */
-        }
-        .VIpgJd-ZVi9od-l4eHX-hSRGPd{
-          display: none;
-        }
-      
-    </style>
-      <script>
+    <!-- ***********************************nav*************************************************************** -->
+    <script>
         function fullname(val) {
           document.getElementById('name').innerHTML=val;
         }
@@ -108,7 +66,7 @@
                         }
                      </style>
 <button type="button" class="btn bg-body-tertiary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Full Name : <b id="name">Akshay</b> &#160 &#160 E-mail ID : <b id="email">name@example.com</b> &#160 &#160 Phone No : <b id="phone">+91-54654646546</b>
+  <b id="fullname">  Full Name </b>: <b id="name">Akshay</b> &#160 &#160 <b id="mail">E-mail ID </b>: <b id="email">name@example.com</b> &#160 &#160 <b id="ph"> Phone No :</b> <b id="phone">+91-54654646546</b>
   </button>
   
   <!-- Modal -->
@@ -121,17 +79,17 @@
         </div>
         <div class="modal-body">
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                <label for="exampleFormControlInput1" class="form-label" id="fullname1">Full Name</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" value="Akshay" onchange="fullname(this.value)" placeholder="User Name">
               </div>
 
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <label for="exampleFormControlInput1" class="form-label" id="mail2">Email address</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" value="name@example.com" onchange="email(this.value)" placeholder="name@example.com">
               </div>
 
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Phone No</label>
+                <label for="exampleFormControlInput1" class="form-label" id="ph3">Phone No</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" value="+91-54654646546" onchange="phone(this.value)" placeholder="Phone No">
               </div>
               
@@ -149,665 +107,404 @@
 
         </div>
       </nav>
-          <!-- *******************************************Charts*****************************************************************************/ -->
-<style>
-  .booo{
-    position: relative;
-    bottom: 0.5cm;
-  }
-</style>
 
-        <br>
-<div class="booo" style=" position: relative; left: 1cm; display: flex; gap: 5.2cm;" >
-  <!-- <h4>Lagna Chart</h4> -->
-  <!-- <button id="reset" onclick="remove()" >Reset</button> -->
+
+      <canvas id="drawingArea">
+
+      </canvas>
+      
+
+      
+<!-- *********************************************navend************************************************************************************************************ -->
 
 
 
+        <div class="box-top-al">
 
+            <div class="box-left">
+              <div class="top-ch">
+                <h1 id="chartlagn">Lagna Chart</h1>
+                <button id="clear" class="butt">Remove</button>
+                <button id="clear" class="butt2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+                  </svg></button>
 
-   
-      <div>
-       
-
-        <style>
-            .box {
-  width:700px;
-  height:550px;
-  border:3px solid;
-  display:flex;
-  margin: 1cm;
-  margin-left: 15cm;
-  flex-wrap:wrap;
-  background:
-    linear-gradient(to top right,transparent calc(50% - 2px), #000 calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 2px)),
-    linear-gradient(to top left ,transparent calc(50% - 2px), #000 calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 2px));
-  background-size:50% 50%;
-   
-  counter-reset:num;
-  overflow:hidden;
-  resize:both;
-}
-.box span {
-  flex-grow:1;
-  flex-basis:50%;
-  height:25%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-
-.box span:nth-child(3),
-.box span:nth-child(5),
-.box span:nth-child(9),
-.box span:nth-child(11) {
-  flex-basis:5%;
-}
-.box span:nth-child(2),
-.box span:nth-child(6),
-.box span:nth-child(8),
-.box span:nth-child(12) {
-  height:12.5%;
-}
-
-/* span:before {
-  content:counter(num);
-  counter-increment:num;
-} */
- #resetButton{
-
-  width: 3cm;
- }
- .butt{
-  position: relative;
-  left: 12.5cm;
- }
- #sett{
-  background-color: blue;
-  color: white;
-  font-family: Arial black;
-  border: 0px solid;
-  border-radius: 10px;
-  width: 1cm;
-  height: 1cm;
- }
-
-
- .ppl{
-  position: fixed;
-  left: 52cm;
-  top: 25cm;
- }
-
-        </style>
-
-        <!-- Modal -->
-<div class="modal fade" id="m1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-...........................................
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-primary " data-bs-dismiss="modal" >Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary ppl" data-bs-toggle="modal" data-bs-target="#m1">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
-  </svg>
-</button>
-    <div class="butt">
-      <button id="resetButton"  onclick="remove()" >Reset </button>
-      <button id="sett" data-bs-toggle="modal" data-bs-target="#sett1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-wide" viewBox="0 0 16 16">
-        <path d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434zM8 12.997a4.998 4.998 0 1 1 0-9.995 4.998 4.998 0 0 1 0 9.996z"/>
-      </svg></button>
-    </div>
-
-
-<h3 id="p3" style=" font-size: 20px;" >10</h3>
-<div class="box11" >
-
-
-<!-- *********************************************************************************** -->
-
-
-<div id="arrayDisplay"  >
-<style>
-  .h00{
-    position: relative;
-    top: 2.5cm;
-    /* left: 1cm; */
-    margin-left: 0.5cm;
-    /* right: -5cm; */
-  }
-  #p1{
-    position: relative;
-    top: 3cm;
-    margin-left: 2.4cm;
-  }
-  #p5{
-    position: relative;
-    /* top: 3cm; */
-    bottom: 0.2cm;
-    margin-left: 2.5cm;
-  }
-  #p7{
-    position: relative;
-    /* top: -7cm; */
-    /* bottom:1cm; */
-    width: 1cm;
-    margin-right: 5cm;
-    bottom: 8cm;
-    
-    z-index: +5;
-    
-  }
-  #p3{
-    position: relative;
-    /* right: 0cm; */
-    left: 10.5cm;
-    top: 280px;
-    width: 0.8cm;
-    z-index: +8;
-  }
-</style>
-
-  <div class="boxx" > 
-    <div class="losange"   id="dropBox"  ><h3 id="p1"  class="h3" style=" font-size: 20px;" >1 </h3></div>
-    <div class="losange11" id="dropBox1" ><h3 id="p2"  class="h00"                          >12</h3></div>
-    <div class="losange12" id="dropBox2" ></div>
-    <div class="losange22" id="dropBox3" ><h3 id="p4"  class="h44"                          >11</h3></div>
-    <div class="losange33" id="dropBox4" ><h3 id="p5"  class="h3" style=" font-size: 20px;" >4 </h3></div>
-    <div class="losange44" id="dropBox5" ><h3 id="p6"  class="h44"                          >9 </h3></div>
-    <div class="losange55" id="dropBox6" ></div>
-    <div class="losange66" id="dropBox7" ><h3 id="p8"  class="h66"                          >8 </h3></div>
-    <div class="losange77" id="dropBox8" ><h3 id="p9"  class="h66"                          >6 </h3></div>
-    <div class="losange88" id="dropBox9" ><h3 id="p10"  class="h88"                          >5 </h3></div>
-    <div class="losange99" id="dropBox10"><h3 id="p11"  class="h88"                          >3 </h3></div>
-    <div class="losange00" id="dropBox11"><h3 id="p12"  class="h00"                          >2 </h3></div>
-    </div>
-
-</div>
-
-<h3 id="p7"   style=" font-size: 20px;" >7 </h3>
-
-      <div>
-        
-<style>
-#p7{
-  width: 0.5cm;
-  /* background-color: red; */
-  position: relative;
-  left: 11.6cm;
-
-  top: -250px;
-  /* bottom: ; */
-}
-    body{
-        /* overflow: hidden; */
-    }
-    ul{
-        /* gap: 0.5cm; */
-        position: relative;
-        /* left: 5cm; */
-        bottom:1cm;
-        /* display: grid;   display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 9px;
-    width: 80%;
-    max-width: 1200px; */
-    left: 1cm;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* gap: 9px; */
-    width: 1000%;
-    max-width: 10px;
-    /* border: 1px solid; */
-    /* border: 1px solid; */
-
-            
-    }
-
-    li{
-        padding: 1cm;
-        display: flex;
-        cursor: pointer;
-        /* border: 1px solid; */
-        position: relative;
-        right: 2cm;
-    }
-    #pl{
-        width: 100%;
-        aspect-ratio: 3/2;
-        object-fit: contain;
-        /* display: none; */
-           
-    }
-    #pal{
-      border: 1px solid;
-      width: 19cm;
-      position: relative;
-      height: 1.5cm;
-      left: 2cm;
-      /* top: 1cm; */
-      bottom: -0.2cm;
-    }
-    
-
-</style>
-          <div style="display: flex; gap: 1cm; position: relative; left: 9cm;">
-            
-          <div class="" style="display: flex;">
-            <label for="" style="font-family: Arial black;" >Names</label><br>
-            <label class="switch">
-            
-              <input  id="input2" type="checkbox" >
-              <span class="slider round"></span>
-            </label>
-          </div>
-
-          <div class="" style="display: flex;">
-            <label for="" style="font-family: Arial black;" >Icon</label><br>
-            <label class="switch">
-            
-              <input  id="input" type="checkbox" >
-              <span class="slider round"></span>
-            </label>
-          </div>
-
-          <div class="" style="display: flex;" >
-            <label for="" style="font-family: Arial black;" >Dubalicate</label><br>
-            <label class="switch">
-            
-              <input  id="input22" type="checkbox" >
-              <span class="slider round"></span>
-            </label>
-          </div>
-          
-          </div>
-
-<div id="pal" >
-        <ul  >
-             <li  > 
-              <style>
-            
-              </style>
-
-              
-                <div id="mydiv8"  class="mydiv8">
-                  <!-- <div > -->
-                    <img id="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
-                    <div id="text1" > Sun</div>
-                  </div>
-
+                  <div  class="lan" style="display: flex;">    <label for="" class="langg" style="font-family: Arial black;" >language </label><br>
+                    <select class="form-select form-select-lg mb-3 sellll" aria-label="Large select example" id="lang"  onchange="LANG(this.value)" >
+                      <option value="Eng"> Eng</option>
+                      <option value="Hin">Hin</option>
                   
-
-                    <p id="pldub" >
-                      
-                    </p>
-            </li>
-            
-            <li>
-                <div class="mydiv2" id="mydiv2">
-                    <img  id="pl" src="https://w7.pngwing.com/pngs/576/257/png-transparent-earth-full-moon-lunar-phase-planet-moon-moon-atmosphere-computer-wallpaper-monochrome-thumbnail.png" alt="">
-                    <div id="text2" > Moon</div>
-                    </div>
-            </li>
-            <li><div id="mydiv" class="mydiv">
-                <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gx5sI_2JaRe-i0W1kBr4whgl9Vfol0nMiw&s" alt="">
-                <div id="text3" >Mercury</div>
-                </div>
-                </li>
-            <li>
+                      <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
+                    </select> </div>
+              </div>
+                <div id="arrayDisplay">
+                    <div class="box">
                 
-                    <div id="mydiv1">
-                        <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3vxhkh6H2-LqkJcCGk36tJz8Tg3EHLWanQ&s" alt="">
-                        <div id="text4" >venus</div>
+                        <div class="b2" >
+                            <div id="dropBox1" class="box2"></div>
+                            <div id="dropBox2" class="box2"></div>
+                            <div id="dropBox3" class="box2"></div>
+                            <div id="dropBox4" class="box2"></div>
+                            <div id="dropBox5" class="box2"></div>
+                            <div id="dropBox6" class="box2"></div>
+                            <div id="dropBox7" class="box2"></div>
+                            <div id="dropBox8" class="box2"></div>
+                            <div id="dropBox9" class="box2"></div>
+                            <div id="dropBox10" class="box2"></div>
+                            <div id="dropBox11" class="box2"></div>
+                            <div id="dropBox12" class="box2"></div>
+                            <div id="dropBox13" class="box2"></div>
+                            <div id="dropBox14" class="box2"></div>
+                            <div id="dropBox15" class="box2"></div>
+                            <div id="dropBox16" class="box2"></div>
+                            <div id="dropBox17" class="box2"></div>
+                            <div id="dropBox18" class="box2"></div>
+                            <div id="dropBox19" class="box2"></div>
+                            <div id="dropBox20" class="box2"></div>
+                            <div id="dropBox21" class="box2"></div>
+                            <div id="dropBox22" class="box2"></div>
+                            <div id="dropBox23" class="box2"></div>
+                            <div id="dropBox24" class="box2"></div>
                         </div>
-                
-            </li>
-        
-            <li>
-                <div id="mydiv3">
-                    <img id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeksFtqTWHTRuXVIspqVOjf1gDs9q-pSGHDw&s" alt="">
-                    <div id="text5" >Mars</div>
                     </div>
-            </li>
-            <li>
-                <div id="mydiv4">
-                    <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJ5SPrwFzu4giI0xFeWXVxIsKNlz7CsGecg&s" alt="">
-                    <div id="text6">Jupiter</div>
+                            <div class="numflax" >
+                                <div id="nu1" ><h4 id="n1">1 </h4></div>
+                                <div id="nu2" ><h4 id="n2">2 </h4></div>
+                                <div id="nu3" ><h4 id="n3">3 </h4></div>
+                                <div id="nu4" ><h4 id="n4">4 </h4></div>
+                                <div id="nu5" ><h4 id="n5">5 </h4></div>
+                                <div id="nu6" ><h4 id="n6">6 </h4></div>
+                                <div id="nu7" ><h4 id="n7">7 </h4></div>
+                                <div id="nu8" ><h4 id="n8">8 </h4></div>
+                                <div id="nu9" ><h4 id="n9">9 </h4></div>
+                               <div id="nu10" ><h4 id="n10">10</h4></div>
+                               <div id="nu11" ><h4 id="n11">11</h4></div>
+                               <div id="nu12" ><h4 id="n12">12</h4></div>
+                            
+                            </div>
                     </div>
-            </li>
-          
-            <li>
-                <div id="mydiv6">
-                    <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQe-DwV3cTZoWGIUu1Jjufr8o0cf5due2vg&s" alt="">
-                    <div id="text7" >Saturn</div>
-                    </div>
-            </li>
-            <li>
-                <div id="mydiv7">
-                    <img id="pl" src="https://www.rahu.in/images/mercury.png" alt="">
-                    <div id="text8" >Rahu</div>
-                    </div>
-            </li>
+<!-- ***********************************************************planetbox***************************************************************** -->
+ <div>
 
-           
-
-            <li>
-                <div id="mydiv9">
-                    <img class="pl" id="pl" src="https://png.pngtree.com/png-clipart/20210803/ourmid/pngtree-abstract-style-black-and-white-watercolor-moon-illustration-png-image_3768678.png" alt="">
-                    <div id="text9" >Ketu</div>
-                    </div>
-            </li>
-          
-        </ul>
-       </div> 
-
-
-
-
-
-     <div style="display: flex; gap: 1cm;" >
-      <div id="colorPalette">
-        <div class="color" style="background-color: rgb(197, 57, 57);" draggable="true"></div>
-        <!-- <div class="color" style="background-color: rgb(130, 199, 130);" draggable="true"></div> -->
-        <!-- <div class="color" style="background-color: rgb(125, 125, 185);" draggable="true"></div> -->
-        <div class="color" style="background-color: rgb(228, 130, 130);" draggable="true"></div>
-        <div class="color" style="background-color: rgb(113, 223, 199);" draggable="true"></div>
-        <!-- <div class="color" style="background-color: rgb(250, 201, 94);" draggable="true"></div> -->
-        <div class="color" style="background-color: rgb(57, 209, 78);" draggable="true"></div>
-        <div class="color" style="background-color: rgb(255, 255, 255);" draggable="true"></div>
-        <!-- <div class="color" style="background-color: rgb(99, 226, 177);" draggable="true"></div> -->
-        <!-- <div class="color" style="background-color: rgb(145, 168, 148);" draggable="true"></div> -->
-        <!-- <div class="color" style="background-color: rgb(247, 177, 235);" draggable="true"></div> -->
-        <!-- <div class="color" style="background-color: rgb(168, 211, 160);" draggable="true"></div> -->
-   
-      </div>
-        <div id="toolbar">
-        
-    
-        </div>
-
-        <div id="toolbar">
-        
-    
-        </div>
+  <div style="display: flex; gap: 1cm;">
+    <h6 class="lp">Planate</h6>
+    <div class="form-check form-switch">
+        <label for="" id="namemm">Full Name</label>
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
      </div>
-      <!-- <div id="dropBox"></div> -->
-  
-      <style>
 
-        #toolbar{
-          display: flex;
-      gap: 10px;
-      position: relative;
-      top: 1.5cm;
-      left: 2cm;
-      border: 1px solid;
-      width: 3cm;
-      position: relative;
-      height: 1.5cm;
+     <div class="form-check form-switch">
+        <label for="" id="icons"> Icons</label>
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+     </div>
+  </div>
+<div id="pal" >
+    <ul  >
+         <li  > 
+          <style>
+        
+          </style>
 
-        }
-.eraser {
-    padding: 5px 18px;
-    position: relative;
-    left: 1.3cm;
-    border: none;
-    background-color: #ddd;
-    border-radius: 5px;
-
-    cursor: pointer;
-}
-  #colorPalette {
-      display: flex;
-      gap: 10px;
-      position: relative;
-      top: 1.5cm;
-      left: 2cm;
-      border: 1px solid;
-      width: 9cm;
-      position: relative;
-      height: 1.5cm;
-  }
-  
-  .color {
-    
-      width:  1cm;
-      height: 1cm;
-      cursor: pointer;
-      border-radius: 50%;
-      border: 1px solid #ccc;
-      position: relative;
-      top: 5px;
-      left: 40px;
-      /* text-align: center; */
-  }
-  
-  #dropBox , #dropBox2 , #dropBox2 , #dropBox3 , #dropBox4 , #dropBox5, #dropBox6, #dropBox7 , #dropBox8 , #dropBox9, #dropBox10 , #dropBox11 {
-
-      transition: all 0.3s ease;
-  }
-  
-      </style>
-
-  
-
-
-        <style>
-     
-            
-         
-           #mydiv,  #mydiv1 , #mydiv2 , #mydiv3 , #mydiv4 , #mydiv5, #mydiv6 , #mydiv7, #mydiv8 , #mydiv9 , .mydiv8{
-              position: absolute;
-              z-index: 9;
-              /* background-color: #f1f1f1; */
-              width: 1cm;
-              border-radius: 10%;
-              text-align: center;
-              /* border: 1px solid #d3d3d3; */
-              
+          <style>
+            .tex{
+              display: flex;
             }
-            
-        
-        
-            </style>
-      </div>
+          </style>
+            <div id="mydiv8"  class="mydiv8">
+              <!-- <div > -->
+                <img id="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
+                <div  class="tex">
+                  <div id="text1" > Sun</div>
+                  <div id="text11">Su</div>
+                </div>
+              </div>
 
+              
+
+                <p id="pldub" >
+                  
+                </p>
+        </li>
+        
+        <li>
+            <div class="mydiv2" id="mydiv2">
+                <img  id="pl" src="https://w7.pngwing.com/pngs/576/257/png-transparent-earth-full-moon-lunar-phase-planet-moon-moon-atmosphere-computer-wallpaper-monochrome-thumbnail.png" alt="">
+                <div class="tex">
+                  <div id="text2" > Moon</div>
+                  <div id="text22" > Mo</div>
+                </div>
+                </div>
+        </li>
+        <li><div id="mydiv" class="mydiv">
+            <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gx5sI_2JaRe-i0W1kBr4whgl9Vfol0nMiw&s" alt="">
+            
+            <div class="tex">
+              <div id="text3" >Mercury</div>
+              <div id="text33" >Mer</div>
+            </div>
+            </div>
+            </li>
+        <li>
+            
+                <div id="mydiv1">
+                    <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3vxhkh6H2-LqkJcCGk36tJz8Tg3EHLWanQ&s" alt="">
+                   <div class="tex">
+                    <div id="text4" >venus</div>
+                    <div id="text44" >ven</div>
+                   </div>
+                    </div>
+            
+        </li>
+    
+        <li>
+            <div id="mydiv3">
+                <img id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeksFtqTWHTRuXVIspqVOjf1gDs9q-pSGHDw&s" alt="">
+                <div class="tex">
+                  <div id="text5" >Mars</div>
+                  <div id="text55" >Mar</div>
+                </div>
+                </div>
+        </li>
+        <li>
+            <div id="mydiv4">
+                <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJ5SPrwFzu4giI0xFeWXVxIsKNlz7CsGecg&s" alt="">
+               <div class="tex">
+                <div id="text6">Jupiter</div>
+                <div id="text66">Jup</div>
+               </div>
+                </div>
+        </li>
+      
+        <li>
+            <div id="mydiv6">
+                <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQe-DwV3cTZoWGIUu1Jjufr8o0cf5due2vg&s" alt="">
+                <div class="tex">
+                  <div id="text7" >Saturn</div>
+                  <div id="text77" >Sat</div>
+                </div>
+                </div>
+        </li>
+        <li>
+            <div id="mydiv7">
+                <img id="pl" src="https://www.rahu.in/images/mercury.png" alt="">
+              <div class="tex">
+                <div id="text8" >Rahu</div>
+                <div id="text88" >Rah</div>
+              </div>
+                </div>
+        </li>
 
        
-        <style>
-          .pp{
-            /* color: white; */
-            font-size: 20px;
-            position: relative;
-            
-          }
-        </style>
 
-<!-- <div class="box" id="n" >
-  <span style="order:4">1</span>
-  <span style="order:1">2</span>
-  <span style="order:3">3</span>
-  <span style="order:6">4</span>
-  <span style="order:8">5</span>
-  <span style="order:11">6</span>
-  <span style="order:9">7</span>
-  <span style="order:12">8</span>
-  <span style="order:10">9</span>
-  <span style="order:7">10</span>
-  <span style="order:5">11</span>
-  <span style="order:2">12</span>
-</div> -->
+        <li>
+            <div id="mydiv9">
+                <img class="pl" id="pl" src="https://png.pngtree.com/png-clipart/20210803/ourmid/pngtree-abstract-style-black-and-white-watercolor-moon-illustration-png-image_3768678.png" alt="">
+                <div class="tex">
+                  <div id="text9" >Ketu</div>
+                  <div id="text99" >Ket</div>
+                </div>
+                </div>
+        </li>
+      
+    </ul>
+</div> </div>
+                            <!-- **************colorbox********************************* -->
+                        <div style="display: flex;">
+                            <div class="col1">
+                                <div class="col"  >
+                                    <label for=""><b id="colorbox">Color  </b></label>
+                                    <div class="color-palette">
+                                        <div class="color-swatch" style="background-color: rgb(255, 123, 123);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(132, 255, 132);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(122, 122, 255);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(255, 255, 136);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(255, 255, 255); border: 1px solid;" draggable="true"></div>
+                                    </div>
+                                </div>
+                             </div>
+                            
+                                <div class="col"  >
+                                    <label for=""><b id="penbox">Pen  </b></label>
+                                    <div class="pen">
+                                         <div class="color-palette2">
+                                            <button class="pen-img" id="startDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+                                              </svg></button>
+                                              <button class="pen-img3" id="stopDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
+                                                <path d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0"/>
+                                              </svg></button>
+                                              <button class="pen-img4" id="eraseDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                              </svg></button>
+                                        <!-- <div class="color-swatch" style="background-color: rgb(132, 255, 132);" draggable="true"></div> -->
+                                        <input type="color" class="colorbox">
+                                        <!-- <div class="color-swatch" style="background-color: rgb(255, 255, 136);" draggable="true"></div> -->
+                                        <!-- <div class="color-swatch" style="background-color: rgb(255, 255, 255); border: 1px solid;" draggable="true"></div> -->
+                                   
+                                    </div>
+                                          
+                                          
+                                       </div> 
+                                       
+                               </div>
+
+                               <div class="buts"  >
+                                <label for=""><b id="arrowbox">Arrow  </b></label>
+                                <div class="pen1">
+
+                                    <button class="pen-img" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+                                        <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+                                      </svg></button>
+
+                                   </div> 
+                           </div>
+                        </div>
+            </div>
+
+            <!-- *************************************************** -->
+            <div class="box-center">
+                                                  
+                              
+          <div class="sel11"> 
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
+              <option id="o1"  selected>Open this select menu</option>
+              <option id="o2" value="Aries"> Aries</option>
+              <option id="o3" value="Taurus">Taurus</option>
+              <option id="o4" value="Gemini">Gemini</option>
+              <option id="o5" value="Cancer">Cancer</option>
+              <option id="o6" value="Leo">Leo</option>
+              <option id="o7" value="Virgo">Virgo</option>
+              <option id="o8" value="Libra">Libra</option>
+              <option id="o9" value="Scorpio">Scorpio</option>
+              <option id="o10" value="Sagittarius">Sagittarius</option>
+              <option id="o11" value="Capricorn">Capricorn</option>
+              <option id="o12" value="Aquarius">Aquarius</option>
+              <option id="o13" value="Pisces">Pisces</option>
+              <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
+            </select> </div>
+                        <div class="box21" style="position: relative; top: 0.3cm;">
 
 
-<style>
-  .selpla{
-    width: 12cm; 
-    margin-left: 2cm; 
-    position: relative;
-     top: 2cm; 
-     display: flex; gap: 1cm; 
-  }
-</style>
+                
+                            <div  id="cardbox1">
+                              
 
 
+
+                            </div>
+                            
+                        </div>
+
+            </div>
+
+            <!-- ****************************************************************** -->
+            <div class="box-right">
+
+                   <!-- *************************************************** -->
+           
+                   <div class="sel11"> 
+                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
+                      <option id="o1"  selected>Open this select menu</option>
+                      <option id="o2" value="Aries"> Aries</option>
+                      <option id="o3" value="Taurus">Taurus</option>
+                      <option id="o4" value="Gemini">Gemini</option>
+                      <option id="o5" value="Cancer">Cancer</option>
+                      <option id="o6" value="Leo">Image uplode</option>
+                  
+                      <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
+                    </select> </div>
+                <!-- <br><br><br> -->
+                    <div class="box21">
+                        <div  id="cardbox1" >
+                            
+                        </div>
+                        
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<!-- *********************************colorbox*************************************************** -->
+ <!-- Modal -->
 
 <!-- Modal -->
-<div class="modal fade" id="sett1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-        <div>   <label for="" style="font-family: Arial black;" >Select </label><br>
-        <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
-          <option selected>Open this select menu</option>
-          <option value="Aries"> Aries</option>
-          <option value="Taurus">Taurus</option>
-          <option value="Gemini">Gemini</option>
-          <option value="Cancer">Cancer</option>
-          <option value="Leo">Leo</option>
-          <option value="Virgo">Virgo</option>
-          <option value="Libra">Libra</option>
-          <option value="Scorpio">Scorpio</option>
-          <option value="Sagittarius">Sagittarius</option>
-          <option value="Capricorn">Capricorn</option>
-          <option value="Aquarius">Aquarius</option>
-          <option value="Pisces">Pisces</option>
-          <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
-        </select> </div>
-
-        <div style="display: flex; gap: 0.5cm;">
-          <h5 style="position: relative; top: 10px;">  Border Color</h5>
-          <button class="color" style="background-color: red;" onclick="co1()"></button>
-          <button class="color" style="background-color: rgb(0, 0, 0);" onclick="c2()"></button>
-          <button class="color" style="background-color: rgb(22, 224, 15);"  onclick="c3()"></button>
-          <button class="color" style="background-color: rgb(17, 67, 175);"  onclick="c4()"></button>
-          <button class="color" style="background-color: rgb(68, 7, 109);"  onclick="c5()"></button>
-       
+<div class="modal fade" id="set1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-<br><br>
-        <div style="display: flex; gap: 0.5cm;">
-          <h5 style="position: relative; top: 10px;">  Box Color &#160 &#160&#160</h5>
-          <button class="color" style="background-color: red;" onclick="B1()"></button>
-          <button class="color" style="background-color: rgb(0, 0, 0);" onclick="B2()"></button>
-          <button class="color" style="background-color: rgb(22, 224, 15);"  onclick="B3()"></button>
-          <button class="color" style="background-color: rgb(17, 67, 175);"  onclick="B4()"></button>
-          <button class="color" style="background-color: rgb(68, 7, 109);"  onclick=" B5()"></button>
-       
+        <div class="modal-body">
+  
+          <div>   <label for="" style="font-family: Arial black;" id="sel1" >Select </label><br>
+          <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
+            <option id="o1"  selected>Open this select menu</option>
+            <option id="o2" value="Aries"> Aries</option>
+            <option id="o3" value="Taurus">Taurus</option>
+            <option id="o4" value="Gemini">Gemini</option>
+            <option id="o5" value="Cancer">Cancer</option>
+            <option id="o6" value="Leo">Leo</option>
+            <option id="o7" value="Virgo">Virgo</option>
+            <option id="o8" value="Libra">Libra</option>
+            <option id="o9" value="Scorpio">Scorpio</option>
+            <option id="o10" value="Sagittarius">Sagittarius</option>
+            <option id="o11" value="Capricorn">Capricorn</option>
+            <option id="o12" value="Aquarius">Aquarius</option>
+            <option id="o13" value="Pisces">Pisces</option>
+            <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
+          </select> </div>
+  
+          <div style="display: flex; gap: 0.5cm;">
+            <h5 style="position: relative; top: 10px;" id="border">  Border Color</h5>
+            <button class="color" style="background-color: red;" onclick="co1()"></button>
+            <button class="color" style="background-color: rgb(0, 0, 0);" onclick="c2()"></button>
+            <button class="color" style="background-color: rgb(22, 224, 15);"  onclick="c3()"></button>
+            <button class="color" style="background-color: rgb(17, 67, 175);"  onclick="c4()"></button>
+            <button class="color" style="background-color: rgb(68, 7, 109);"  onclick="c5()"></button>
+         
+          </div>
+  <br><br>
+          <div style="display: flex; gap: 0.5cm;">
+            <h5 style="position: relative; top: 10px;" id="box">  Box Color &#160 &#160&#160</h5>
+            <button class="color" style="background-color: red;" onclick="B1()"></button>
+            <button class="color" style="background-color: rgb(0, 0, 0);" onclick="B2()"></button>
+            <button class="color" style="background-color: rgb(22, 224, 15);"  onclick="B3()"></button>
+            <button class="color" style="background-color: rgb(17, 67, 175);"  onclick="B4()"></button>
+            <button class="color" style="background-color: rgb(68, 7, 109);"  onclick=" B5()"></button>
+         
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Save changes</button>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
+  
 
-
-
-
-      <div >
-        <div class="selpla" >
-            <div>
-           
-
-         
-            </div>
-          
-       <style>#pl{position: relative; top: 5px; }</style>
-
-        </div>
-        <style>
-          .box11{
-            position: relative;
-            bottom: 1cm;
-            right: 2.5cm;
-            /* background-color: blue; */
-          }
-        </style>
-       <script>
-
-      </script>
-        </div>
-        <script>
-          document.getElementById('input').addEventListener('change', function() {
-    if (this.checked) {
-
-      document.getElementById('pl').innerHTML = "<style>#pl{display: none;}</style>"
-
-      //  document.getElementById('mydiv8').style.display = 'none'
-
-      //  document.getElementById('mydiv2').style.display = 'none'
-      //  document.getElementById('mydiv').style.display =  'none'
-      //  document.getElementById('mydiv1').style.display = 'none'
-      //  document.getElementById('mydiv3').style.display = 'none'
-      //  document.getElementById('mydiv4').style.display = 'none'
-      //  document.getElementById('mydiv6').style.display = 'none'
-      //  document.getElementById('mydiv7').style.display = 'none'
-      //  document.getElementById('mydiv9').style.display = 'none'
-
-      //  document.getElementsByClassName('color').style.display = 'none';
-       
-    } else {
-        // alert('Toggle is OFF');
-         document.getElementById('pl').innerHTML = "<style>#pl{display: block; }</style>"
-
-
-    }
-});
-
-        </script>
-          
-      </div>
- <style>
-  .swi{
-    position: relative;
-    top: 2cm;
-    left: 3cm;
-
-  }
- </style>
-   
-      <!-- <h1 id="arrayDisplay" ></h1> -->
-      <script>
-   
-    </script>
-
-
-<!-- <img src="./IMG20231128184411-removebg-preview.png" alt=""> -->
-<script>
-
-</script>
-
- 
-<script src="./s.js">
-
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="./js/dublication.js" ></script>
-<script src="./js/changecolor.js" ></script>
-<script src="./js/changecolor.js" ></script>
+<script src="./js/lang.js"></script>
+<script src="./js/img-logo.js"></script>
+<script src="./js/dra.js"></script>
+<script src="./js/back-colo-pop.js"></script>
+<script src="./js/drack.js"></script>
+<script src="./js/chart-select.js"></script>
+<script src="./js/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+ 
+</body>
 </html>

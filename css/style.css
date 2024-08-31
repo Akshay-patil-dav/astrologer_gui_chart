@@ -1,0 +1,101 @@
+@import "./colorbox.css";
+@import url('./colorbox.css');
+@import url('./pla.css');
+
+body{
+    overflow-x: hidden;
+    overflow: hidden;
+}
+#cardbox1{
+    /* background-color: white; */
+     border: 0.1cm solid;
+     overflow: hidden;
+     position: relative;
+     right: 0.8cm;
+            height: 760px; 
+            width: 600px;
+            border-radius: 20px;
+            z-index: -5;
+
+            box-shadow: 0 0 5px 0 ;
+            background: inherit;
+            backdrop-filter: blur(10px);
+            /* <!--margin: 100px; according to your need--> */
+
+}
+#cardbox2{
+    background-color: white;
+     border: 0.1cm solid;
+     overflow: hidden;
+     position: relative;
+     right: 0.9cm;
+            height: 820px; 
+            width: 600px;
+            border-radius: 20px;
+
+}
+.card11{
+    position: relative;
+    right: 1cm;
+}
+
+canvas{
+    /* background-color: red; */
+    width: 100%;
+    /* z-index: 10; */
+    position: fixed;
+    /* height: 500%; */
+    height: auto;
+    /* display: flexbox; */
+}
+
+#drawingArea{
+    /* z-index: +8; */
+}
+
+.colorbox{
+    border: 1cm;
+    /* border-radius: 2; */
+    border-color: blue;
+    width: 1cm;
+    height: 1cm;
+    margin: 0.2cm;
+    border: 0.1cm solid;
+}
+
+#text3{
+    position: relative;
+    top: 5px;
+    /* right: 5px; */
+    /* font-family: Arial bla/ck; */
+
+    font-size:13px ;
+    
+
+}
+
+#cardbox1{
+
+    /* z-index: -1; */
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOREACs80RzopaANyYLQ7hUHo7xiaEWNIE0Q&s'); */
+}
+
+.lan{
+    position: relative;
+    left: 30cm;
+    cursor: pointer;
+}
+
+.langg{
+    position: relative;
+    top: 10px;
+    right: 5px;
+}
+
+.sel11{
+    width: 5cm;
+    position: relative;
+    left: 9.4cm;
+    top: 2.5cm;
+    z-index: 1;
+}
