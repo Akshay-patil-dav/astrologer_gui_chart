@@ -127,11 +127,19 @@
     
                 <button id="clear" style="z-index: 100;" class="butt">Remove</button>
      
-                <button id="clear" class="butt2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                <button id="clear"  style="z-index: 100;"  class="butt2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
                   </svg></button>
 
-                  <div  class="lan" style="display: flex;">    <label for="" class="langg" style="font-family: Arial black;" >language </label><br>
+
+                  
+                <button id="clear"   style="z-index: 100; position: fixed; left: 47cm; top: 22cm; "  class="butt2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
+                </svg></button>
+
+
+
+                  <div  class="lan" style="display: flex;">    <label for="" class="langg" style="font-family: Arial black;" id="langg"> </label><br>
                     <select class="form-select form-select-lg mb-3 sellll" aria-label="Large select example" id="lang"  onchange="LANG(this.value)" >
                       <option value="Eng"> Eng</option>
                       <option value="Hin">Hin</option>
@@ -212,7 +220,10 @@
               display: flex;
             }
           </style>
-            <div id="mydiv8"  class="mydiv8">
+
+<button id="duplicate-mydiv8" class="but" style="z-index: 1;">+</button>
+
+            <div id="mydiv8"  class="mydiv8" style="cursor: pointer;">
               <!-- <div > -->
                 <img id="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
                 <div  class="tex">
@@ -229,7 +240,9 @@
         </li>
         
         <li>
-            <div class="mydiv2" id="mydiv2">
+          <button id="duplicate-mydivmoon" class="but" >+</button>
+
+            <div class="mydiv2" id="mydiv2"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; "  >
                 <img  id="pl" src="https://w7.pngwing.com/pngs/576/257/png-transparent-earth-full-moon-lunar-phase-planet-moon-moon-atmosphere-computer-wallpaper-monochrome-thumbnail.png" alt="">
                 <div class="tex">
                   <div id="text2" > Moon</div>
@@ -237,7 +250,12 @@
                 </div>
                 </div>
         </li>
-        <li><div id="mydiv" class="mydiv">
+        <li>
+          <button id="duplicate-mydivMercury" class="but" style="z-index: 1;">+</button>
+
+          <div id="mydiv" class="mydiv"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
+
+
             <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gx5sI_2JaRe-i0W1kBr4whgl9Vfol0nMiw&s" alt="">
             
             <div class="tex">
@@ -248,7 +266,9 @@
             </li>
         <li>
             
-                <div id="mydiv1">
+          <button id="duplicate-mydivvenus" class="but" style="z-index: 1;">+</button>
+
+                <div class="mydiv1" id="mydiv1"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                     <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3vxhkh6H2-LqkJcCGk36tJz8Tg3EHLWanQ&s" alt="">
                    <div class="tex">
                     <div id="text4" >venus</div>
@@ -259,7 +279,9 @@
         </li>
     
         <li>
-            <div id="mydiv3">
+          <button id="duplicate-mydivMars" class="but" style="z-index: 1;">+</button>
+
+            <div class="mydiv3" id="mydiv3"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                 <img id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeksFtqTWHTRuXVIspqVOjf1gDs9q-pSGHDw&s" alt="">
                 <div class="tex">
                   <div id="text5" >Mars</div>
@@ -268,17 +290,24 @@
                 </div>
         </li>
         <li>
-            <div id="mydiv4">
+          <!-- <button id="duplicate-btn" class="but">Duplicate Element</button>
+          <div class="draggable" id="element-1" style="z-index: 100;">Drag me!</div> -->
+          <!-- <button id="duplicate-btn2" class="but"></button> -->
+          <button id="duplicate-btnJupiter" class="but">+</button>
+            <div class="mydiv4" id="mydiv4" style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
+              
                 <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJ5SPrwFzu4giI0xFeWXVxIsKNlz7CsGecg&s" alt="">
                <div class="tex">
                 <div id="text6">Jupiter</div>
                 <div id="text66">Jup</div>
                </div>
-                </div>
+          </div>
         </li>
       
         <li>
-            <div id="mydiv6">
+          <button id="duplicate-mydivSaturn" class="but" style="z-index: 1;">+</button>
+
+            <div class="mydiv6" id="mydiv6"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                 <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQe-DwV3cTZoWGIUu1Jjufr8o0cf5due2vg&s" alt="">
                 <div class="tex">
                   <div id="text7" >Saturn</div>
@@ -287,8 +316,10 @@
                 </div>
         </li>
         <li>
-            <div id="mydiv7">
-                <img id="pl" src="https://www.rahu.in/images/mercury.png" alt="">
+          <button id="duplicate-mydivRahu" class="but" style="z-index: 1;">+</button>
+
+            <div class="mydiv7" id="mydiv7"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; " >
+                <img id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVuBLhYPAUMeg3M-MfLyRpPxEeuoJBw7t6wQ&s" alt="">
               <div class="tex">
                 <div id="text8" >Rahu</div>
                 <div id="text88" >Rah</div>
@@ -299,7 +330,9 @@
        
 
         <li>
-            <div id="mydiv9">
+          <button id="duplicate-mydivKetu" class="but" style="z-index: 1;">+</button>
+
+            <div class="mydiv9" id="mydiv9"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                 <img class="pl" id="pl" src="https://png.pngtree.com/png-clipart/20210803/ourmid/pngtree-abstract-style-black-and-white-watercolor-moon-illustration-png-image_3768678.png" alt="">
                 <div class="tex">
                   <div id="text9" >Ketu</div>
@@ -377,28 +410,22 @@
                                                   
                               
           <div class="sel11"> 
-            <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="NUM(this.value)" >
-              <option id="o1"  selected>Open this select menu</option>
-              <option id="o2" value="Aries"> Aries</option>
-              <option id="o3" value="Taurus">Taurus</option>
-              <option id="o4" value="Gemini">Gemini</option>
-              <option id="o5" value="Cancer">Cancer</option>
-              <option id="o6" value="Leo">Leo</option>
-              <option id="o7" value="Virgo">Virgo</option>
-              <option id="o8" value="Libra">Libra</option>
-              <option id="o9" value="Scorpio">Scorpio</option>
-              <option id="o10" value="Sagittarius">Sagittarius</option>
-              <option id="o11" value="Capricorn">Capricorn</option>
-              <option id="o12" value="Aquarius">Aquarius</option>
-              <option id="o13" value="Pisces">Pisces</option>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="val11"  onchange="box1sel2(this.value)" >
+              <option id="imm1"  selected>Open this select menu</option>
+              <option id="imm2" value="Aries"> Aries</option>
+              <option id="imm3" value="Taurus">Taurus</option>
+              <option id="imm4" value="Gemini">Gemini</option>
+              <option id="imm5" value="Cancer">Cancer</option>
+              <option id="imm5" value="popup2">Custome image</option>
               <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
             </select> </div>
-                        <div class="box21" style="position: relative; top: 0.3cm;">
+                        <div id="box21" style="position: relative; top: 0.3cm; z-index: -1;">
 
 
                 
-                            <div  id="cardbox1">
-                              
+                            <div  id="cardbox1" style="z-index: 1;">
+                              <label for="fileInput" class="" style="position: relative; top: 10px; cursor: pointer;margin: 1cm; top: 1cm; " id="displayImage2">
+                              </label>
 
 
 
@@ -414,20 +441,24 @@
                    <!-- *************************************************** -->
            
                    <div class="sel11"> 
-                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="value1"  onchange="box1sel(this.value)" >
-                      <option id="o1"  selected>Open this select menu</option>
-                      <option id="o2" value="Aries"> Aries</option>
-                      <option id="o3" value="Taurus">Taurus</option>
-                      <option id="o4" value="popup1">Gemini</option>
-                      <option id="o5" value="popup2">Custome image</option>
+                    <select class="form-select form-select-lg mb-3" style="position: relative; bottom: 0.3cm;" aria-label="Large select example" id="value1"  onchange="box1sel(this.value)" >
+                      <option id="im1"  selected>Open this select menu</option>
+                      <option id="im2" value="Aries"> Aries</option>
+                      <option id="im3" value="Taurus">Taurus</option>
+                      <option id="im4" value="popup1">Gemini</option>
+                      <!-- <option id="o5" value="popup2">Custome image</option> -->
                     
                   
                       <!-- <option value="Capricorn Rashi">Capricorn Rashi</option> -->
                     </select> </div>
                 <!-- <br><br><br> -->
-                    <div class="box21">
+                    <div class="box21" style="z-index: -1;">
                         <div  id="cardbox1" >
-                            
+                          <!-- <img id="displayImage" src="" alt="Selected Image" style="max-width: 300px; display:none;"> -->
+                          <label for="fileInput" class="" style="position: relative; top: 10px; cursor: pointer; margin: 1cm; top: 1cm;" id="displayImage">
+                            </label>
+
+
                         </div>
                         
                     </div>
@@ -453,8 +484,8 @@
           <span class="closeBtn">&times;</span>
           <h2>Popup 1</h2>
          <div>
-          <input type="file" id="FileUpload">
-<input type="button" id="btnFile" value="Upload">
+          <input style="display: block;"  id="FileUpload" type="file"/>
+<!-- <input type="button" id="btnFile" value="Upload"> -->
          </div>
       </div>
   </div>
@@ -464,7 +495,9 @@
       <div class="popup-content">
           <span class="closeBtn">&times;</span>
           <h2>Popup 2</h2>
-          <p>This is the second popup window.</p>
+          <!-- <p>This is the second popup window.</p> -->
+          <input style="display: block;"  id="FileUpload2" type="file"/>
+
       </div>
   </div>
 
@@ -549,6 +582,11 @@
   </div>
   
   
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
 <script src="./js/popup.js"></script>
 <script src="./js/lang.js"></script>
 <script src="./js/img-logo.js"></script>

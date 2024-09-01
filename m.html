@@ -3,128 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freehand Drawing Tool</title>
+    <title>Draggable and Duplicable Elements</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="controls">
-        <label>
-            <input type="checkbox" id="startDrawing">
-            Start Drawing
-        </label>
-        <button id="eraseDrawing">Erase</button>
-        <button id="drawArrow">Draw Single Arrow</button>
-        <button id="clearAll">Clear All</button>
-        <div class="color-palette">
-            <button class="color-button" style="background-color: black;" onclick="setColor('black')"></button>
-            <button class="color-button" style="background-color: red;" onclick="setColor('red')"></button>
-            <button class="color-button" style="background-color: green;" onclick="setColor('green')"></button>
-            <button class="color-button" style="background-color: blue;" onclick="setColor('blue')"></button>
-        </div>
-    </div>
-    <canvas id="drawingArea"></canvas>
+    <style>
+        ul{
+            display: flex;
+            gap: 5cm;
+        }
+        li{
+            display: flex;
+        }
+    </style>
+        <ul>
+            <li><div class="draggable" id="element-1">Drag me!</div> </li>
+            <li>        <div class="draggable2" id="element-2">Drag me!</div></li>
+        </ul>
+   
+    <button id="duplicate-btn" class="but">Duplicate Element</button>
+    <button id="duplicate-btn2" class="but">Duplicate Element</button>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+<style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.but{
+    margin-top: 20cm;
+}
+.draggable {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    /* top: 15cm; */
+    cursor: move;
+}
+
+.draggable2 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(67, 139, 163);
+    border: 2px solid #000;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    /* top: 15cm; */
+    cursor: move;
+}
+</style>
+
 <script>
-    let isDrawingEnabled = false;
-let isDrawing = false;
-let isDrawingArrow = false;
-let color = 'black';
-let startX = 0;
-let startY = 0;
-const drawingArea = document.getElementById('drawingArea');
-const ctx = drawingArea.getContext('2d');
+    // script.js
+$(document).ready(function() {
+    let elementCount = 1;
 
-function resizeCanvas() {
-    drawingArea.width = window.innerWidth;
-    drawingArea.height = window.innerHeight * 0.8;
-}
+    // Make the element draggable
+    $(".draggable").draggable({
+        containment: "body"
+    });
 
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
+     // Make the element draggable
+     $(".draggable2").draggable({
+        containment: "body"
+    });
 
-drawingArea.addEventListener('mousedown', (event) => {
-    if (isDrawingEnabled && isDrawingArrow) {
-        startX = event.clientX - drawingArea.offsetLeft;
-        startY = event.clientY - drawingArea.offsetTop;
-        isDrawing = true;
-        document.body.style.cursor = 'crosshair';
-    }
+    
+    // Duplicate the element
+    $("#duplicate-btn").click(function() {
+        elementCount++;
+        let newElement = $("#element-1").clone();
+        newElement.attr("id", "element-" + elementCount);
+        newElement.css({
+            top: "20cm",
+            left: "0px"
+        }).appendTo("body");
+        newElement.draggable({
+            containment: "body"
+        });
+    });
+
+    $("#duplicate-btn2").click(function() {
+        elementCount++;
+        let newElement = $("#element-2").clone();
+        newElement.attr("id", "element-" + elementCount);
+        newElement.css({
+            top: "20cm",
+            left: "0px"
+        }).appendTo("body");
+        newElement.draggable({
+            containment: "body"
+        });
+    });
 });
 
-drawingArea.addEventListener('mouseup', (event) => {
-    if (isDrawingEnabled && isDrawingArrow && isDrawing) {
-        const endX = event.clientX - drawingArea.offsetLeft;
-        const endY = event.clientY - drawingArea.offsetTop;
-
-        drawArrow(startX, startY, endX, endY);
-        isDrawing = false;
-        isDrawingArrow = false;
-        document.body.style.cursor = 'default';
-    }
-});
-
-document.getElementById('startDrawing').addEventListener('change', function() {
-    if (this.checked) {
-        document.getElementById('drawingArea').style.zIndex = '30';
-        isDrawingEnabled = true;
-        document.body.style.cursor = 'default';
-    } else {
-        document.getElementById('drawingArea').style.zIndex = '1';
-        isDrawingEnabled = false;
-        isDrawing = false;
-        isDrawingArrow = false;
-        document.body.style.cursor = 'default';
-    }
-});
-
-document.getElementById('eraseDrawing').addEventListener('click', () => {
-    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-});
-
-document.getElementById('drawArrow').addEventListener('click', () => {
-    if (isDrawingEnabled) {
-        isDrawingArrow = true;
-    }
-});
-
-document.getElementById('clearAll').addEventListener('click', () => {
-    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-    // Reset variables
-    isDrawing = false;
-    isDrawingArrow = false;
-    document.body.style.cursor = 'default';
-});
-
-function setColor(selectedColor) {
-    color = selectedColor;
-}
-
-function drawArrow(fromX, fromY, toX, toY) {
-    const headlen = 10; // Length of the arrowhead
-    const angle = Math.atan2(toY - fromY, toX - fromX);
-
-    ctx.beginPath();
-    ctx.moveTo(fromX, fromY);
-    ctx.lineTo(toX, toY);
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.lineCap = 'round';
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.moveTo(toX, toY);
-    ctx.lineTo(toX - headlen * Math.cos(angle - Math.PI / 6), toY - headlen * Math.sin(angle - Math.PI / 6));
-    ctx.lineTo(toX - headlen * Math.cos(angle + Math.PI / 6), toY - headlen * Math.sin(angle + Math.PI / 6));
-    ctx.lineTo(toX, toY);
-    ctx.lineTo(toX - headlen * Math.cos(angle - Math.PI / 6), toY - headlen * Math.sin(angle - Math.PI / 6));
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    ctx.fillStyle = color;
-    ctx.fill();
-}
 
 </script>

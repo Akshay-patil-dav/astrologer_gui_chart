@@ -61,3 +61,14 @@
   section{
     z-index: 100;
   }
+  .but{
+    /* margin: px; */
+    border: 0px solid;
+    background-color: wheat;
+    width: 0.7cm;
+    height: 0.7cm;
+    display:flexbox;
+    border-radius: 100%;
+    position: relative;
+    left: 7px;
+  }

@@ -60,12 +60,21 @@ document.getElementById('dropBox14').addEventListener('dragover', function(e) {
     e.preventDefault();  // Necessary to allow dropping
 });
 
+document.getElementById('cardbox1').addEventListener('dragover', function(e) {
+    e.preventDefault();  // Necessary to allow dropping
+});
 
 document.getElementById('dropBox8').addEventListener('dragover', function(e) {
     e.preventDefault();  // Necessary to allow dropping
 });
 // Add drop event to change box color**********************************************************
 
+
+document.getElementById('cardbox1').addEventListener('drop', function(e) {
+    e.preventDefault();
+    const color = e.dataTransfer.getData('color');
+    e.target.style.backgroundColor = color;
+});
 
 document.getElementById('dropBox15').addEventListener('drop', function(e) {
     e.preventDefault();

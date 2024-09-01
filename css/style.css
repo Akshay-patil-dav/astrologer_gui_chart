@@ -6,7 +6,11 @@
 body{
     overflow-x: hidden;
     overflow: hidden;
+    /* column-rule: white; */
+   
+    
 }
+
 #cardbox1{
     /* background-color: white; */
      border: 0.1cm solid;
@@ -86,7 +90,8 @@ canvas{
 
 .lan{
     position: relative;
-    left: 30cm;
+    left: 33cm;
+    width: 4cm;
     cursor: pointer;
 }
 
@@ -105,6 +110,10 @@ canvas{
 }
 
 
+.box-right{
+  position: relative;
+  top: 0.3cm;
+}
 
 
 
@@ -213,4 +222,32 @@ canvas{
 
 .sellll{
   z-index: 100;
+}
+
+
+.but{
+  /* margin-top: 20cm; */
+}
+.draggable {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 150px;
+  position: absolute;
+  /* top: 15cm; */
+  cursor: move;
+}
+
+.draggable2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(67, 139, 163);
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 150px;
+  position: absolute;
+  /* top: 15cm; */
+  cursor: move;
 }

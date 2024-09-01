@@ -105,7 +105,10 @@ function eng(){
         document.getElementById('text8').innerHTML = 'Rahu';
         document.getElementById('text9').innerHTML = 'Ketu';
 
-
+        document.getElementById('namemm').innerHTML = 'Names';
+        
+        document.getElementById('icons').innerHTML = 'Icons';
+        document.getElementById('chartlagn').innerHTML = '<h1>Lagna Chart</h1>'
         // document.getElementById('text11').style.display = 'Su';
         // document.getElementById('text22').style.display = 'Mo';
         // document.getElementById('text33').style.display = 'Mer';
@@ -154,6 +157,7 @@ function eng(){
         document.getElementById('colorbox').innerHTML ='Color'
         document.getElementById('penbox').innerHTML = 'Pen'
         document.getElementById('arrowbox').innerHTML = 'Arrow'
+
 
     document.getElementById('exampleModalLabel').innerHTML=  'User Information'
         

@@ -20,11 +20,11 @@
       gap: 9px;
       width: 80%;
       max-width: 1200px; */
-      left: -1.2cm;
+      left: -1cm;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(9, 1fr);
       /* gap: 9px; */
-      width: 1000%;
+      /* width: 10%; */
       max-width: 10px;
       /* border: 1px solid; */
       /* border: 1px solid; */
@@ -33,13 +33,13 @@
       }
   
       li{
-          padding: 26px;
+          padding: 14px;
 
           display: flex;
           cursor: pointer;
           /* border: 1px solid; */
           position: relative;
-          top: 0.4cm;
+          top: 0.7cm; 
           /* right: 2.5cm; */
       }
       #pl{
