@@ -248,6 +248,19 @@ function f1(val){
     document.getElementById('n11').style.color = val
     document.getElementById('n12').style.color = val
 
+    document.getElementById('colorbox').style.color = val
+    document.getElementById('penbox').style.color = val
+    document.getElementById('arrowbox').style.color = val
+
+    document.getElementById('imm1').style.color = val
+    document.getElementById('imm2').style.color = val
+    document.getElementById('imm3').style.color = val
+    document.getElementById('imm4').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm6').style.color = val
+    document.getElementById('imm7').style.color = val
+    // document.getElementById('val11').style.color = val
     
 
 }
@@ -289,6 +302,19 @@ function f2(val){
     document.getElementById('n11').style.color = val
     document.getElementById('n12').style.color = val
 
+    document.getElementById('colorbox').style.color = val
+    document.getElementById('penbox').style.color = val
+    document.getElementById('arrowbox').style.color = val
+
+    document.getElementById('imm1').style.color = val
+    document.getElementById('imm2').style.color = val
+    document.getElementById('imm3').style.color = val
+    document.getElementById('imm4').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm6').style.color = val
+    document.getElementById('imm7').style.color = val
+
 }
 
 function f3(val){
@@ -328,6 +354,19 @@ function f3(val){
     document.getElementById('n11').style.color = val
     document.getElementById('n12').style.color = val
 
+    document.getElementById('colorbox').style.color = val
+    document.getElementById('penbox').style.color = val
+    document.getElementById('arrowbox').style.color = val
+
+
+    document.getElementById('imm1').style.color = val
+    document.getElementById('imm2').style.color = val
+    document.getElementById('imm3').style.color = val
+    document.getElementById('imm4').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm6').style.color = val
+    document.getElementById('imm7').style.color = val
 }
 function f4(val){
     // alert(val)
@@ -366,6 +405,19 @@ function f4(val){
     document.getElementById('n11').style.color = val
     document.getElementById('n12').style.color = val
 
+    document.getElementById('colorbox').style.color = val
+    document.getElementById('penbox').style.color = val
+    document.getElementById('arrowbox').style.color = val
+
+
+    document.getElementById('imm1').style.color = val
+    document.getElementById('imm2').style.color = val
+    document.getElementById('imm3').style.color = val
+    document.getElementById('imm4').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm6').style.color = val
+    document.getElementById('imm7').style.color = val
 }
 
 function f5(val){
@@ -405,4 +457,24 @@ function f5(val){
     document.getElementById('n11').style.color = val
     document.getElementById('n12').style.color = val
 
+    document.getElementById('colorbox').style.color = val
+    document.getElementById('penbox').style.color = val
+    document.getElementById('arrowbox').style.color = val
+
+
+    document.getElementById('imm1').style.color = val
+    document.getElementById('imm2').style.color = val
+    document.getElementById('imm3').style.color = val
+    document.getElementById('imm4').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm5').style.color = val
+    document.getElementById('imm6').style.color = val
+    document.getElementById('imm7').style.color = val
 }
+
+
+
+
+
+
+
