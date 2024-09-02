@@ -1,3 +1,10 @@
+// function setColor(val) {
+//     // alert(val)
+//     // color = selectedColor;
+//     return val;
+// }
+
+
 let isDrawingEnabled = false;
 let isDrawing = false;
 let color = 'black';
@@ -30,6 +37,11 @@ drawingArea.addEventListener('mouseup', () => {
     }
 });
 
+function setColor(val) {
+    // alert(val)
+    // color = selectedColor;
+//     return val;
+// }
 drawingArea.addEventListener('mousemove', (event) => {
     if (isDrawing) {
         const x = event.clientX - drawingArea.offsetLeft;
@@ -38,7 +50,7 @@ drawingArea.addEventListener('mousemove', (event) => {
         ctx.beginPath();
         ctx.moveTo(lastX, lastY);
         ctx.lineTo(x, y);
-        ctx.strokeStyle = color;
+        ctx.strokeStyle = val;
         ctx.lineWidth = 2;
         ctx.lineCap = 'round';
         ctx.stroke();
@@ -47,6 +59,7 @@ drawingArea.addEventListener('mousemove', (event) => {
         lastY = y;
     }
 });
+}
 
 
 
@@ -88,7 +101,4 @@ document.getElementById('eraseDrawing').addEventListener('click', () => {
     ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
 });
 
-function setColor(selectedColor) {
-    color = selectedColor;
-}
 

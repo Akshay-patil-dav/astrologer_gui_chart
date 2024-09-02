@@ -3,113 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draggable and Duplicable Elements</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <title>3D Computer Model with Three.js</title>
     <style>
-        ul{
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
             display: flex;
-            gap: 5cm;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
         }
-        li{
-            display: flex;
+        canvas {
+            display: block;
         }
     </style>
-        <ul>
-            <li><div class="draggable" id="element-1">Drag me!</div> </li>
-            <li>        <div class="draggable2" id="element-2">Drag me!</div></li>
-        </ul>
-   
-    <button id="duplicate-btn" class="but">Duplicate Element</button>
-    <button id="duplicate-btn2" class="but">Duplicate Element</button>
+</head>
+<body>
+    <div id="container"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script>
+        let scene, camera, renderer, controls;
+
+        function init() {
+            // Create a Scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xeeeeee);
+
+            // Create a Camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+            // Create a Renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Add OrbitControls for user interaction
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+            // Add Ambient Light
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+
+            // Add Point Light
+            const pointLight = new THREE.PointLight(0xffffff, 1);
+            pointLight.position.set(10, 10, 10);
+            scene.add(pointLight);
+
+            // Create a simple computer model
+            createComputerModel();
+
+            // Handle window resize
+            window.addEventListener('resize', onWindowResize, false);
+
+            // Start Animation
+            animate();
+        }
+
+        function createComputerModel() {
+            // Monitor
+            const monitorGeometry = new THREE.BoxGeometry(2.5, 1.5, 0.1);
+            const monitorMaterial = new THREE.MeshStandardMaterial({ color: 0x333333 });
+            const monitor = new THREE.Mesh(monitorGeometry, monitorMaterial);
+            monitor.position.set(0, 1.2, 0);
+            scene.add(monitor);
+
+            // Screen
+            const screenGeometry = new THREE.PlaneGeometry(2.4, 1.4);
+            const screenMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+            const screen = new THREE.Mesh(screenGeometry, screenMaterial);
+            screen.position.set(0, 1.2, 0.055);
+            scene.add(screen);
+
+            // Stand
+            const standGeometry = new THREE.CylinderGeometry(0.1, 0.1, 1, 32);
+            const standMaterial = new THREE.MeshStandardMaterial({ color: 0x555555 });
+            const stand = new THREE.Mesh(standGeometry, standMaterial);
+            stand.position.set(0, 0.5, 0);
+            scene.add(stand);
+
+            // Base
+            const baseGeometry = new THREE.BoxGeometry(1, 0.1, 1);
+            const baseMaterial = new THREE.MeshStandardMaterial({ color: 0x444444 });
+            const base = new THREE.Mesh(baseGeometry, baseMaterial);
+            base.position.set(0, 0, 0);
+            scene.add(base);
+
+            // Keyboard
+            const keyboardGeometry = new THREE.BoxGeometry(2, 0.1, 0.5);
+            const keyboardMaterial = new THREE.MeshStandardMaterial({ color: 0x222222 });
+            const keyboard = new THREE.Mesh(keyboardGeometry, keyboardMaterial);
+            keyboard.position.set(0, -0.4, 0.7);
+            scene.add(keyboard);
+
+            // Mouse
+            const mouseGeometry = new THREE.BoxGeometry(0.3, 0.1, 0.5);
+            const mouseMaterial = new THREE.MeshStandardMaterial({ color: 0x111111 });
+            const mouse = new THREE.Mesh(mouseGeometry, mouseMaterial);
+            mouse.position.set(0.7, -0.4, 1.0);
+            scene.add(mouse);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        init();
+    </script>
 </body>
 </html>
-<style>
-    /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    position: relative;
-    min-height: 100vh;
-}
-
-.but{
-    margin-top: 20cm;
-}
-.draggable {
-    width: 150px;
-    height: 150px;
-    background-color: lightblue;
-    border: 2px solid #000;
-    text-align: center;
-    line-height: 150px;
-    position: absolute;
-    /* top: 15cm; */
-    cursor: move;
-}
-
-.draggable2 {
-    width: 150px;
-    height: 150px;
-    background-color: rgb(67, 139, 163);
-    border: 2px solid #000;
-    text-align: center;
-    line-height: 150px;
-    position: absolute;
-    /* top: 15cm; */
-    cursor: move;
-}
-</style>
-
-<script>
-    // script.js
-$(document).ready(function() {
-    let elementCount = 1;
-
-    // Make the element draggable
-    $(".draggable").draggable({
-        containment: "body"
-    });
-
-     // Make the element draggable
-     $(".draggable2").draggable({
-        containment: "body"
-    });
-
-    
-    // Duplicate the element
-    $("#duplicate-btn").click(function() {
-        elementCount++;
-        let newElement = $("#element-1").clone();
-        newElement.attr("id", "element-" + elementCount);
-        newElement.css({
-            top: "20cm",
-            left: "0px"
-        }).appendTo("body");
-        newElement.draggable({
-            containment: "body"
-        });
-    });
-
-    $("#duplicate-btn2").click(function() {
-        elementCount++;
-        let newElement = $("#element-2").clone();
-        newElement.attr("id", "element-" + elementCount);
-        newElement.css({
-            top: "20cm",
-            left: "0px"
-        }).appendTo("body");
-        newElement.draggable({
-            containment: "body"
-        });
-    });
-});
-
-
-</script>
