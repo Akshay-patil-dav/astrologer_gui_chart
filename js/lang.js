@@ -79,19 +79,19 @@ function LANG(lang){
 
 
 
-    //    document.getElementById('text11').style.display = 'सूर';
-    //    document.getElementById('text22').style.display = 'चंद्र';
-    //    document.getElementById('text33').style.display = 'पार';
-    //    document.getElementById('text44').style.display = 'शुक';
-    //    document.getElementById('text55').style.display = 'मंग';
-    //    document.getElementById('text66').style.display = 'बृह';
-    //    document.getElementById('text77').style.display = 'श';
-    //    document.getElementById('text88').style.display = 'रा';
-    //    document.getElementById('text99').style.display = 'के';
+       document.getElementById('text11').innerHTML = 'सूर';
+       document.getElementById('text22').innerHTML = 'चंद्र';
+       document.getElementById('text33').innerHTML = 'पार';
+       document.getElementById('text44').innerHTML = 'शुक';
+       document.getElementById('text55').innerHTML = 'मंग';
+       document.getElementById('text66').innerHTML = 'बृह';
+       document.getElementById('text77').innerHTML = 'श';
+       document.getElementById('text88').innerHTML = 'रा';
+       document.getElementById('text99').innerHTML = 'के';
 
     // display: flex; gap: 1cm; position: relative; left: 9cm;
 
-    // document.getElementById('swcl').style.marginLeft = '2cm'
+    document.getElementById('swcl').style.marginLeft = '2cm'
 }
 
 function eng(){
@@ -163,3 +163,58 @@ function eng(){
         
 }
 
+
+
+
+document.getElementById('flexSwitchCheckDefault').addEventListener('change', function() {
+    if (this.checked) {
+
+        document.getElementById('text11').style.display = 'none'
+        document.getElementById('text22').style.display = 'none'
+        document.getElementById('text33').style.display = 'none'
+        document.getElementById('text44').style.display = 'none'
+        document.getElementById('text55').style.display = 'none'
+        document.getElementById('text66').style.display = 'none'
+        document.getElementById('text77').style.display = 'none'
+        document.getElementById('text88').style.display = 'none'
+        document.getElementById('text99').style.display = 'none'
+
+
+        
+        document.getElementById('text1').style.display = 'block'
+        document.getElementById('text2').style.display = 'block'
+        document.getElementById('text3').style.display = 'block'
+        document.getElementById('text4').style.display = 'block'
+        document.getElementById('text5').style.display = 'block'
+        document.getElementById('text6').style.display = 'block'
+        document.getElementById('text7').style.display = 'block'
+        document.getElementById('text8').style.display = 'block'
+        document.getElementById('text9').style.display = 'block'
+
+                
+    }else{
+
+        document.getElementById('text11').style.display = 'block'
+         document.getElementById('text22').style.display = 'block'
+          document.getElementById('text33').style.display = 'block'
+           document.getElementById('text44').style.display = 'block'
+            document.getElementById('text55').style.display = 'block'
+             document.getElementById('text66').style.display = 'block'
+              document.getElementById('text77').style.display = 'block'
+               document.getElementById('text88').style.display = 'block'
+                document.getElementById('text99').style.display = 'block'
+
+
+                document.getElementById('text1').style.display = 'none'
+                document.getElementById('text2').style.display = 'none'
+                document.getElementById('text3').style.display = 'none'
+                document.getElementById('text4').style.display = 'none'
+                document.getElementById('text5').style.display = 'none'
+                document.getElementById('text6').style.display = 'none'
+                document.getElementById('text7').style.display = 'none'
+                document.getElementById('text8').style.display = 'none'
+                document.getElementById('text9').style.display = 'none'
+        
+    }
+
+});
