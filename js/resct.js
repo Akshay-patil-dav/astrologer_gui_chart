@@ -34,5 +34,7 @@ function remove() {
     document.getElementById('dropBox24').style.backgroundColor = '';
     
    
+    document.getElementById('displayImage2').innerHTML = ""
+    document.getElementById('displayImage').innerHTML = ""
     
     }
