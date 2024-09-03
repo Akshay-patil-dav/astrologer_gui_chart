@@ -116,18 +116,18 @@ function NUM(val) {
       
                 
              
-                document.getElementById('nu1').innerHTML ="<h4>"+numbersArray[1 ]+"</h4>";
-                document.getElementById('nu2').innerHTML ="<h4>"+numbersArray[0] +"</h4>" ;
-                document.getElementById('nu3').innerHTML ="<h4>"+numbersArray[10]+"</h4>";
-                document.getElementById('nu4').innerHTML ="<h4>"+numbersArray[11]+"</h4>";
-                document.getElementById('nu5').innerHTML ="<h4>"+numbersArray[4 ]+"</h4>";
-                document.getElementById('nu6').innerHTML ="<h4>"+numbersArray[9 ]+"</h4>";
-                document.getElementById('nu7').innerHTML ="<h4>"+numbersArray[7 ]+"</h4>";
-                document.getElementById('nu8').innerHTML ="<h4>"+numbersArray[8 ]+"</h4>";
-                document.getElementById('nu9').innerHTML ="<h4>"+numbersArray[6 ]+"</h4>";
-                document.getElementById('nu10').innerHTML="<h4>"+numbersArray[5 ]+"</h4>";
-                document.getElementById('nu11').innerHTML="<h4>"+numbersArray[3 ]+"</h4>";
-                document.getElementById('nu12').innerHTML="<h4>"+numbersArray[2 ]+"</h4>";
+                document.getElementById('nu1').innerHTML ="<h6>"+numbersArray[1 ]+"</h6>";
+                document.getElementById('nu2').innerHTML ="<h6>"+numbersArray[0] +"</h6>" ;
+                document.getElementById('nu3').innerHTML ="<h6>"+numbersArray[10]+"</h6>";
+                document.getElementById('nu4').innerHTML ="<h6>"+numbersArray[11]+"</h6>";
+                document.getElementById('nu5').innerHTML ="<h6>"+numbersArray[4 ]+"</h6>";
+                document.getElementById('nu6').innerHTML ="<h6>"+numbersArray[9 ]+"</h6>";
+                document.getElementById('nu7').innerHTML ="<h6>"+numbersArray[7 ]+"</h6>";
+                document.getElementById('nu8').innerHTML ="<h6>"+numbersArray[8 ]+"</h6>";
+                document.getElementById('nu9').innerHTML ="<h6>"+numbersArray[6 ]+"</h6>";
+                document.getElementById('nu10').innerHTML="<h6>"+numbersArray[5 ]+"</h6>";
+                document.getElementById('nu11').innerHTML="<h6>"+numbersArray[3 ]+"</h6>";
+                document.getElementById('nu12').innerHTML="<h6>"+numbersArray[2 ]+"</h6>";
                      }
                 
             

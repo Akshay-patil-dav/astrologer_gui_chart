@@ -10,6 +10,16 @@ function LANG(lang){
     switch(lang){
         case 'Hin':
             // alert(l1[0])
+
+            document.getElementById('text11').innerHTML = 'सूर';
+            document.getElementById('text22').innerHTML = 'चंद्र';
+            document.getElementById('text33').innerHTML = 'पार';
+            document.getElementById('text44').innerHTML = 'शुक';
+            document.getElementById('text55').innerHTML = 'मंग';
+            document.getElementById('text66').innerHTML = 'बृह';
+            document.getElementById('text77').innerHTML = 'श';
+            document.getElementById('text88').innerHTML = 'रा';
+            document.getElementById('text99').innerHTML = 'के';
             arr(l1);
             break;
         case 'Eng':
@@ -79,15 +89,15 @@ function LANG(lang){
 
 
 
-       document.getElementById('text11').innerHTML = 'सूर';
-       document.getElementById('text22').innerHTML = 'चंद्र';
-       document.getElementById('text33').innerHTML = 'पार';
-       document.getElementById('text44').innerHTML = 'शुक';
-       document.getElementById('text55').innerHTML = 'मंग';
-       document.getElementById('text66').innerHTML = 'बृह';
-       document.getElementById('text77').innerHTML = 'श';
-       document.getElementById('text88').innerHTML = 'रा';
-       document.getElementById('text99').innerHTML = 'के';
+    //    document.getElementById('text11').innerHTML = 'सूर';
+    //    document.getElementById('text22').innerHTML = 'चंद्र';
+    //    document.getElementById('text33').innerHTML = 'पार';
+    //    document.getElementById('text44').innerHTML = 'शुक';
+    //    document.getElementById('text55').innerHTML = 'मंग';
+    //    document.getElementById('text66').innerHTML = 'बृह';
+    //    document.getElementById('text77').innerHTML = 'श';
+    //    document.getElementById('text88').innerHTML = 'रा';
+    //    document.getElementById('text99').innerHTML = 'के';
 
     // display: flex; gap: 1cm; position: relative; left: 9cm;
 
@@ -236,4 +246,3 @@ document.getElementById('iconss').addEventListener('change', function() {
 
     }
 });
-

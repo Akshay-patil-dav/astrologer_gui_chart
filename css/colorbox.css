@@ -8,10 +8,10 @@
 .pen{
     /* border: 1px solid; */
     height: 1.5cm;
-    width: 5.6cm;
+    width:0cm;
     position: relative;
-    right: 0.5cm;
-    border-radius: 20px;
+    right: 0.8cm;
+    /* border-radius: 20px; */
     
 }
 
@@ -19,9 +19,9 @@
 .pen1{
     border: 1px solid;
     height: 1.5cm;
-    width: 2cm;
-    position: relative;
+    width: 3cm;
+    /* position: relative; */
     /* right: 1cm; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     
 }

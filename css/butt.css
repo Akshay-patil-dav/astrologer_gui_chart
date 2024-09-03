@@ -21,6 +21,24 @@
     background-color: rgb(192, 27, 27);
 }
 
+
+@media only screen and (max-width: 1954px) {
+    .butt2{
+        width: 1cm;
+        height: 1cm;
+       background-color: rgb(53, 134, 255);
+       color: white;
+       position: relative;
+       top: 10px;
+       font-family: Arial black;
+       border-radius: 20px;
+       left: 3.2cm;
+       border: 0px solid;
+       font-size: 0.3cm   
+    }
+
+}
+
 .butt2{
     width: 1cm;
     height: 1cm;

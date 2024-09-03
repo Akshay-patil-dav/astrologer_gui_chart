@@ -19,12 +19,12 @@ body{
      right: 0.8cm;
             height: 760px; 
             width: 600px;
-            border-radius: 20px;
+            /* border-radius: 20px; */
             z-index: -5;
-
+/* 
             box-shadow: 0 0 5px 0 ;
             background: inherit;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); */
             /* <!--margin: 100px; according to your need--> */
 
 }
@@ -90,9 +90,18 @@ canvas{
 
 .lan{
     position: relative;
+    left: 39cm;
+    width: 4cm;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1954px) {
+  .lan{
+    position: relative;
     left: 33cm;
     width: 4cm;
     cursor: pointer;
+}
 }
 
 .langg{
@@ -250,4 +259,26 @@ canvas{
   position: absolute;
   /* top: 15cm; */
   cursor: move;
+}
+
+
+
+.arrow {
+  position: absolute;
+  background-color: black;
+  transform-origin: 0 0;
+  height: 2px;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid black;
+  top: -4px;
+  left: calc(100% - 6px);
+  /* rotate: 2deg; */
 }

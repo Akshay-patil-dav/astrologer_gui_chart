@@ -643,6 +643,10 @@
    // script.js
    $(document).ready(function() {
     let elementCount = 1;
+    let duplicationEnabled = true;
+
+    // if(duplicationEnabled){}
+
 
     $(".mydiv").draggable({
         containment: "body"
@@ -685,6 +689,7 @@
     });
 
     
+
     // Duplicate the element
     $("#duplicate-btn").click(function() {
         elementCount++;
@@ -823,6 +828,13 @@
 
 
 
+
+    // $("#remove").click(function() {
+    //     $(".mydiv8['#mydiv8']").remove(); // Remove all cloned elements
+    // });
    
+    $("#remove").click(function() {
+        duplicationEnabled = false;
+    });
 });
 

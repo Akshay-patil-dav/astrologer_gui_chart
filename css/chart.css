@@ -29,7 +29,7 @@ width: 1000%;
 max-width: 10px;
 position: absolute;
 /* top: -9cm; */
-top: 2.4cm;
+top: 2.3cm;
 /* opacity: 0.5; */
 rotate: 45deg;
 
@@ -49,7 +49,7 @@ border: 0.1cm solid;
 /* left: 0.6cm; */
 top: 10px;
 z-index: 2;
-border-radius: 20px;
+/* border-radius: 20px; */
 
 
 
@@ -66,16 +66,16 @@ border-radius: 20px;
     border: 1px solid;
     /* width: 8cm; */
     height: 1.5cm;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     z-index: 2;
 }
 
 .color-palette2 {
     display: flex;
     border: 1px solid;
-    width: 4.7cm;
+    width: 4cm;
     height: 1.5cm;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 .col{
     position: relative;
@@ -83,11 +83,21 @@ border-radius: 20px;
     left: 1cm;
 }
 
+@media only screen and (max-width: 1954px) {
+  .buts{
+    position: relative;
+    top: 1cm;
+    left: -3cm;
+    /* background-color: black; */
+    /* right: -4cm; */
+    /* left: 1cm; */
+}
+}
 .buts{
     position: relative;
     top: 1cm;
     /* left: -2cm; */
-    right: 3cm;
+    right: 4.8cm;
 }
 
 .color-swatch {

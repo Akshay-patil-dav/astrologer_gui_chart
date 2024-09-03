@@ -1,104 +1,71 @@
-// function setColor(val) {
-//     // alert(val)
-//     // color = selectedColor;
-//     return val;
-// }
+let drawingModeActive = false;
+let isCurrentlyDrawing = false;
+let selectedColor = 'black';
+let previousX = 0;
+let previousY = 0;
+const canvasElement = document.getElementById('drawingArea');
+const canvasContext = canvasElement.getContext('2d');
 
-
-let isDrawingEnabled = false;
-let isDrawing = false;
-let color = 'black';
-let lastX = 0;
-let lastY = 0;
-const drawingArea = document.getElementById('drawingArea');
-const ctx = drawingArea.getContext('2d');
-
-function resizeCanvas() {
-    drawingArea.width = window.innerWidth;
-    drawingArea.height = window.innerHeight * 0.8;
+function adjustCanvasSize() {
+    canvasElement.width = window.innerWidth;
+    canvasElement.height = window.innerHeight * 0.8;
 }
 
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
+window.addEventListener('resize', adjustCanvasSize);
+adjustCanvasSize();
 
-drawingArea.addEventListener('dblclick', (event) => {
-    if (isDrawingEnabled) {
-        isDrawing = true;
+canvasElement.addEventListener('dblclick', (event) => {
+    if (drawingModeActive) {
+        isCurrentlyDrawing = true;
         document.body.style.cursor = 'crosshair';
-        lastX = event.clientX - drawingArea.offsetLeft;
-        lastY = event.clientY - drawingArea.offsetTop;
+        previousX = event.clientX - canvasElement.offsetLeft;
+        previousY = event.clientY - canvasElement.offsetTop;
     }
 });
 
-drawingArea.addEventListener('mouseup', () => {
-    if (isDrawingEnabled) {
-        isDrawing = false;
+canvasElement.addEventListener('mouseup', () => {
+    if (drawingModeActive) {
+        isCurrentlyDrawing = false;
         document.body.style.cursor = 'default';
     }
 });
 
-function setColor(val) {
-    // alert(val)
-    // color = selectedColor;
-//     return val;
-// }
-drawingArea.addEventListener('mousemove', (event) => {
-    if (isDrawing) {
-        const x = event.clientX - drawingArea.offsetLeft;
-        const y = event.clientY - drawingArea.offsetTop;
+canvasElement.addEventListener('mousemove', (event) => {
+    if (isCurrentlyDrawing) {
+        const currentX = event.clientX - canvasElement.offsetLeft;
+        const currentY = event.clientY - canvasElement.offsetTop;
 
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(x, y);
-        ctx.strokeStyle = val;
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.stroke();
+        canvasContext.beginPath();
+        canvasContext.moveTo(previousX, previousY);
+        canvasContext.lineTo(currentX, currentY);
 
-        lastX = x;
-        lastY = y;
+        canvasContext.strokeStyle = selectedColor;
+        canvasContext.lineWidth = 2;
+        canvasContext.lineCap = 'round';
+        canvasContext.stroke();
+
+        previousX = currentX;
+        previousY = currentY;
     }
 });
-}
 
-
-
-
+document.getElementById('colorPicker').addEventListener('input', (event) => {
+    selectedColor = event.target.value;
+});
 
 document.getElementById('startDrawing').addEventListener('change', function() {
     if (this.checked) {
         document.getElementById('drawingArea').style.zIndex = '30';
-        isDrawingEnabled = true;
+        drawingModeActive = true;
         document.body.style.cursor = 'default';
-    }else{
+    } else {
         document.getElementById('drawingArea').style.zIndex = '1';
-
-        isDrawingEnabled = false;
-        isDrawing = false;
+        drawingModeActive = false;
+        isCurrentlyDrawing = false;
         document.body.style.cursor = 'default';
     }
 });
 
-
-
-
-// document.getElementById('startDrawing').addEventListener('click', () => {
-//     // alert("jskdfjm")
-//     document.getElementById('drawingArea').style.zIndex = '30';
-//     isDrawingEnabled = true;
-//     document.body.style.cursor = 'default';
-// });
-
-// document.getElementById('stopDrawing').addEventListener('click', () => {
-//     document.getElementById('drawingArea').style.zIndex = '2';
-
-//     isDrawingEnabled = false;
-//     isDrawing = false;
-//     document.body.style.cursor = 'default';
-// });
-
 document.getElementById('eraseDrawing').addEventListener('click', () => {
-    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+    canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
 });
-
-
