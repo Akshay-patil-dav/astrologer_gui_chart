@@ -271,7 +271,7 @@
 <!-- ***********************************************************planetbox***************************************************************** -->
  <div>
 
-  <div style="display: flex; gap: 1cm;">
+  <div style="display: flex; gap: 1cm;" id="planetsbox">
     <h6 class="lp">Planets</h6>
     <div class="form-check form-switch">
         <label for="" id="namemm">Full Name</label>
@@ -294,14 +294,23 @@
             .tex{
               display: flex;
             }
+            #pl{
+              /* display: none; */
+            }
+          
           </style>
+
+          <!-- <style>  #tex{position: relative;top: 0.7cm;}</style> -->
 
 <button id="duplicate-mydiv8" class="but" style="z-index: 1;">+</button>
 
             <div id="mydiv8"  class="mydiv8" style="cursor: pointer;">
               <!-- <div > -->
+                <div class="pall">
+
+                </div>
                 <img id="pl" src="https://w7.pngwing.com/pngs/16/608/png-transparent-sun-the-sun-sunscreen-light-sphere-sun-image-file-formats-orange-sphere-thumbnail.png" alt="">
-                <div  class="tex">
+                <div  id="tex">
                   <div id="text1" > Sun</div>
                   <div id="text11">Su</div>
                 </div>
@@ -334,7 +343,7 @@
 
             <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gx5sI_2JaRe-i0W1kBr4whgl9Vfol0nMiw&s" alt="">
             
-            <div class="tex">
+            <div id="tex">
               <div id="text3" >Mercury</div>
               <div id="text33" >Mer</div>
             </div>
@@ -346,7 +355,7 @@
 
                 <div class="mydiv1" id="mydiv1"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                     <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR3vxhkh6H2-LqkJcCGk36tJz8Tg3EHLWanQ&s" alt="">
-                   <div class="tex">
+                   <div id="tex">
                     <div id="text4" >venus</div>
                     <div id="text44" >ven</div>
                    </div>
@@ -359,7 +368,7 @@
 
             <div class="mydiv3" id="mydiv3"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                 <img id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeksFtqTWHTRuXVIspqVOjf1gDs9q-pSGHDw&s" alt="">
-                <div class="tex">
+                <div id="tex">
                   <div id="text5" >Mars</div>
                   <div id="text55" >Mar</div>
                 </div>
@@ -373,7 +382,7 @@
             <div class="mydiv4" id="mydiv4" style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
               
                 <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJ5SPrwFzu4giI0xFeWXVxIsKNlz7CsGecg&s" alt="">
-               <div class="tex">
+               <div id="tex">
                 <div id="text6">Jupiter</div>
                 <div id="text66">Jup</div>
                </div>
@@ -385,7 +394,7 @@
 
             <div class="mydiv6" id="mydiv6"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
                 <img  id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQe-DwV3cTZoWGIUu1Jjufr8o0cf5due2vg&s" alt="">
-                <div class="tex">
+                <div id="tex">
                   <div id="text7" >Saturn</div>
                   <div id="text77" >Sat</div>
                 </div>
@@ -396,7 +405,7 @@
 
             <div class="mydiv7" id="mydiv7"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; " >
                 <img id="pl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVuBLhYPAUMeg3M-MfLyRpPxEeuoJBw7t6wQ&s" alt="">
-              <div class="tex">
+              <div id="tex">
                 <div id="text8" >Rahu</div>
                 <div id="text88" >Rah</div>
               </div>
@@ -409,8 +418,8 @@
           <button id="duplicate-mydivKetu" class="but" style="z-index: 1;">+</button>
 
             <div class="mydiv9" id="mydiv9"  style="position: absolute; width: 1cm; z-index: 2; cursor: pointer; ">
-                <img class="pl" id="pl" src="https://png.pngtree.com/png-clipart/20210803/ourmid/pngtree-abstract-style-black-and-white-watercolor-moon-illustration-png-image_3768678.png" alt="">
-                <div class="tex">
+                <img id="pl" id="pl" src="https://png.pngtree.com/png-clipart/20210803/ourmid/pngtree-abstract-style-black-and-white-watercolor-moon-illustration-png-image_3768678.png" alt="">
+                <div id="tex">
                   <div id="text9" >Ketu</div>
                   <div id="text99" >Ket</div>
                 </div>
@@ -452,6 +461,9 @@
                                                 <span class="slider round"></span>
                                               </label>
 
+
+
+                                              
 
                                               <button class="pen-img4" id="eraseDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                                 <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>

@@ -2,10 +2,11 @@
 @import url('./colorbox.css');
 @import url('./pla.css');
 @import url('./switch.css');
+@import url("./responcive/chart-r.css");
 
 body{
-    overflow-x: hidden;
-    overflow: hidden;
+    /* overflow-x: hidden;
+    overflow: hidden; */
     /* column-rule: white; */
    
     
@@ -52,6 +53,8 @@ canvas{
     /* height: 500%; */
     height: auto;
     /* display: flexbox; */
+
+    /* position: fixed; */
 }
 
 #drawingArea{
@@ -282,3 +285,6 @@ canvas{
   left: calc(100% - 6px);
   /* rotate: 2deg; */
 }
+
+
+

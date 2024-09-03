@@ -214,9 +214,13 @@ document.getElementById('iconss').addEventListener('change', function() {
     if (this.checked) {
         
 
+        // <style>  #tex{position: relative;top: 0.7cm;}</style>
+
         // document.getElementById('tex').innerHTML = "<style>#tex{background-color: rgb(255, 255, 255); width: 1.1cm;}</style>"
 
-        document.getElementById('pl').innerHTML = "   <style>#pl{display: none;}</style>"
+        document.getElementById('pl').innerHTML = "<style>#pl{display: none;}</style>"
+
+        document.getElementById('tex').innerHTML = "<style> #tex{position: relative;top: 0.7cm;}</style>"
     }else{
 
         document.getElementById('pl').innerHTML = "   <style>#pl{display: block;}</style>"

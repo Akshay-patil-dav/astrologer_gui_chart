@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1280px) {
+
+    .box-center , .box-left , .box-right{
+
+        height: 25cm;
+        /* margin: -5cm; */
+        position: relative;
+        /* right: cm; */
+        left: 1cm;
+        /* background-color: red; */
+    }
+
+    .buts{
+        position: relative;
+        /* left: -5cm; */
+
+    }
+
+    #arrayDisplay{
+        position: relative;
+        /* right: 0cm; */
+        left: 0.1cm;
+    }
+
+    .pen1{
+        position: relative;
+        left: 2.5cm;
+    }
+
+    #flexSwitchCheckDefault{
+        position: relative;
+        left: -5cm;
+        /* right: 2cm; */
+    }
+  }
+
+  @media only screen and (max-width: 1880px) {
+
+    
+    canvas{
+        /* background-color: rgb(255, 103, 103); */
+        width: 100%;
+        /* z-index: 10; */
+        position: fixed;
+        /* height: 500%; */
+        height: auto;
+        /* display: flexbox; */
+    }
+    #arrayDisplay{
+        position: relative;
+        right: 1cm;
+    }
+  }
+  

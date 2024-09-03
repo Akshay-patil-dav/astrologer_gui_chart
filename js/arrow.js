@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             arrowCanvas.style.pointerEvents = 'auto';
         } else {
             // Reset z-index to 1 when drawing is disabled
-            arrowCanvas.style.zIndex = '1';
+            arrowCanvas.style.zIndex = '0';
             arrowCanvas.style.pointerEvents = 'none';
             // Clear any ongoing drawing state
             isDrawing = false;
