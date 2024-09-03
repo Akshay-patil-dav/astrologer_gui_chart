@@ -830,11 +830,12 @@
 
 
     // $("#remove").click(function() {
-    //     $(".mydiv8['#mydiv8']").remove(); // Remove all cloned elements
+    //     $(".#mydiv8").remove(); // Remove all cloned elements
     // });
    
-    $("#remove").click(function() {
-        duplicationEnabled = false;
-    });
+    // $("#remove").click(function() {
+    //     // alert("wdsk")
+    //     duplicationEnabled = true;
+    // });
 });
 

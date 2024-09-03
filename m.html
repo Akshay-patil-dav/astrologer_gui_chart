@@ -3,144 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing App</title>
+    <title>Drag and Drop Colors</title>
     <style>
-        #drawingArea {
-            border: 1px solid black;
-            cursor: crosshair;
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropBox {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            margin-top: 20px;
+        }
+
+        #clearButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <input type="checkbox" id="startDrawing"> Enable Drawing
-    <button id="eraseDrawing">Erase Drawing</button>
-    <button id="drawArrow">Draw Arrow</button>
-    <input type="color" id="colorPicker" value="#000000">
-    <canvas id="drawingArea"></canvas>
+
+    <div class="color-swatch" style="background-color: red;" draggable="true"></div>
+    <div class="color-swatch" style="background-color: green;" draggable="true"></div>
+    <div class="color-swatch" style="background-color: blue;" draggable="true"></div>
+    <div class="color-swatch" style="background-color: yellow;" draggable="true"></div>
+
+    <div id="dropBox" class="dropBox"></div>
+    <div id="dropBox2" class="dropBox"></div>
+
+    <button id="clearButton">Clear Color</button>
 
     <script>
-        let isDrawingEnabled = false;
-        let isDrawing = false;
-        let isDrawingArrow = false;
-        let color = 'black';
-        let lastX = 0;
-        let lastY = 0;
-        const drawingArea = document.getElementById('drawingArea');
-        const ctx = drawingArea.getContext('2d');
+        // Function to handle dragstart
+        document.querySelectorAll('.color-swatch').forEach(swatch => {
+            swatch.addEventListener('dragstart', function(e) {
+                e.dataTransfer.setData('color', e.target.style.backgroundColor);
+            });
+        });
 
-        function resizeCanvas() {
-            drawingArea.width = window.innerWidth;
-            drawingArea.height = window.innerHeight * 0.8;
+        // Function to allow dropping
+        function allowDrop(e) {
+            e.preventDefault();
         }
 
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        drawingArea.addEventListener('dblclick', (event) => {
-            if (isDrawingEnabled) {
-                if (isDrawingArrow) {
-                    handleArrowDrawing(event);
-                } else {
-                    startFreehandDrawing(event);
-                }
-            }
-        });
-
-        drawingArea.addEventListener('mouseup', () => {
-            if (isDrawingEnabled && !isDrawingArrow) {
-                isDrawing = false;
-                document.body.style.cursor = 'default';
-            }
-        });
-
-        drawingArea.addEventListener('mousemove', (event) => {
-            if (isDrawing && !isDrawingArrow) {
-                const x = event.clientX - drawingArea.offsetLeft;
-                const y = event.clientY - drawingArea.offsetTop;
-
-                ctx.beginPath();
-                ctx.moveTo(lastX, lastY);
-                ctx.lineTo(x, y);
-
-                ctx.strokeStyle = color;
-                ctx.lineWidth = 2;
-                ctx.lineCap = 'round';
-                ctx.stroke();
-
-                lastX = x;
-                lastY = y;
-            }
-        });
-
-        document.getElementById('startDrawing').addEventListener('change', function() {
-            if (this.checked) {
-                drawingArea.style.zIndex = '30';
-                isDrawingEnabled = true;
-                document.body.style.cursor = 'default';
-            } else {
-                drawingArea.style.zIndex = '1';
-                isDrawingEnabled = false;
-                isDrawing = false;
-                isDrawingArrow = false;
-                document.body.style.cursor = 'default';
-            }
-        });
-
-        document.getElementById('eraseDrawing').addEventListener('click', () => {
-            ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-        });
-
-        document.getElementById('drawArrow').addEventListener('click', () => {
-            isDrawingArrow = !isDrawingArrow;
-            document.body.style.cursor = isDrawingArrow ? 'crosshair' : 'default';
-        });
-
-        document.getElementById('colorPicker').addEventListener('input', (event) => {
-            color = event.target.value;
-        });
-
-        function drawArrow(x1, y1, x2, y2) {
-            const headlen = 10; // Length of the arrow head
-            const angle = Math.atan2(y2 - y1, x2 - x1);
-
-            ctx.beginPath();
-            ctx.moveTo(x1, y1);
-            ctx.lineTo(x2, y2);
-
-            ctx.lineWidth = 2;
-            ctx.lineCap = 'round';
-            ctx.strokeStyle = color;
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.moveTo(x2, y2);
-            ctx.lineTo(x2 - headlen * Math.cos(angle - Math.PI / 6), y2 - headlen * Math.sin(angle - Math.PI / 6));
-            ctx.lineTo(x2 - headlen * Math.cos(angle + Math.PI / 6), y2 - headlen * Math.sin(angle + Math.PI / 6));
-            ctx.lineTo(x2, y2);
-            ctx.closePath();
-            ctx.fillStyle = color;
-            ctx.fill();
+        // Function to handle drop
+        function handleDrop(e) {
+            e.preventDefault();
+            const color = e.dataTransfer.getData('color');
+            e.target.style.backgroundColor = color;
         }
 
-        function handleArrowDrawing(event) {
-            if (!isDrawing) {
-                lastX = event.clientX - drawingArea.offsetLeft;
-                lastY = event.clientY - drawingArea.offsetTop;
-                isDrawing = true;
-            } else {
-                const x = event.clientX - drawingArea.offsetLeft;
-                const y = event.clientY - drawingArea.offsetTop;
-                drawArrow(lastX, lastY, x, y);
-                isDrawing = false;
-            }
+        // Adding dragover and drop event listeners to the drop box
+        const dropBox = document.getElementById('dropBox');
+        dropBox.addEventListener('dragover', allowDrop);
+        dropBox.addEventListener('drop', handleDrop);
+
+            // Adding dragover and drop event listeners to the drop box
+            const dropBox2 = document.getElementById('dropBox2');
+        dropBox2.addEventListener('dragover', allowDrop);
+        dropBox2.addEventListener('drop', handleDrop);
+
+
+        // Function to clear the color in the drop box
+        function clearColor() {
+            dropBox.style.backgroundColor = ''; // Reset the background color
+            dropBox2.style.backgroundColor = ''; // Reset the background color
         }
 
-        function startFreehandDrawing(event) {
-            isDrawing = true;
-            document.body.style.cursor = 'crosshair';
-            lastX = event.clientX - drawingArea.offsetLeft;
-            lastY = event.clientY - drawingArea.offsetTop;
-        }
+        // Add event listener to the clear button
+        document.getElementById('clearButton').addEventListener('click', clearColor);
     </script>
+    
 </body>
 </html>
