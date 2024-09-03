@@ -11,11 +11,11 @@ function LANG(lang){
         case 'Hin':
             // alert(l1[0])
 
-            document.getElementById('text11').innerHTML = 'सूर';
+            document.getElementById('text11').innerHTML = 'सू';
             document.getElementById('text22').innerHTML = 'चंद्र';
-            document.getElementById('text33').innerHTML = 'पार';
-            document.getElementById('text44').innerHTML = 'शुक';
-            document.getElementById('text55').innerHTML = 'मंग';
+            document.getElementById('text33').innerHTML = 'पा';
+            document.getElementById('text44').innerHTML = 'शु';
+            document.getElementById('text55').innerHTML = 'मं';
             document.getElementById('text66').innerHTML = 'बृह';
             document.getElementById('text77').innerHTML = 'श';
             document.getElementById('text88').innerHTML = 'रा';
