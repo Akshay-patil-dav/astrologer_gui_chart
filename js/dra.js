@@ -14,15 +14,17 @@ function adjustCanvasSize() {
 window.addEventListener('resize', adjustCanvasSize);
 adjustCanvasSize();
 
-canvasElement.addEventListener('dblclick', (event) => {
+// Mouse down to start drawing
+canvasElement.addEventListener('mousedown', (event) => {
     if (drawingModeActive) {
         isCurrentlyDrawing = true;
-        document.body.style.cursor = 'crosshair';
+        document.body.style.cursor = 'pointer';
         previousX = event.clientX - canvasElement.offsetLeft;
         previousY = event.clientY - canvasElement.offsetTop;
     }
 });
 
+// Mouse up to stop drawing
 canvasElement.addEventListener('mouseup', () => {
     if (drawingModeActive) {
         isCurrentlyDrawing = false;
@@ -30,6 +32,7 @@ canvasElement.addEventListener('mouseup', () => {
     }
 });
 
+// Mouse move to draw on canvas
 canvasElement.addEventListener('mousemove', (event) => {
     if (isCurrentlyDrawing) {
         const currentX = event.clientX - canvasElement.offsetLeft;
@@ -59,7 +62,7 @@ document.getElementById('startDrawing').addEventListener('change', function() {
         drawingModeActive = true;
         document.body.style.cursor = 'default';
     } else {
-        document.getElementById('drawingArea').style.zIndex = '1';
+        document.getElementById('drawingArea').style.zIndex = '0';
         drawingModeActive = false;
         isCurrentlyDrawing = false;
         document.body.style.cursor = 'default';
@@ -72,10 +75,12 @@ document.getElementById('eraseDrawing').addEventListener('click', () => {
 
 document.getElementById('remove').addEventListener('click', () => {
     canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
-
-   
+    
+    // Clear additional contexts if necessary (assuming they exist)
+    if (typeof arrows !== 'undefined') {
         arrows = [];
+    }
+    if (typeof arrowContext !== 'undefined' && typeof arrowCanvas !== 'undefined') {
         arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
-    
-    
+    }
 });

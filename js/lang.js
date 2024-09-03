@@ -88,19 +88,6 @@ function LANG(lang){
 
 
 
-
-    //    document.getElementById('text11').innerHTML = 'सूर';
-    //    document.getElementById('text22').innerHTML = 'चंद्र';
-    //    document.getElementById('text33').innerHTML = 'पार';
-    //    document.getElementById('text44').innerHTML = 'शुक';
-    //    document.getElementById('text55').innerHTML = 'मंग';
-    //    document.getElementById('text66').innerHTML = 'बृह';
-    //    document.getElementById('text77').innerHTML = 'श';
-    //    document.getElementById('text88').innerHTML = 'रा';
-    //    document.getElementById('text99').innerHTML = 'के';
-
-    // display: flex; gap: 1cm; position: relative; left: 9cm;
-
     document.getElementById('swcl').style.marginLeft = '2cm'
 }
 
@@ -119,16 +106,7 @@ function eng(){
         
         document.getElementById('icons').innerHTML = 'Icons';
         document.getElementById('chartlagn').innerHTML = '<h1>Lagna Chart</h1>'
-        // document.getElementById('text11').style.display = 'Su';
-        // document.getElementById('text22').style.display = 'Mo';
-        // document.getElementById('text33').style.display = 'Mer';
-        // document.getElementById('text44').style.display = 'ven';
-        // document.getElementById('text55').style.display = 'Mar';
-        // document.getElementById('text66').style.display = 'Jup';
-        // document.getElementById('text77').style.display = 'Sat';
-        // document.getElementById('text88').style.display = 'Rah';
-        // document.getElementById('text99').style.display = 'Ket';
- 
+      
 
         document.getElementById('o1').innerHTML=  'Open this select menu' 
         document.getElementById('o2').innerHTML = 'Aries' 

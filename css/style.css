@@ -90,7 +90,7 @@ canvas{
 
 .lan{
     position: relative;
-    left: 39cm;
+    left: 38cm;
     width: 4cm;
     cursor: pointer;
 }
@@ -98,7 +98,7 @@ canvas{
 @media only screen and (max-width: 1954px) {
   .lan{
     position: relative;
-    left: 33cm;
+    left: 33.5cm;
     width: 4cm;
     cursor: pointer;
 }

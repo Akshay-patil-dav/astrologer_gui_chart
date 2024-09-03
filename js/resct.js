@@ -43,4 +43,17 @@ function remove() {
 
 
 
+
+    
+
+
+    document.getElementById('remove').addEventListener('click', () => {
+        canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
+    
+       
+            arrows = [];
+            arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
+        
+        
+    });
     

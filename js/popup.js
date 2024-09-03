@@ -62,20 +62,6 @@ window.addEventListener('click', function(event) {
 
 
 
-
-
-// document.getElementById('btnFile').onclick = function(event) {
-    // 
-        // document.getElementById('FileUpload').click();
-
-//    let a = document.getElementById('FileUpload').value;
-
-//    document.getElementById('displayImage').src = a;
-//             document.getElementById('displayImage').style.display = 'block';
-    // alert(a)
-   
-// };
-
 // *******************************
 document.getElementById('FileUpload').onchange = function(event) {
     const file = event.target.files[0];
