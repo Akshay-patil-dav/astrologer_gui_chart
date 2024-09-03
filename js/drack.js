@@ -837,5 +837,25 @@
     //     // alert("wdsk")
     //     duplicationEnabled = true;
     // });
+
+    $("#remove").click(function() {
+        // Remove all cloned elements
+        $("[id^='element-']").remove();
+
+        // Reset original elements' positions
+        $("#mydiv").css({ top: "", left: "" });
+        $("#mydiv1").css({ top: "", left: "" });
+        $("#mydiv2").css({ top: "", left: "" });
+        $("#mydiv3").css({ top: "", left: "" });
+        $("#mydiv4").css({ top: "", left: "" });
+        $("#mydiv5").css({ top: "", left: "" });
+        $("#mydiv6").css({ top: "", left: "" });
+        $("#mydiv7").css({ top: "", left: "" });
+        $("#mydiv8").css({ top: "", left: "" });
+        $("#mydiv9").css({ top: "", left: "" });
+
+        // Reset element count
+        elementCount = 1;
+    });
 });
 

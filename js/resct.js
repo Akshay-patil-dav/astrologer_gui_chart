@@ -37,4 +37,6 @@ function remove() {
     document.getElementById('displayImage2').innerHTML = ""
     document.getElementById('displayImage').innerHTML = ""
     
+
+    
     }
