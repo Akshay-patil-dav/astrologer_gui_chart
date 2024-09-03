@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     arrowcolorPicker.addEventListener('input', (e) => {
         arrowColor = e.target.value;
     });
+
+    // Handle window resizing
+    window.addEventListener('resize', resizeCanvas);
 });
 
 function initializeArrowCanvas() {
@@ -42,7 +45,7 @@ function initializeArrowCanvas() {
     arrowCanvas.style.position = 'absolute';
     arrowCanvas.style.top = '0';
     arrowCanvas.style.left = '0';
-    arrowCanvas.style.zIndex = '1';  // Default z-index when disabled
+    arrowCanvas.style.zIndex = '0';  // Default z-index when disabled
     arrowCanvas.style.pointerEvents = 'none';
     document.body.appendChild(arrowCanvas);
 
@@ -53,6 +56,30 @@ function initializeArrowCanvas() {
     arrowCanvas.addEventListener('mousemove', draw);
     arrowCanvas.addEventListener('mouseup', stopDrawing);
     arrowCanvas.addEventListener('mouseout', stopDrawing);
+}
+
+function resizeCanvas() {
+    // Update canvas size
+    arrowCanvas.width = window.innerWidth;
+    arrowCanvas.height = window.innerHeight;
+
+    // Redraw arrows
+    redrawArrows();
+}
+
+function redrawArrows() {
+    // Clear the canvas
+    arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
+
+    // Redraw all arrows
+    arrows.forEach(arrow => {
+        // Adjust arrows' coordinates if needed
+        drawArrowOnCanvas(arrow.startX * (arrowCanvas.width / window.innerWidth),
+                          arrow.startY * (arrowCanvas.height / window.innerHeight),
+                          arrow.endX * (arrowCanvas.width / window.innerWidth),
+                          arrow.endY * (arrowCanvas.height / window.innerHeight),
+                          arrow.color);
+    });
 }
 
 function startDrawing(e) {
@@ -71,7 +98,11 @@ function draw(e) {
 
     // Draw all existing arrows
     arrows.forEach(arrow => {
-        drawArrowOnCanvas(arrow.startX, arrow.startY, arrow.endX, arrow.endY, arrow.color);
+        drawArrowOnCanvas(arrow.startX * (arrowCanvas.width / window.innerWidth),
+                          arrow.startY * (arrowCanvas.height / window.innerHeight),
+                          arrow.endX * (arrowCanvas.width / window.innerWidth),
+                          arrow.endY * (arrowCanvas.height / window.innerHeight),
+                          arrow.color);
     });
 
     // Draw the current arrow being drawn
@@ -83,7 +114,11 @@ function stopDrawing(e) {
     isDrawing = false;
 
     // Save the arrow coordinates and color
-    arrows.push({ startX, startY, endX: e.clientX, endY: e.clientY, color: arrowColor });
+    arrows.push({ startX: startX / (arrowCanvas.width / window.innerWidth),
+                  startY: startY / (arrowCanvas.height / window.innerHeight),
+                  endX: e.clientX / (arrowCanvas.width / window.innerWidth),
+                  endY: e.clientY / (arrowCanvas.height / window.innerHeight),
+                  color: arrowColor });
 }
 
 function drawArrowOnCanvas(x1, y1, x2, y2, color) {
@@ -115,12 +150,13 @@ function undoArrow() {
 
     // Redraw the remaining arrows
     arrows.forEach(arrow => {
-        drawArrowOnCanvas(arrow.startX, arrow.startY, arrow.endX, arrow.endY, arrow.color);
+        drawArrowOnCanvas(arrow.startX * (arrowCanvas.width / window.innerWidth),
+                          arrow.startY * (arrowCanvas.height / window.innerHeight),
+                          arrow.endX * (arrowCanvas.width / window.innerWidth),
+                          arrow.endY * (arrowCanvas.height / window.innerHeight),
+                          arrow.color);
     });
 }
 
 // Example of adding event listeners to buttons
 document.getElementById('clearArrowsBtn').addEventListener('click', clearArrows);
-document.getElementById('undoArrowBtn').addEventListener('click', undoArrow);
-
-// document.getElementById('remove').addEventListener('click', clearArrows);
