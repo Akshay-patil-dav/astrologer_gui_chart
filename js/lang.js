@@ -224,6 +224,7 @@ document.getElementById('iconss').addEventListener('change', function() {
     }else{
 
         document.getElementById('pl').innerHTML = "   <style>#pl{display: block;}</style>"
+         document.getElementById('tex').innerHTML = "<style> #tex{position: relative;top: 0cm;}</style>"
         // document.getElementById('tex').innerHTML = "<style>#tex{background-color: rgb(255, 255, 255); width: 1.1cm;}</style>"
 
     }
