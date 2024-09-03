@@ -122,3 +122,5 @@ function undoArrow() {
 // Example of adding event listeners to buttons
 document.getElementById('clearArrowsBtn').addEventListener('click', clearArrows);
 document.getElementById('undoArrowBtn').addEventListener('click', undoArrow);
+
+// document.getElementById('remove').addEventListener('click', clearArrows);

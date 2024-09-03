@@ -69,3 +69,13 @@ document.getElementById('startDrawing').addEventListener('change', function() {
 document.getElementById('eraseDrawing').addEventListener('click', () => {
     canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
 });
+
+document.getElementById('remove').addEventListener('click', () => {
+    canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
+
+   
+        arrows = [];
+        arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
+    
+    
+});

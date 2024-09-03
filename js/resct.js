@@ -33,4 +33,6 @@ function remove() {
     document.getElementById('dropBox23').style.backgroundColor = '';
     document.getElementById('dropBox24').style.backgroundColor = '';
     
+   
+    
     }
