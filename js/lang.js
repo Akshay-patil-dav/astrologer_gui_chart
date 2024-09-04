@@ -19,6 +19,7 @@ function LANG(lang){
             document.getElementById('text66').innerHTML = 'बृह';
             document.getElementById('text77').innerHTML = 'श';
             document.getElementById('text88').innerHTML = 'रा';
+            document.getElementById('onButton').innerHTML = 'तीर'
             document.getElementById('text99').innerHTML = 'के';
             arr(l1);
             break;
@@ -134,6 +135,10 @@ function eng(){
         document.getElementById('o13').innerHTML = 'Pisces'
 
         document.getElementById('remove').innerHTML='Reset'
+
+         document.getElementById('penbox').innerHTML='Pen'
+          document.getElementById('colorbox').innerHTML='Color'
+          document.getElementById('onButton').innerHTML ='Arrow'
 
 
         document.getElementById('fullname').innerHTML= 'Full Name '
