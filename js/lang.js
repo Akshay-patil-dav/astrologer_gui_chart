@@ -2,7 +2,7 @@ function LANG(lang){
     // input2(lang);
     // alert(lang)
     // 'रीसेट',
-    const  l1 = ['सूरज','चंद्रमा','पारा','शुक्र','मंगल','बृहस्पति','शनि','राहु','केतु','रीसेट','नाम','आइकन','डुबालिकेट','चुनना','सीमा रंग','बॉक्स रंग'
+    const  l1 = ['सूरज','चंद्रमा','बुध','शुक्र','मंगल','बृहस्पति','शनि','राहु','केतु','रीसेट','नाम','आइकन','डुबालिकेट','चुनना','सीमा रंग','बॉक्स रंग'
         ,'मेनू चुनें','एआरआईएस','वृषभ','मिथुन','कैंसर','सिंह','कन्या','तुल','वृश्चिक','धनुराशि','मकर','कुम्भ','मीन राशि','पूरा नाम','ईमेल आईडी','फोन नंबर'
     ];
 
@@ -13,7 +13,7 @@ function LANG(lang){
 
             document.getElementById('text11').innerHTML = 'सू';
             document.getElementById('text22').innerHTML = 'चंद्र';
-            document.getElementById('text33').innerHTML = 'पा';
+            document.getElementById('text33').innerHTML = 'बु';
             document.getElementById('text44').innerHTML = 'शु';
             document.getElementById('text55').innerHTML = 'मं';
             document.getElementById('text66').innerHTML = 'बृह';
@@ -92,15 +92,15 @@ function LANG(lang){
 }
 
 function eng(){
-        document.getElementById('text1').innerHTML = 'Sun';
-        document.getElementById('text2').innerHTML = 'Moon';
-        document.getElementById('text3').innerHTML = 'Mercury';
-        document.getElementById('text4').innerHTML = 'venus';
-        document.getElementById('text5').innerHTML = 'Mars';
-        document.getElementById('text6').innerHTML = 'Jupiter';
-        document.getElementById('text7').innerHTML = 'Saturn';
-        document.getElementById('text8').innerHTML = 'Rahu';
-        document.getElementById('text9').innerHTML = 'Ketu';
+        document.getElementById('text1').innerHTML = ' <div id="text1" > Sun </div>';
+        document.getElementById('text2').innerHTML = ' <div id="text1" > Moon </div>';
+        document.getElementById('text3').innerHTML = ' <div id="text1" > Mercury </div>';
+        document.getElementById('text4').innerHTML = ' <div id="text1" > venus </div>';
+        document.getElementById('text5').innerHTML = ' <div id="text1" > Mars </div>';
+        document.getElementById('text6').innerHTML = ' <div id="text1" > Jupiter </div>';
+        document.getElementById('text7').innerHTML = ' <div id="text1" > Saturn </div>';
+        document.getElementById('text8').innerHTML = ' <div id="text1" > Rahu </div>';
+        document.getElementById('text9').innerHTML = ' <div id="text1" > Ketu </div>';
 
         document.getElementById('namemm').innerHTML = 'Names';
         
@@ -220,11 +220,16 @@ document.getElementById('iconss').addEventListener('change', function() {
 
         document.getElementById('pl').innerHTML = "<style>#pl{display: none;}</style>"
 
-        document.getElementById('tex').innerHTML = "<style> #tex{position: relative;top: 0.7cm;}</style>"
+            // document.getElementById('br').style.display = 'block'
+
+
+        // document.getElementById('text1').innerHTML = "<style> #tex{position: relative;top: 0.7cm;}</style>"
     }else{
 
         document.getElementById('pl').innerHTML = "   <style>#pl{display: block;}</style>"
-         document.getElementById('tex').innerHTML = "<style> #tex{position: relative;top: 0cm;}</style>"
+        
+
+        //  document.getElementById('tex').innerHTML = "<style> #tex{position: relative;top: 0cm;}</style>"
         // document.getElementById('tex').innerHTML = "<style>#tex{background-color: rgb(255, 255, 255); width: 1.1cm;}</style>"
 
     }
