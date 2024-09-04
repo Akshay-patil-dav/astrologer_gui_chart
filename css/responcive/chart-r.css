@@ -32,6 +32,8 @@
         left: -5cm;
         /* right: 2cm; */
     }
+
+
   }
 
   @media only screen and (max-width: 1880px) {
@@ -50,5 +52,20 @@
         position: relative;
         right: 1cm;
     }
+    
+    .boxses{
+        position: relative;
+        /* background-color: rgb(115, 77, 77); */
+        /* position: relative; */
+        right: 1cm;
+    }
+    .collbox{
+        position: relative;
+        right: 1cm;
+    }
+  #hh2{
+    position: relative;
+    left: 1px;
+  }
   }
   
