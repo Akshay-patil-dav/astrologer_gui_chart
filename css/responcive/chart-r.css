@@ -67,6 +67,11 @@
     position: relative;
     left: 1px;
   }
+  #chartlagn{
+    font-size: 0.8cm;
+    position: relative;
+    right: 30px;
+  }
   }
   #penbox{
     position: relative;
