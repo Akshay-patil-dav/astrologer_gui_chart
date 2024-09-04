@@ -23,6 +23,17 @@ function LANG(lang){
             arr(l1);
             break;
         case 'Eng':
+
+
+        document.getElementById('text11').innerHTML = ' <div id="text1" > Su </div>';
+        document.getElementById('text22').innerHTML = ' <div id="text1" > Mo </div>';
+        document.getElementById('text33').innerHTML = ' <div id="text1" > Me </div>';
+        document.getElementById('text44').innerHTML = ' <div id="text1" > ve </div>';
+        document.getElementById('text55').innerHTML = ' <div id="text1" > Ma </div>';
+        document.getElementById('text66').innerHTML = ' <div id="text1" > Ju </div>';
+        document.getElementById('text77').innerHTML = ' <div id="text1" > Sa </div>';
+        document.getElementById('text88').innerHTML = ' <div id="text1" > Ra </div>';
+        document.getElementById('text99').innerHTML = ' <div id="text1" > Ke </div>';
             eng();
             break;
         default :
