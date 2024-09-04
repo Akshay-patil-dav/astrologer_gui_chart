@@ -68,4 +68,8 @@
     left: 1px;
   }
   }
+  #penbox{
+    position: relative;
+    right: 30px;
+  }
   
