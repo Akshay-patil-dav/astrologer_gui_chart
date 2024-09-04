@@ -5,8 +5,8 @@
 @import url("./responcive/chart-r.css");
 
 body{
-    /* overflow-x: hidden; */
-    overflow: hidden;
+    overflow-x: hidden;
+/*     overflow: hidden; */
     /* column-rule: white; */
    
     
