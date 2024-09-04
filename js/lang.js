@@ -231,15 +231,35 @@ document.getElementById('iconss').addEventListener('change', function() {
 
         document.getElementById('pl').innerHTML = "<style>#pl{display: none;}</style>"
 
-            // document.getElementById('br').style.display = 'block'
+            document.getElementById('pall1').style.display = 'block'
+                        document.getElementById('pall1').style.display = 'block'
+                        document.getElementById('pall2').style.display = 'block'
+                        document.getElementById('pall3').style.display = 'block'
+                        document.getElementById('pall4').style.display = 'block'
+                        document.getElementById('pall5').style.display = 'block'
+                        document.getElementById('pall6').style.display = 'block'
+                        document.getElementById('pall7').style.display = 'block'
+                        document.getElementById('pall8').style.display = 'block'
+                        document.getElementById('pall9').style.display = 'block'
 
 
         // document.getElementById('text1').innerHTML = "<style> #tex{position: relative;top: 0.7cm;}</style>"
     }else{
 
-        document.getElementById('pl').innerHTML = "   <style>#pl{display: block;}</style>"
+        document.getElementById('pl').innerHTML = "<style>#pl{display: block;}</style>"
         
+            // document.getElementById('pall1').style.display = 'none'
 
+
+            document.getElementById('pall1').style.display = 'none'
+            document.getElementById('pall2').style.display = 'none'
+            document.getElementById('pall3').style.display = 'none'
+            document.getElementById('pall4').style.display = 'none'
+            document.getElementById('pall5').style.display = 'none'
+            document.getElementById('pall6').style.display = 'none'
+            document.getElementById('pall7').style.display = 'none'
+            document.getElementById('pall8').style.display = 'none'
+            document.getElementById('pall9').style.display = 'none'
         //  document.getElementById('tex').innerHTML = "<style> #tex{position: relative;top: 0cm;}</style>"
         // document.getElementById('tex').innerHTML = "<style>#tex{background-color: rgb(255, 255, 255); width: 1.1cm;}</style>"
 
