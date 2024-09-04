@@ -58,7 +58,7 @@ function LANG(lang){
     document.getElementById('text9').innerHTML=l1[8]
 
     
-    document.getElementById('clear').innerHTML=l1[9]
+    document.getElementById('remove').innerHTML=l1[9]
     document.getElementById('namemm').innerHTML=l1[10]
     document.getElementById('icons').innerHTML=l1[11]
     // document.getElementById('dub').innerHTML=l1[12]
@@ -132,6 +132,8 @@ function eng(){
         document.getElementById('o11').innerHTML = 'Capricorn'
         document.getElementById('o12').innerHTML = 'Aquarius'
         document.getElementById('o13').innerHTML = 'Pisces'
+
+        document.getElementById('remove').innerHTML='Reset'
 
 
         document.getElementById('fullname').innerHTML= 'Full Name '
