@@ -118,13 +118,15 @@ function stopUniqueDrawing() {
     isUserDrawing = false;
 }
 
-document.getElementById('eraseDrawing').addEventListener('click', () => {
-    myUniqueContext.clearRect(0, 0, myUniqueCanvas.width, myUniqueCanvas.height);
-});
+
 
 // Undo last drawing or remove canvas content if needed
 document.getElementById('remove').addEventListener('click', () => {
     myUniqueContext.clearRect(0, 0, myUniqueCanvas.width, myUniqueCanvas.height);
+
+
+    arrows = [];
+    arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
 });
 
 // Automatically adjust canvas when window size changes
