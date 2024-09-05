@@ -1,5 +1,9 @@
 @media only screen and (max-width: 1280px) {
 
+  .butt2{
+      margin-right: 8cm;
+    /* right: 50 cm; */
+  }
   .btn{
     position: absolute;
     right: 0cm;
@@ -20,6 +24,22 @@
         /* left: -5cm; */
 
     }
+    .box-center{
+      position: absolute;
+      
+    }
+    #cardbox1{
+      position: relative;
+      /* width: 2cm; */
+      /* background-color: red; */
+      left: 12.5cm;
+    }
+    #cardbox2{
+      position: relative;
+      /* width: 2cm; */
+      /* background-color: red; */
+      left: 10cm;
+    }
 
 
     #arrayDisplay{
@@ -28,15 +48,20 @@
         /* left: 0.cm; */
     }
 
-  
+  #onButton{
+    position: relative;
+    right: 7.3cm;
+    /* bottom: 0.8cm; */
+  }
     .box-top-al{
       position: relative;
       right: 0.4cm;
     }
 
     .pen1{
-        position: relative;
-        right: 5cm;
+        position: absolute;
+        /* right: cm; */
+        left: -7.3cm;
         
         /* left: 1cm; */
     }

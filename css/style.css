@@ -32,14 +32,14 @@ body{
 
 }
 #cardbox2{
-    background-color: white;
-     border: 0.1cm solid;
-     overflow: hidden;
-     position: relative;
-     right: 0.9cm;
-            height: 820px; 
-            width: 600px;
-            border-radius: 20px;
+  border: 0.1cm solid;
+  overflow: hidden;
+  position: relative;
+  right: 0.8cm;
+         height: 760px; 
+         width: 600px;
+         /* border-radius: 20px; */
+         z-index: -5;
 
 }
 .card11{
