@@ -1,5 +1,10 @@
 @media only screen and (max-width: 1280px) {
 
+  .btn{
+    position: absolute;
+    right: 0cm;
+    bottom: 0.5cm;
+  }
     .box-center , .box-left , .box-right{
 
         height: 25cm;
@@ -16,15 +21,24 @@
 
     }
 
+
     #arrayDisplay{
         position: relative;
-        /* right: 0cm; */
-        left: 0.1cm;
+        right: 5cm;
+        /* left: 0.cm; */
+    }
+
+  
+    .box-top-al{
+      position: relative;
+      right: 0.4cm;
     }
 
     .pen1{
         position: relative;
-        left: 2.5cm;
+        right: 5cm;
+        
+        /* left: 1cm; */
     }
 
     #flexSwitchCheckDefault{
@@ -72,9 +86,10 @@
     left: 1px;
   }
   #chartlagn{
-    font-size: 0.8cm;
+    font-size: 0.7cm;
     position: relative;
     right: 30px;
+    top: 0.5cm;
   }
   .sellll{
     position: relative;
