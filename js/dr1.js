@@ -1,4 +1,3 @@
-        // document.getElementById('drawingArea').style.zIndex = '0';
 let drawingModeActive = false;
 let isCurrentlyDrawing = false;
 let selectedColor = 'black';
@@ -7,9 +6,25 @@ let previousY = 0;
 const canvasElement = document.getElementById('drawingArea');
 const canvasContext = canvasElement.getContext('2d');
 
+function saveCanvas() {
+    return canvasElement.toDataURL();  // Save the current drawing as a data URL
+}
+
+function restoreCanvas(dataURL) {
+    const img = new Image();
+    img.src = dataURL;
+    img.onload = () => {
+        canvasContext.drawImage(img, 0, 0);
+    };
+}
+
 function adjustCanvasSize() {
+    const savedDrawing = saveCanvas();  // Save the current drawing before resizing
+
     canvasElement.width = window.innerWidth;
     canvasElement.height = window.innerHeight * 0.8;
+
+    restoreCanvas(savedDrawing);  // Restore the drawing after resizing
 }
 
 window.addEventListener('resize', adjustCanvasSize);
@@ -62,7 +77,6 @@ document.getElementById('startDrawing').addEventListener('change', function() {
         document.getElementById('drawingArea').style.zIndex = '7';
         drawingModeActive = true;
         document.body.style.cursor = 'default';
-        
     } else {
         document.getElementById('drawingArea').style.zIndex = '0';
         drawingModeActive = false;
@@ -86,6 +100,3 @@ document.getElementById('remove').addEventListener('click', () => {
         arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
     }
 });
-
-
-

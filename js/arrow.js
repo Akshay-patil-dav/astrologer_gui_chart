@@ -160,3 +160,8 @@ function undoArrow() {
 
 // Example of adding event listeners to buttons
 document.getElementById('clearArrowsBtn').addEventListener('click', clearArrows);
+
+
+
+// analyse this code and add autio option in it to adgest the posgition the the dowing lines acording to ther screen size 
+

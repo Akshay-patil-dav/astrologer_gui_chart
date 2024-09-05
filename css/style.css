@@ -3,10 +3,11 @@
 @import url('./pla.css');
 @import url('./switch.css');
 @import url("./responcive/chart-r.css");
+@import url("./responcive/re120.css");
 
 body{
     overflow-x: hidden;
-/*     overflow: hidden; */
+    /* overflow: hidden; */
     /* column-rule: white; */
    
     
