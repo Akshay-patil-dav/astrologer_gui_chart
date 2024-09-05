@@ -6,7 +6,7 @@
 }
 
 .box-center , .box-left , .box-right{
-    height: 25cm;
+    height: 0cm;
     margin: 0.5cm;
 }
 .box-left{
