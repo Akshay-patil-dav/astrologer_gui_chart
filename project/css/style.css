@@ -1,0 +1,295 @@
+@import "./colorbox.css";
+@import url('./colorbox.css');
+@import url('./pla.css');
+@import url('./switch.css');
+@import url("./responcive/chart-r.css");
+@import url("./responcive/re120.css");
+
+
+body{
+    /* overflow-x: hidden; */
+    /* overflow: hidden; */
+    /* column-rule: white; */
+   
+    
+}
+
+#cardbox1{
+    /* background-color: white; */
+     border: 0.1cm solid;
+     overflow: hidden;
+     position: relative;
+     right: 0.8cm;
+            height: 760px; 
+            width: 600px;
+            /* border-radius: 20px; */
+            z-index: -5;
+/* 
+            box-shadow: 0 0 5px 0 ;
+            background: inherit;
+            backdrop-filter: blur(10px); */
+            /* <!--margin: 100px; according to your need--> */
+
+}
+#cardbox2{
+  border: 0.1cm solid;
+  overflow: hidden;
+  position: relative;
+  right: 0.8cm;
+         height: 760px; 
+         width: 600px;
+         /* border-radius: 20px; */
+         z-index: -5;
+
+}
+.card11{
+    position: relative;
+    right: 1cm;
+}
+
+canvas{
+    /* background-color: red; */
+    width: 100%;
+    /* z-index: 10; */
+    position: fixed;
+    /* height: 500%; */
+    height: auto;
+    /* display: flexbox; */
+
+    /* position: fixed; */
+}
+
+#drawingArea{
+    /* z-index: +8; */
+}
+
+.colorbox{
+    border: 1cm;
+    /* border-radius: 2; */
+    border-color: blue;
+    width: 1cm;
+    height: 1cm;
+    margin: 0.2cm;
+    border: 0.1cm solid;
+}
+
+#text3{
+    position: relative;
+    top: 5px;
+    /* right: 5px; */
+    /* font-family: Arial bla/ck; */
+
+    font-size:13px ;
+    
+
+}
+#text99{
+  display: none;
+}
+
+#cardbox1{
+
+    /* z-index: -1; */
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOREACs80RzopaANyYLQ7hUHo7xiaEWNIE0Q&s'); */
+}
+
+.lan{
+    position: relative;
+    left: 38cm;
+    width: 4cm;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1954px) {
+  .lan{
+    position: relative;
+    left: 33.5cm;
+    width: 4cm;
+    cursor: pointer;
+}
+}
+
+.langg{
+    position: relative;
+    top: 10px;
+    right: 5px;
+}
+
+.sel11{
+    width: 5cm;
+    position: relative;
+    left: 9.4cm;
+    top: 2.5cm;
+    z-index: 1;
+}
+
+
+.box-right{
+  position: relative;
+  top: 0.3cm;
+}
+
+
+
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+
+/* *************************popupwindows****************************** */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.closeBtn:hover {
+    color: #000;
+}
+
+.sellll{
+  z-index: 100;
+}
+
+
+.but{
+  /* margin-top: 20cm; */
+}
+.draggable {
+  width: 150px;
+  height: 150px;
+  background-color: lightblue;
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 150px;
+  position: absolute;
+  /* top: 15cm; */
+  cursor: move;
+}
+
+.draggable2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(67, 139, 163);
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 150px;
+  position: absolute;
+  /* top: 15cm; */
+  cursor: move;
+}
+
+
+
+.arrow {
+  position: absolute;
+  background-color: black;
+  transform-origin: 0 0;
+  height: 2px;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid black;
+  top: -4px;
+  left: calc(100% - 6px);
+  /* rotate: 2deg; */
+}
+
+
+
+#pall1 , #pall2 , #pall3 , #pall4 , #pall5 , #pall6 , #pall7 , #pall8 , #pall9{
+  display: none;
+}

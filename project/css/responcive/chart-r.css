@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
 
   .butt2{
       margin-right: 8cm;
@@ -23,6 +23,22 @@
         position: relative;
         /* left: -5cm; */
 
+    }
+    .box-center{
+      position: absolute;
+      
+    }
+    #cardbox1{
+      position: relative;
+      /* width: 2cm; */
+      /* background-color: red; */
+      left: 12.5cm;
+    }
+    #cardbox2{
+      position: relative;
+      /* width: 2cm; */
+      /* background-color: red; */
+      left: 10cm;
     }
 
 
@@ -84,11 +100,7 @@
         position: relative;
         /* background-color: rgb(115, 77, 77); */
         /* position: relative; */
-        /* right: 1cm; */
-    }
-    .loverbox-pl-pen-arr-col{
-      position: relative;
-      right: 1cm;
+        right: 1cm;
     }
     .collbox{
         position: relative;
@@ -113,7 +125,10 @@
     /* font-size: 0.5cm; */
   }
 
-
+  #clear2{
+        position:fixed;
+        right: 5cm;
+  }
   .box21{
    position: relative;
    right: 0.6cm;
@@ -140,5 +155,3 @@
      top: 0.3cm;
       z-index: -1;
    }
-
-

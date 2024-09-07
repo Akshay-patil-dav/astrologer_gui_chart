@@ -1,12 +1,19 @@
 .col1{
     position: relative;
-    /* right: 1cm; */
-    /* width: cm; */
+    right: 1cm;
     /* top: 13cm; */
     /* background-color: rgb(255, 255, 255); */
 }
 
-
+.pen{
+    /* border: 1px solid; */
+    height: 1.5cm;
+    width:0cm;
+    position: relative;
+    right: 0.8cm;
+    /* border-radius: 20px; */
+    
+}
 
 
 .pen1{
@@ -15,12 +22,7 @@
     width: 3cm;
     position: relative;
     /* right: 1cm; */
-    /* left: 0cm; */
+    left: 0cm;
     /* border-radius: 20px; */
     
-}
-.boxes-color-pen-arrow{
-    /* position: absolute; */
-    margin-top: 1cm;
-    margin-right: 0cm;
 }

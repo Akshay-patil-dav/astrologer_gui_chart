@@ -1,6 +1,9 @@
 /* @import url("./style.css"); */
 
 
+body{
+    overflow-y: hi;
+}
 
 .box{
     position: relative;
@@ -63,7 +66,7 @@ z-index: 2;
 .color-palette {
     display: flex;
     border: 1px solid;
-    width: 5.5cm;
+    /* width: 8cm; */
     height: 1.5cm;
     /* border-radius: 10px; */
     z-index: 2;

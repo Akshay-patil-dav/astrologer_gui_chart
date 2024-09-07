@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initializeUniqueDrawingCanvas() {
     myUniqueCanvas = document.createElement('canvas');
-    myUniqueCanvas.width = window.innerWidth ;
-    myUniqueCanvas.height = window.innerHeight ;
+    myUniqueCanvas.width = window.innerWidth *1;
+    myUniqueCanvas.height = window.innerHeight *1;
     myUniqueCanvas.style.position = 'absolute';
     myUniqueCanvas.style.top = '0';
     myUniqueCanvas.style.left = '0';
@@ -69,7 +69,7 @@ function adjustUniqueCanvasSize() {
 
     // Update canvas size
     myUniqueCanvas.width = window.innerWidth;
-    myUniqueCanvas.height = window.innerHeight * 1;
+    myUniqueCanvas.height = window.innerHeight * 0.8;
 
     restoreUniqueCanvas(savedUniqueDrawing);  // Restore the drawing after resizing
 }

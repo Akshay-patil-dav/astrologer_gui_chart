@@ -140,7 +140,10 @@
 
                 
                   
-             
+                <button id="clear2"   style="z-index: 100; position: fixed; left: 48cm; top: 23cm; "  class="butt2" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                  <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                  <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+                </svg></button>
 
 
                 <!-- Modal -->
@@ -265,8 +268,6 @@
                             
                             </div>
                     </div>
-
-<div class="loverbox-pl-pen-arr-col">                    
 <!-- ***********************************************************planetbox***************************************************************** -->
  <div class="boxses">
 
@@ -282,10 +283,6 @@
         <input class="form-check-input" type="checkbox" role="switch" id="iconss">
      </div>
   </div>
-
-
-
-  <!-- ********************** -->
 <div id="pal" >
     <ul  >
          <li  > 
@@ -464,91 +461,107 @@
       
     </ul>
 </div> </div>
+                            <!-- **************colorbox********************************* -->
+                        <div class="collbox" style="display: flex;">
+                            <div class="col1">
+                                <div class="col"  >
+                                    <label for=""><b id="colorbox">Color  </b></label>
+                                    <div class="color-palette">
+                                        <div class="color-swatch" style="background-color: rgb(255, 123, 123);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(132, 255, 132);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(122, 122, 255);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(255, 255, 136);" draggable="true"></div>
+                                        <div class="color-swatch" style="background-color: rgb(255, 255, 255); border: 1px solid;" draggable="true"></div>
+                                    </div>
+                                </div>
+                             </div>
+                            
+                                <div class="col"  >
+                                    <label for=""><b id="penbox">Pen  </b></label>
+                                    <div class="pen">
+                                         <div class="color-palette2">
+                                          <!-- *************** -->
+                                            <!-- <button class="pen-img" id="startDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+                                              </svg></button>
+                                              <button class="pen-img3" id="stopDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
+                                                <path d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0"/>
+                                              </svg></button> -->
+                                            <!-- ////***************************************** -->
 
-
-  <div class="boxes-color-pen-arrow" style="display: flex;  gap: 0.2cm;">
-    <!-- ***************************** -->
-    <div class=""  >
-      <label for=""><b id="colorbox">Color  </b></label>
-      <div class="color-palette">
-          <div class="color-swatch" style="background-color: rgb(255, 123, 123);" draggable="true"></div>
-          <div class="color-swatch" style="background-color: rgb(132, 255, 132);" draggable="true"></div>
-          <div class="color-swatch" style="background-color: rgb(122, 122, 255);" draggable="true"></div>
-          <div class="color-swatch" style="background-color: rgb(255, 255, 136);" draggable="true"></div>
-          <div class="color-swatch" style="background-color: rgb(255, 255, 255); border: 1px solid;" draggable="true"></div>
-      </div>
-  </div>
-     <!-- ******************************* -->
-
-     <div class=""  >
-      <label for=""><b id="penbox">Pen  </b></label>
-      <div class="pen">
-           <div class="color-palette2">
-            <!-- *************** -->
-              <!-- <button class="pen-img" id="startDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
-                </svg></button>
-                <button class="pen-img3" id="stopDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
-                  <path d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0"/>
-                </svg></button> -->
-              <!-- ////***************************************** -->
-
-                <label class="switch " style="z-index: 100; position: relative; top: 10px;left: 5px;">
-                  <input type="checkbox" id="startDrawing">
-                  <span class="slider round"></span>
-                </label>
+                                              <label class="switch " style="z-index: 100; position: relative; top: 10px;left: 5px;">
+                                                <input type="checkbox" id="startDrawing">
+                                                <span class="slider round"></span>
+                                              </label>
 <!-- <style>
-p{
-position: absolute;
-}
+  p{
+    position: absolute;
+  }
 </style> -->
 
 
-                
+                                              
 
-                <button class="pen-img4" id="eraseDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                </svg></button>
-          <!-- <div class="color-swatch" style="background-color: rgb(132, 255, 132);" draggable="true"></div> -->
-          <input type="color" class="colorbox" value="#000000" id="colorPicker" style="z-index: 100;">
-          <!-- <div class="color-swatch" style="background-color: rgb(255, 255, 136);" draggable="true"></div> -->
-          <!-- <div class="color-swatch" style="background-color: rgb(255, 255, 255); border: 1px solid;" draggable="true"></div> -->
-     
-      </div>
-            
-            
-         </div> 
-         
- </div>
- <!-- ********************************************* -->
- <div class="" id=""  >
-  <label for=""><b id="onButton">Arrow  </b></label>
-  <div class="pen1" style="display: flex;">
+                                              <button class="pen-img4" id="eraseDrawing" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                              </svg></button>
+                                        <!-- <div class="color-swatch" style="background-color: rgb(132, 255, 132);" draggable="true"></div> -->
+                                        <input type="color" class="colorbox" value="#000000" id="colorPicker" style="z-index: 100;">
+                                        <!-- <div class="color-swatch" style="background-color: rgb(255, 255, 136);" draggable="true"></div> -->
+                                        <!-- <div class="color-swatch" style="background-color: rgb(255, 255, 255); border: 1px solid;" draggable="true"></div> -->
+                                   
+                                    </div>
+                                          
+                                          
+                                       </div> 
+                                       
+                               </div>
 
+                               <div class="buts" id="hh2"  >
+                                <label for=""><b id="onButton">Arrow  </b></label>
+                                <div class="pen1" style="display: flex;">
 
-
-        
-     <label class="switch " style="z-index: 100; position: relative; top: 10px;left: 5px;">
-      <input type="checkbox" id="toggleArrowButton">
-      <span class="slider round"></span>
-    </label>
-    <!-- <input type="color" id="arrowcolorPicker" value="#000000" style="z-index: 1000;"> -->
-
-    <button class="pen-img4" id="clearArrowsBtn" fdprocessedid="nl5isj" style="z-index: 100;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-      <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-    </svg></button>
-
-     </div> 
+                                    <!-- <button class="pen-img" id="onButton" style="" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cursor-fill" viewBox="0 0 16 16">
+                                        <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+                                      </svg></button> -->
+                                      <!-- <input type="checkbox" id="arrowMode" style="z-index: 100;"> -->
 
 
+                                      
+                                   <label class="switch " style="z-index: 100; position: relative; top: 10px;left: 5px;">
+                                    <input type="checkbox" id="toggleArrowButton">
+                                    <span class="slider round"></span>
+                                  </label>
+                                  <!-- <input type="color" id="arrowcolorPicker" value="#000000" style="z-index: 1000;"> -->
+
+                                  <button class="pen-img4" id="clearArrowsBtn" fdprocessedid="nl5isj" style="z-index: 100;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                  </svg></button>
+
+                                   </div> 
 
 
-  <!-- ******* -->
-</div></div>
-<!-- ************************************* -->
 
-  </div>
 
+                                   <!-- <button id="undoDrawing">Undo</button> -->
+
+
+                                   <div class="arrowtool">
+                                    <!-- <label id="arrow" for="arrowcolorPicker" style="margin-top: 5px; z-index: 1000;">Arrow:</label> -->
+                                    <!-- <input type="color" id="arrowcolorPicker" value="#000000" style="z-index: 1000;"> -->
+                                    <!-- <label class="custom-switch" style="z-index: 1000;">
+                                        <input type="checkbox" id="toggleArrowButton">
+                                        <span class="custom-slider round"></span>
+                                    </label> -->
+                                    <!-- <div style="display: flex; flex-direction: column; gap: 0px"> -->
+                                        <!-- <button id="clearArrowsBtn" fdprocessedid="nl5isj" style="z-index: 100;">🗑️</button> -->
+                                        <!-- <button id="undoArrowBtn" fdprocessedid="y53sad" style="z-index: 100;">↩</button> -->
+                                    <!-- </div> -->
+                                </div>
+
+                                <!-- ******* -->
+                           </div>
+                        </div>
             </div>
 
             <!-- *************************************************** -->
@@ -609,15 +622,8 @@ position: absolute;
                         </div>
                         
                     </div>
-                    <button id="clear2"   type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#set2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                      <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-                      <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
-                    </svg></button>
-                
 
             </div>
-            
-            
 
         </div>
 
@@ -735,7 +741,7 @@ position: absolute;
     </div>
   </div>
   
- 
+  
 
   <script src="./js/resct.js"></script>
   <script src="./js/arrow.js"></script>
