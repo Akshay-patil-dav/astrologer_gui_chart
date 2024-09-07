@@ -32,23 +32,12 @@
         /* left: 0.cm; */
     }
 
-  #onButton{
-    position: relative;
-    right: 7.3cm;
-    /* bottom: 0.8cm; */
-  }
+
     .box-top-al{
       position: relative;
       right: 0.4cm;
     }
 
-    .pen1{
-        position: absolute;
-        /* right: cm; */
-        left: -7.3cm;
-        
-        /* left: 1cm; */
-    }
 
     #flexSwitchCheckDefault{
         position: relative;
@@ -127,10 +116,7 @@
   }
  
   }
-  #penbox{
-    position: relative;
-    right: 30px;
-  }
+
   
   #box21{
   

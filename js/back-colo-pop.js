@@ -19,6 +19,8 @@ document.getElementById('dropBox21' ).style.borderColor='red'
 document.getElementById('dropBox20' ).style.borderColor='red'
  document.getElementById('dropBox13').style.borderColor='red'
   document.getElementById('dropBox7').style.borderColor='red'
+
+   document.getElementById('arrayDisplay').style.borderColor='red'
 }
 
 function c2(){
@@ -38,6 +40,7 @@ document.getElementById('dropBox21' ).style.borderColor = 'rgb(0, 0, 0)'
 document.getElementById('dropBox20' ).style.borderColor = 'rgb(0, 0, 0)'
  document.getElementById('dropBox13').style.borderColor = 'rgb(0, 0, 0)'
   document.getElementById('dropBox7').style.borderColor = 'rgb(0, 0, 0)'
+    document.getElementById('arrayDisplay').style.borderColor = 'rgb(0, 0, 0)'
 }
 
 function c3(){
@@ -55,6 +58,7 @@ document.getElementById('dropBox21' ).style.borderColor = ' rgb(22, 224, 15)'
 document.getElementById('dropBox20' ).style.borderColor = ' rgb(22, 224, 15)'
  document.getElementById('dropBox13').style.borderColor = ' rgb(22, 224, 15)'
   document.getElementById('dropBox7').style.borderColor = ' rgb(22, 224, 15)'
+   document.getElementById('arrayDisplay').style.borderColor = ' rgb(22, 224, 15)'
 
 }
 
@@ -75,6 +79,8 @@ document.getElementById('dropBox21' ).style.borderColor = 'rgb(17, 67, 175)'
 document.getElementById('dropBox20' ).style.borderColor = 'rgb(17, 67, 175)'
  document.getElementById('dropBox13').style.borderColor = 'rgb(17, 67, 175)'
   document.getElementById('dropBox7').style.borderColor = 'rgb(17, 67, 175)'
+  document.getElementById('arrayDisplay').style.borderColor = 'rgb(17, 67, 175)'
+
 
 
 }
@@ -98,6 +104,7 @@ document.getElementById('dropBox21' ).style.borderColor = 'rgb(68, 7, 109)'
 document.getElementById('dropBox20' ).style.borderColor = 'rgb(68, 7, 109)'
  document.getElementById('dropBox13').style.borderColor = 'rgb(68, 7, 109)'
   document.getElementById('dropBox7').style.borderColor = 'rgb(68, 7, 109)'
+  document.getElementById('arrayDisplay').style.borderColor = 'rgb(68, 7, 109)'
 }
 
 
@@ -116,6 +123,7 @@ document.getElementById('dropBox21' ).style.background = 'red'
 document.getElementById('dropBox20' ).style.background = 'red'
 document.getElementById('dropBox13').style.background = 'red'
 document.getElementById('dropBox7').style.background =  'red'
+// document.getElementById('arrayDisplay').style.background =  'red'
 
   // document.getElementById('arrayDisplay').style.borderColor = 'red'
 }
