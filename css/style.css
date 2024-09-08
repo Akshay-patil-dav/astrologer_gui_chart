@@ -93,21 +93,8 @@ canvas{
     /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOREACs80RzopaANyYLQ7hUHo7xiaEWNIE0Q&s'); */
 }
 
-.lan{
-    position: relative;
-    left: 38cm;
-    width: 4cm;
-    cursor: pointer;
-}
 
-@media only screen and (max-width: 1954px) {
-  .lan{
-    position: relative;
-    left: 33.5cm;
-    width: 4cm;
-    cursor: pointer;
-}
-}
+
 
 .langg{
     position: relative;
@@ -239,9 +226,7 @@ canvas{
 }
 
 
-.but{
-  /* margin-top: 20cm; */
-}
+
 .draggable {
   width: 150px;
   height: 150px;

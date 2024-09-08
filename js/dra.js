@@ -121,12 +121,10 @@ function stopUniqueDrawing() {
 
 
 // Undo last drawing or remove canvas content if needed
-document.getElementById('remove').addEventListener('click', () => {
+document.getElementById('removedr').addEventListener('click', () => {
     myUniqueContext.clearRect(0, 0, myUniqueCanvas.width, myUniqueCanvas.height);
 
 
-    arrows = [];
-    arrowContext.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
 });
 
 // Automatically adjust canvas when window size changes

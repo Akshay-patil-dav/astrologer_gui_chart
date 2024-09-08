@@ -13,9 +13,10 @@
    top: 10px;
    font-family: Arial black;
    /* border-radius: 10px; */
-   left: 3cm;
+   /* left: 3cm; */
    /* border: 0px solid; */
-   font-size: 0.4cm   
+   font-size: 0.4cm  ;
+   /* border-style: dotted; */
 }
 .butt:hover{
     background-color: rgb(226, 226, 226);
@@ -33,7 +34,7 @@
    top: 10px;
    font-family: Arial black;
    /* border-radius: 20px; */
-   left: 3.2cm;
+   /* left: 3.2cm; */
    border: 1px solid;
    font-size: 0.3cm   
 }

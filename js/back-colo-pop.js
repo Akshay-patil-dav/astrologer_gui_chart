@@ -104,7 +104,6 @@ document.getElementById('dropBox21' ).style.borderColor = 'rgb(68, 7, 109)'
 document.getElementById('dropBox20' ).style.borderColor = 'rgb(68, 7, 109)'
  document.getElementById('dropBox13').style.borderColor = 'rgb(68, 7, 109)'
   document.getElementById('dropBox7').style.borderColor = 'rgb(68, 7, 109)'
-  document.getElementById('arrayDisplay').style.borderColor = 'rgb(68, 7, 109)'
 }
 
 

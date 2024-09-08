@@ -64,7 +64,7 @@ function LANG(lang){
     document.getElementById('icons').innerHTML=l1[11]
     // document.getElementById('dub').innerHTML=l1[12]
 
-    document.getElementById('chartlagn').innerHTML = '<h1>लग्न चार्ट</h1>'
+    document.getElementById('chartlagn').innerHTML = 'लग्न चार्ट'
 
 
     document.getElementById('sel1').innerHTML=l1[13]
