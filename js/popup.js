@@ -208,7 +208,7 @@ function body5(val){
 
 function f1(val){
     // alert(val)
-    document.getElementById('chartlagn').style.color = val
+    document.getElementById('chartlagn').style.color=val
     document.getElementById('text1').style.color = val
     document.getElementById('text2').style.color = val
     document.getElementById('text3').style.color = val
@@ -229,6 +229,15 @@ function f1(val){
     document.getElementById('text88').style.color = val
     document.getElementById('text99').style.color = val
 
+    document.getElementById('planetsbox').style.color=val
+    document.getElementById('planetsbox').style.color=val
+
+    document.getElementById('colorbox').style.color=val
+
+    document.getElementById('penbox').style.color=val
+    document.getElementById('onButton').style.color=val
+
+
     document.getElementById('n1').style.color = val
     document.getElementById('n2').style.color = val
     document.getElementById('n3').style.color = val
@@ -242,236 +251,8 @@ function f1(val){
     document.getElementById('n11').style.color = val
     document.getElementById('n12').style.color = val
 
-    document.getElementById('colorbox').style.color = val
-    document.getElementById('penbox').style.color = val
-    document.getElementById('arrowbox').style.color = val
-
-    document.getElementById('imm1').style.color = val
-    document.getElementById('imm2').style.color = val
-    document.getElementById('imm3').style.color = val
-    document.getElementById('imm4').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm6').style.color = val
-    document.getElementById('imm7').style.color = val
-
-    document.getElementById('planets').style.color = val
-    
 
 }
-
-function f2(val){
-    // alert(val)
-    document.getElementById('chartlagn').style.color = val
-    document.getElementById('text1').style.color = val
-    document.getElementById('text2').style.color = val
-    document.getElementById('text3').style.color = val
-    document.getElementById('text4').style.color = val
-    document.getElementById('text5').style.color = val
-    document.getElementById('text6').style.color = val
-    document.getElementById('text7').style.color = val
-    document.getElementById('text8').style.color = val
-    document.getElementById('text9').style.color = val
-
-    document.getElementById('text11').style.color = val
-    document.getElementById('text22').style.color = val
-    document.getElementById('text33').style.color = val
-    document.getElementById('text44').style.color = val
-    document.getElementById('text55').style.color = val
-    document.getElementById('text66').style.color = val
-    document.getElementById('text77').style.color = val
-    document.getElementById('text88').style.color = val
-    document.getElementById('text99').style.color = val
-
-    
-    document.getElementById('n1').style.color = val
-    document.getElementById('n2').style.color = val
-    document.getElementById('n3').style.color = val
-    document.getElementById('n4').style.color = val
-    document.getElementById('n5').style.color = val
-    document.getElementById('n6').style.color = val
-    document.getElementById('n7').style.color = val
-    document.getElementById('n8').style.color = val
-    document.getElementById('n9').style.color = val
-    document.getElementById('n10').style.color = val
-    document.getElementById('n11').style.color = val
-    document.getElementById('n12').style.color = val
-
-    document.getElementById('colorbox').style.color = val
-    document.getElementById('penbox').style.color = val
-    document.getElementById('arrowbox').style.color = val
-
-    document.getElementById('imm1').style.color = val
-    document.getElementById('imm2').style.color = val
-    document.getElementById('imm3').style.color = val
-    document.getElementById('imm4').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm6').style.color = val
-    document.getElementById('imm7').style.color = val
-
-}
-
-function f3(val){
-    // alert(val)
-    document.getElementById('chartlagn').style.color = val
-    document.getElementById('text1').style.color = val
-    document.getElementById('text2').style.color = val
-    document.getElementById('text3').style.color = val
-    document.getElementById('text4').style.color = val
-    document.getElementById('text5').style.color = val
-    document.getElementById('text6').style.color = val
-    document.getElementById('text7').style.color = val
-    document.getElementById('text8').style.color = val
-    document.getElementById('text9').style.color = val
-
-    document.getElementById('text11').style.color = val
-    document.getElementById('text22').style.color = val
-    document.getElementById('text33').style.color = val
-    document.getElementById('text44').style.color = val
-    document.getElementById('text55').style.color = val
-    document.getElementById('text66').style.color = val
-    document.getElementById('text77').style.color = val
-    document.getElementById('text88').style.color = val
-    document.getElementById('text99').style.color = val
-
-    
-    document.getElementById('n1').style.color = val
-    document.getElementById('n2').style.color = val
-    document.getElementById('n3').style.color = val
-    document.getElementById('n4').style.color = val
-    document.getElementById('n5').style.color = val
-    document.getElementById('n6').style.color = val
-    document.getElementById('n7').style.color = val
-    document.getElementById('n8').style.color = val
-    document.getElementById('n9').style.color = val
-    document.getElementById('n10').style.color = val
-    document.getElementById('n11').style.color = val
-    document.getElementById('n12').style.color = val
-
-    document.getElementById('colorbox').style.color = val
-    document.getElementById('penbox').style.color = val
-    document.getElementById('arrowbox').style.color = val
-
-
-    document.getElementById('imm1').style.color = val
-    document.getElementById('imm2').style.color = val
-    document.getElementById('imm3').style.color = val
-    document.getElementById('imm4').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm6').style.color = val
-    document.getElementById('imm7').style.color = val
-}
-function f4(val){
-    // alert(val)
-    document.getElementById('chartlagn').style.color = val
-    document.getElementById('text1').style.color = val
-    document.getElementById('text2').style.color = val
-    document.getElementById('text3').style.color = val
-    document.getElementById('text4').style.color = val
-    document.getElementById('text5').style.color = val
-    document.getElementById('text6').style.color = val
-    document.getElementById('text7').style.color = val
-    document.getElementById('text8').style.color = val
-    document.getElementById('text9').style.color = val
-
-    document.getElementById('text11').style.color = val
-    document.getElementById('text22').style.color = val
-    document.getElementById('text33').style.color = val
-    document.getElementById('text44').style.color = val
-    document.getElementById('text55').style.color = val
-    document.getElementById('text66').style.color = val
-    document.getElementById('text77').style.color = val
-    document.getElementById('text88').style.color = val
-    document.getElementById('text99').style.color = val
-
-    
-    document.getElementById('n1').style.color = val
-    document.getElementById('n2').style.color = val
-    document.getElementById('n3').style.color = val
-    document.getElementById('n4').style.color = val
-    document.getElementById('n5').style.color = val
-    document.getElementById('n6').style.color = val
-    document.getElementById('n7').style.color = val
-    document.getElementById('n8').style.color = val
-    document.getElementById('n9').style.color = val
-    document.getElementById('n10').style.color = val
-    document.getElementById('n11').style.color = val
-    document.getElementById('n12').style.color = val
-
-    document.getElementById('colorbox').style.color = val
-    document.getElementById('penbox').style.color = val
-    document.getElementById('arrowbox').style.color = val
-
-
-    document.getElementById('imm1').style.color = val
-    document.getElementById('imm2').style.color = val
-    document.getElementById('imm3').style.color = val
-    document.getElementById('imm4').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm6').style.color = val
-    document.getElementById('imm7').style.color = val
-}
-
-function f5(val){
-    // alert(val)
-    document.getElementById('chartlagn').style.color = val
-    document.getElementById('text1').style.color = val
-    document.getElementById('text2').style.color = val
-    document.getElementById('text3').style.color = val
-    document.getElementById('text4').style.color = val
-    document.getElementById('text5').style.color = val
-    document.getElementById('text6').style.color = val
-    document.getElementById('text7').style.color = val
-    document.getElementById('text8').style.color = val
-    document.getElementById('text9').style.color = val
-
-    document.getElementById('text11').style.color = val
-    document.getElementById('text22').style.color = val
-    document.getElementById('text33').style.color = val
-    document.getElementById('text44').style.color = val
-    document.getElementById('text55').style.color = val
-    document.getElementById('text66').style.color = val
-    document.getElementById('text77').style.color = val
-    document.getElementById('text88').style.color = val
-    document.getElementById('text99').style.color = val
-
-    
-    document.getElementById('n1').style.color = val
-    document.getElementById('n2').style.color = val
-    document.getElementById('n3').style.color = val
-    document.getElementById('n4').style.color = val
-    document.getElementById('n5').style.color = val
-    document.getElementById('n6').style.color = val
-    document.getElementById('n7').style.color = val
-    document.getElementById('n8').style.color = val
-    document.getElementById('n9').style.color = val
-    document.getElementById('n10').style.color = val
-    document.getElementById('n11').style.color = val
-    document.getElementById('n12').style.color = val
-
-    document.getElementById('colorbox').style.color = val
-    document.getElementById('penbox').style.color = val
-    document.getElementById('arrowbox').style.color = val
-
-
-    document.getElementById('imm1').style.color = val
-    document.getElementById('imm2').style.color = val
-    document.getElementById('imm3').style.color = val
-    document.getElementById('imm4').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm5').style.color = val
-    document.getElementById('imm6').style.color = val
-    document.getElementById('imm7').style.color = val
-
-  
-}
-
-
-
-
 
 
 
