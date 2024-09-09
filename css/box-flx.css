@@ -81,3 +81,94 @@
 
 
 /* } */
+
+
+
+@media only screen and (max-width: 600px) {
+
+/* @media only screen and (max-width: 1680px) { */
+.box-top-al{
+    display: block;
+    /* bottom: 20cm; */
+}
+
+
+.box-left{
+    /* background-color: rgb(255, 214, 214); */
+    width: 90%;
+    /* height: 10cm; */
+    position: relative;
+    margin: 0.5cm;
+    bottom: 1.8cm;
+    /* margin-bottom: 8cm; */
+
+ 
+}
+.box-center{
+    /* background-color: rgb(90, 15, 15); */
+    width:  95%;
+    height: 10cm;
+    border: 2px solid;
+    position: relative;
+    margin: 0.5cm;
+
+
+    
+    /* height: 10cm; */
+}
+
+.bott-sdj-ssk{
+    /* position: fixed; */
+    /* display: block; */
+    position: relative;
+    width: 0px;
+  
+
+    /* background-color: red; */
+    /* margin-left: 48cm; */
+    right: 2cm;
+    top: 0.8cm;
+    /* bottom: 1cm; */
+    z-index: 100;
+    
+}
+.settbut-odfj{
+    /* position: fixed; */
+    /* background-color: ; */
+    /* bottom: 1cm; */
+    background-color: white;
+    border: 1px solid;
+    /* cursor: pointer; */
+    /* z-index: 100; */
+    
+    /* margin-top: 14cm; */
+  
+}
+.box-center-appd{
+    display: block;
+}
+.to-box-top{
+    display: block;
+    /* background-color: red; */
+    /* height: 1cm; */
+}
+.boxright{
+    /* background-color: rgb(130, 174, 255); */
+    width: 95%;
+    /* height: 10cm; */
+    height: 10cm;
+    border: 2px solid;
+    margin: 0.5cm;
+
+ 
+}
+#value1 ,#val11 {
+    width: 3cm;
+}
+.box-55-5{
+    width: 100%;
+
+    /* background-color: red; */
+}
+
+}
