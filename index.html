@@ -602,7 +602,7 @@ position: absolute;
                         <option id="im2" value="Aries"> Lordship Chart</option>
                         <option id="im3" value="Taurus">Planet Degree Chart</option>
                         <option id="im4" value="Gemini">Drishti Chart</option>
-                        <option id="im5" value="Cancer">Live notes - Hindi and English</option>
+                        <option id="im5" value="notes">Live notes - Hindi and English</option>
                         <option id="im6" value="popup1">Custome image</option>
                         </select>
                         <!-- <option id="o5" value="popup2">Custome image</option> -->
@@ -613,11 +613,23 @@ position: absolute;
 <label for="fileInput" class="" style="position: relative; top: 10px; cursor: pointer; margin: 1cm; top: 1cm; " id="displayImage">
                              
 </label>
+<div id="textarea">
+  <textarea name="" id="textarears" placeholder="Write Note's"></textarea>
+
+</div>
   
           
 
 </div>
 
+<style>
+  #textarea{
+    display: none;
+  }
+  #textarea1{
+    display: none;
+  }
+</style>
             <!-- ****************************************************************** -->
 <div class="boxright">
 <br>
@@ -627,12 +639,12 @@ position: absolute;
     <div class="box-55-5"></div>
     <div class="box-55-5"></div>
     <div class="box-55-5" style="z-index: 100;">
-      <select class="form-select " aria-label="Large select example" id="val11" onchange="box1sel2(this.value)" >
+      <select class="form-select " aria-label="Large select example" id="val11"  onchange="box1sel2(this.value)" >
         <option id="imm1"  selected>Open this select menu</option>
         <option id="imm2" value="Aries"> Lordship Chart</option>
         <option id="imm3" value="Taurus">Planet Degree Chart</option>
         <option id="imm4" value="Gemini">Drishti Chart</option>
-        <option id="imm6" value="Cancer">Live notes - Hindi and English</option>
+        <option id="imm6" value="notes">Live notes - Hindi and English</option>
         <option id="imm5" value="popup2">Custome image</option>
         </select>
     </div>
@@ -641,6 +653,10 @@ position: absolute;
                    <label for="fileInput" class="" style="position: relative; top: 10px; cursor: pointer;margin: 1cm; top: 1cm; " id="displayImage2">
                              
                    </label>
+                   <div id="textarea1">
+                    <textarea name="" id="textarears1" placeholder="Write Note's"></textarea>
+                  
+                  </div>
 
 </div>
 

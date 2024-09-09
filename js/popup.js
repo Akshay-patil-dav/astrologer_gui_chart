@@ -1,17 +1,17 @@
-function box1sel(value){
-    var selectedValue = value;
-    var popups = document.querySelectorAll('.popup');
+// function box1sel(value){
+//     var selectedValue = value;
+//     var popups = document.querySelectorAll('.popup');
     
-    // Close any open popups
-    popups.forEach(function(popup) {
-        popup.style.display = 'none';
-    });
+//     // Close any open popups
+//     popups.forEach(function(popup) {
+//         popup.style.display = 'none';
+//     });
 
-    // Open the selected popup
-    if (selectedValue) {
-        document.getElementById(selectedValue).style.display = 'block';
-    }
-}
+//     // Open the selected popup
+//     if (selectedValue) {
+//         document.getElementById(selectedValue).style.display = 'block';
+//     }
+// }
 
 // Close the popup when the close button is clicked
 document.querySelectorAll('.closeBtn').forEach(function(button) {
@@ -29,24 +29,32 @@ window.addEventListener('click', function(event) {
 
 
 
-function box1sel2(value){
-    var selectedValue = value;
-    var popups = document.querySelectorAll('.popup');
+// function box1sel2(value){
+//     var selectedValue = value;
+//     var popups = document.querySelectorAll('.popup');
     
-    // Close any open popups
-    popups.forEach(function(popup) {
-        popup.style.display = 'none';
-    });
+//     // Close any open popups
+//     popups.forEach(function(popup) {
+//         popup.style.display = 'none';
+//     });
 
-    // Open the selected popup
-    if (selectedValue) {
-        document.getElementById(selectedValue).style.display = 'block';
-    }
-}
+//     // Open the selected popup
+//     if (selectedValue) {
+//         document.getElementById(selectedValue).style.display = 'block';
+
+//         // document.getElementById('textarea1').style.display = 'none'
+
+//     }
+
+// }
+
+
 
 // Close the popup when the close button is clicked
 document.querySelectorAll('.closeBtn').forEach(function(button) {
+    
     button.addEventListener('click', function() {
+        
         this.parentElement.parentElement.style.display = 'none';
     });
 });
@@ -457,6 +465,8 @@ function f5(val){
     document.getElementById('imm5').style.color = val
     document.getElementById('imm6').style.color = val
     document.getElementById('imm7').style.color = val
+
+  
 }
 
 
@@ -465,7 +475,70 @@ function f5(val){
 
 
 
+function box1sel2(value){
+
+
+    switch(value){
+        case 'notes':
+            document.getElementById('textarea1').style.display = 'block'
+            document.getElementById('displayImage2').style.display = 'none'
+
+        case 'popup2':
+
+        
+    var selectedValue = value;
+    var popups = document.querySelectorAll('.popup');
+    
+    // Close any open popups
+    popups.forEach(function(popup) {
+        popup.style.display = 'none';
+    });
+
+    // Open the selected popup
+    if (selectedValue) {
+        document.getElementById(selectedValue).style.display = 'block';
+
+        document.getElementById('textarea1').style.display = 'none'
+        document.getElementById('displayImage2').style.display = 'block'
+
+
+    }
+    }
+
+}
 
 
 
 
+function box1sel(value){
+
+
+    switch(value){
+        case 'notes':
+            document.getElementById('textarea').style.display = 'block'
+            document.getElementById('displayImage').style.display = 'none'
+
+        case 'popup1':
+
+                           var selectedValue = value;
+                       var popups = document.querySelectorAll('.popup');
+
+                       // Close any open popups
+                       popups.forEach(function(popup) {
+                           popup.style.display = 'none';
+                       });
+                   
+                       // Open the selected popup
+                       if (selectedValue) {
+                           document.getElementById(selectedValue).style.display = 'block';
+                           document.getElementById('textarea').style.display = 'none'
+                           document.getElementById('displayImage').style.display = 'block'
+
+
+                       }
+                   
+                       break;
+
+    }
+
+}
