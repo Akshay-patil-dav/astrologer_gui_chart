@@ -246,7 +246,8 @@ function f1(val){
     document.getElementById('imm5').style.color = val
     document.getElementById('imm6').style.color = val
     document.getElementById('imm7').style.color = val
-    // document.getElementById('val11').style.color = val
+
+    document.getElementById('planets').style.color = val
     
 
 }
