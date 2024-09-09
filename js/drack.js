@@ -711,8 +711,8 @@
         let newElement = $("#mydiv8").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "1.3cm"
+            top: "18.3cm",
+            left: "0.8cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -724,8 +724,8 @@
         let newElement = $("#mydiv2").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "2.7cm"
+            top: "18.3cm",
+            left: "2.2cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -737,8 +737,8 @@
         let newElement = $("#mydiv").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "4.1cm"
+            top: "18.3cm",
+            left: "3.6cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -750,8 +750,8 @@
         let newElement = $("#mydiv1").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "5.6cm"
+            top: "18.3cm",
+            left: "5.1cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -764,8 +764,8 @@
         let newElement = $("#mydiv3").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "7cm"
+            top: "18.3cm",
+            left: "6.5cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -778,8 +778,8 @@
         let newElement = $("#mydiv4").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "8.5cm"
+            top: "18.3cm",
+            left: "8cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -792,8 +792,8 @@
         let newElement = $("#mydiv6").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "9.9cm"
+            top: "18.3cm",
+            left: "9.4cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -805,8 +805,8 @@
         let newElement = $("#mydiv7").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "11.3cm"
+            top: "18.3cm",
+            left: "10.8cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
@@ -819,8 +819,8 @@
         let newElement = $("#mydiv9").clone();
         newElement.attr("id", "element-" + elementCount);
         newElement.css({
-            top: "19cm",
-            left: "12.8cm"
+            top: "18.3cm",
+            left: "12.3cm"
         }).appendTo("body");
         newElement.draggable({
             containment: "body"
